@@ -1,0 +1,291 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\component\\account\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:component\\account\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\component\\account\\logout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:component\\account\\logout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\component\\account\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:component\\account\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\pages\\adminuser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:pages\\adminuser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\sevices\\customauthenticationstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:sevices\\customauthenticationstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\sevices\\iaccountmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:sevices\\iaccountmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\sevices\\cutomhttphandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:sevices\\cutomhttphandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\model\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:model\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\model\\tokeninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:model\\tokeninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\model\\formresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:model\\formresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdminUser.razor",
+              "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Pages\\AdminUser.razor",
+              "RelativeDocumentMoniker": "Pages\\AdminUser.razor",
+              "ToolTip": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Pages\\AdminUser.razor",
+              "RelativeToolTip": "Pages\\AdminUser.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-15T22:57:28.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{7f40df72-066b-4810-a08b-c0fbed76c948}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-13T03:13:28.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CustomAuthenticationStateProvider.cs",
+              "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Sevices\\CustomAuthenticationStateProvider.cs",
+              "RelativeDocumentMoniker": "Sevices\\CustomAuthenticationStateProvider.cs",
+              "ToolTip": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Sevices\\CustomAuthenticationStateProvider.cs",
+              "RelativeToolTip": "Sevices\\CustomAuthenticationStateProvider.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB8AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T02:48:14.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Component\\Account\\Login.razor",
+              "RelativeDocumentMoniker": "Component\\Account\\Login.razor",
+              "ToolTip": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Component\\Account\\Login.razor",
+              "RelativeToolTip": "Component\\Account\\Login.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-13T02:45:54.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Layout\\MainLayout.razor",
+              "ToolTip": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Layout\\MainLayout.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-13T02:46:39.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Layout\\NavMenu.razor",
+              "ToolTip": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "Layout\\NavMenu.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-13T02:47:02.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Logout.razor",
+              "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Component\\Account\\Logout.razor",
+              "RelativeDocumentMoniker": "Component\\Account\\Logout.razor",
+              "ToolTip": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Component\\Account\\Logout.razor",
+              "RelativeToolTip": "Component\\Account\\Logout.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-13T02:46:16.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Register.razor",
+              "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Component\\Account\\Register.razor",
+              "RelativeDocumentMoniker": "Component\\Account\\Register.razor",
+              "ToolTip": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Component\\Account\\Register.razor",
+              "RelativeToolTip": "Component\\Account\\Register.razor",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAACgAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-13T02:46:21.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\App.razor",
+              "RelativeDocumentMoniker": "App.razor",
+              "ToolTip": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\App.razor",
+              "RelativeToolTip": "App.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-13T02:51:50.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T02:44:10.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CutomHttpHandler.cs",
+              "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Sevices\\CutomHttpHandler.cs",
+              "RelativeDocumentMoniker": "Sevices\\CutomHttpHandler.cs",
+              "ToolTip": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Sevices\\CutomHttpHandler.cs",
+              "RelativeToolTip": "Sevices\\CutomHttpHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T02:48:27.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IAccountManagement.cs",
+              "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Sevices\\IAccountManagement.cs",
+              "RelativeDocumentMoniker": "Sevices\\IAccountManagement.cs",
+              "ToolTip": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Sevices\\IAccountManagement.cs",
+              "RelativeToolTip": "Sevices\\IAccountManagement.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T02:48:37.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\_Imports.razor",
+              "RelativeDocumentMoniker": "_Imports.razor",
+              "ToolTip": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\_Imports.razor",
+              "RelativeToolTip": "_Imports.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-13T02:51:32.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TokenInfo.cs",
+              "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Model\\TokenInfo.cs",
+              "RelativeDocumentMoniker": "Model\\TokenInfo.cs",
+              "ToolTip": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Model\\TokenInfo.cs",
+              "RelativeToolTip": "Model\\TokenInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T02:47:41.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserInfo.cs",
+              "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Model\\UserInfo.cs",
+              "RelativeDocumentMoniker": "Model\\UserInfo.cs",
+              "ToolTip": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Model\\UserInfo.cs",
+              "RelativeToolTip": "Model\\UserInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T02:47:45.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FormResult.cs",
+              "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Model\\FormResult.cs",
+              "RelativeDocumentMoniker": "Model\\FormResult.cs",
+              "ToolTip": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Model\\FormResult.cs",
+              "RelativeToolTip": "Model\\FormResult.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T02:47:34.595Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
