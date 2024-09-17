@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\component\\account\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:component\\account\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\component\\account\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:component\\account\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\component\\account\\logout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:component\\account\\logout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\component\\account\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:component\\account\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\pages\\adminuser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:pages\\adminuser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\component\\account\\logout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|solutionrelative:component\\account\\logout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{63C2EE69-93F1-41EF-87DD-E09C3256E2DD}|modulum-client.csproj|c:\\_programacao\\projetos\\_ modulum\\modulum-client\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -74,11 +74,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 5,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{7f40df72-066b-4810-a08b-c0fbed76c948}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "AdminUser.razor",
               "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Pages\\AdminUser.razor",
               "RelativeDocumentMoniker": "Pages\\AdminUser.razor",
@@ -90,14 +98,6 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{7f40df72-066b-4810-a08b-c0fbed76c948}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "launchSettings.json",
@@ -107,8 +107,7 @@
               "RelativeToolTip": "Properties\\launchSettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-13T03:13:28.526Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-13T03:13:28.526Z"
             },
             {
               "$type": "Document",
@@ -124,13 +123,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Login.razor",
               "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Component\\Account\\Login.razor",
               "RelativeDocumentMoniker": "Component\\Account\\Login.razor",
               "ToolTip": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Component\\Account\\Login.razor",
               "RelativeToolTip": "Component\\Account\\Login.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA+AAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACgAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-13T02:45:54.295Z",
               "EditorCaption": ""
@@ -161,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Logout.razor",
               "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Component\\Account\\Logout.razor",
               "RelativeDocumentMoniker": "Component\\Account\\Logout.razor",
@@ -169,25 +168,24 @@
               "RelativeToolTip": "Component\\Account\\Logout.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-13T02:46:16.017Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-13T02:46:16.017Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Register.razor",
               "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Component\\Account\\Register.razor",
               "RelativeDocumentMoniker": "Component\\Account\\Register.razor",
               "ToolTip": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Component\\Account\\Register.razor",
               "RelativeToolTip": "Component\\Account\\Register.razor",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAACgAAAAqAAAA",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAAAGkAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-13T02:46:21.387Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "App.razor",
               "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\App.razor",
               "RelativeDocumentMoniker": "App.razor",
@@ -200,16 +198,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAvAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAABZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T02:44:10.605Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-13T02:44:10.605Z"
             },
             {
               "$type": "Document",

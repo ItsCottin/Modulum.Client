@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("modulum-client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa7337c109b497ba1ae0bf17fa40900b755dd396")]
 [assembly: System.Reflection.AssemblyProductAttribute("modulum-client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("modulum-client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,9 +3,9 @@
 @inject IAccountManagement Acct
 <h3>login</h3>
 
-<AuthorizeView>
+<AuthorizeView Context="authContext">
     <Authorized>
-        <div class="alert alert-success">Você está logado como @context.User.Identity?.Name.</div>
+        <div class="alert alert-success">Você está logado como @authContext.User.Identity?.Name.</div>
     </Authorized>
     <NotAuthorized>
         @if (errors)
@@ -15,7 +15,32 @@
                 <div class="alert alert-danger">@error</div>
             }
         }
-        <div class="flex-outer">
+        <EditForm Model="Input" method="post" FormName="login">
+            <DataAnnotationsValidator />
+            <h2>Use uma conta local para fazer login.</h2>
+            <hr />
+            <ValidationSummary class="text-danger" role="alert" />
+            <div class="form-floating mb-3">
+                <InputText @bind-Value="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                <label for="email" class="form-label">Email</label>
+                <ValidationMessage For="() => Input.Email" class="text-danger" />
+            </div>
+            <div class="form-floating mb-3">
+                <InputText type="password" @bind-Value="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
+                <label for="password" class="form-label">Senha</label>
+                <ValidationMessage For="() => Input.Password" class="text-danger" />
+            </div>
+            <div>
+                <button class="w-100 btn btn-lg btn-primary" @onclick="DoLoginAsync" disabled="@loading">
+                    @if (loading)
+                    {
+                        <span class="spinner-border spinner-border-sm mr-1"></span>
+                    }
+                    Log in
+                </button>
+            </div>
+        </EditForm>
+        <!--div class="flex-outer">
             <div>
                 <label for="email">
                     Email:
@@ -31,7 +56,7 @@
             <div>
                 <button class="btn btn-primary" @onclick="DoLoginAsync">Login</button>
             </div>
-        </div>
+        </div>-->
     </NotAuthorized>
 </AuthorizeView>
 @code {
@@ -40,12 +65,17 @@
     private string password = string.Empty;
     private string[] errorList = [];
 
+    [SupplyParameterFromForm]
+    private InputModel Input { get; set; } = new();
+    private bool loading;
+
     public async Task DoLoginAsync()
     {
+        loading = true;
         success = errors = false;
         errorList = [];
 
-        if (string.IsNullOrWhiteSpace(email))
+        if (string.IsNullOrWhiteSpace(Input.Email))
         {
             errors = true;
             errorList = ["Email is required."];
@@ -53,25 +83,33 @@
             return;
         }
 
-        if (string.IsNullOrWhiteSpace(password))
-        {
+        if (string.IsNullOrWhiteSpace(Input.Password))
+    {
             errors = true;
             errorList = ["Password is required."];
 
             return;
         }
 
-        var result = await Acct.LoginAsync(email, password);
+        var result = await Acct.LoginAsync(Input.Email, Input.Password);
 
         if (result.Succeeded)
         {
             success = true;
-            email = password = string.Empty;
+            Input.Email = Input.Password = string.Empty;
         }
         else
         {
             errors = true;
             errorList = result.ErrorList;
         }
+        loading = false;
+    }
+
+    private sealed class InputModel
+    {
+        public string Email { get; set; } = "";
+
+        public string Password { get; set; } = "";
     }
 }
