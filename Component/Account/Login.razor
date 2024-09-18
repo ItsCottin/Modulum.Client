@@ -1,7 +1,7 @@
 ﻿@page "/login"
 @using modulum_client.Sevices
 @inject IAccountManagement Acct
-<h3>login</h3>
+<h3>Login</h3>
 
 <AuthorizeView Context="authContext">
     <Authorized>
@@ -15,28 +15,29 @@
                 <div class="alert alert-danger">@error</div>
             }
         }
-        <EditForm Model="Input" method="post" FormName="login">
+        <EditForm Model="Input" method="post" FormName="Bem vindo ao Modulum =)">
             <DataAnnotationsValidator />
-            <h2>Use uma conta local para fazer login.</h2>
+            <h2>Use uma conta local para entrar.</h2>
             <hr />
-            <ValidationSummary class="text-danger" role="alert" />
             <div class="form-floating mb-3">
                 <InputText @bind-Value="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
                 <label for="email" class="form-label">Email</label>
-                <ValidationMessage For="() => Input.Email" class="text-danger" />
             </div>
             <div class="form-floating mb-3">
                 <InputText type="password" @bind-Value="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
                 <label for="password" class="form-label">Senha</label>
-                <ValidationMessage For="() => Input.Password" class="text-danger" />
             </div>
             <div>
                 <button class="w-100 btn btn-lg btn-primary" @onclick="DoLoginAsync" disabled="@loading">
                     @if (loading)
                     {
                         <span class="spinner-border spinner-border-sm mr-1"></span>
+                        @textoBotao
+                    } 
+                    else
+                    {
+                        @textoBotao
                     }
-                    Log in
                 </button>
             </div>
         </EditForm>
@@ -60,6 +61,7 @@
     </NotAuthorized>
 </AuthorizeView>
 @code {
+    private String textoBotao = "Entrar";
     private bool success, errors;
     private string email = string.Empty;
     private string password = string.Empty;
@@ -72,22 +74,25 @@
     public async Task DoLoginAsync()
     {
         loading = true;
+        textoBotao = "  Entrando...";
         success = errors = false;
         errorList = [];
 
         if (string.IsNullOrWhiteSpace(Input.Email))
         {
             errors = true;
-            errorList = ["Email is required."];
-
+            errorList = ["E-mail é obrigatório"];
+            loading = false;
+            textoBotao = "Entrar";
             return;
         }
 
         if (string.IsNullOrWhiteSpace(Input.Password))
     {
             errors = true;
-            errorList = ["Password is required."];
-
+            errorList = ["Senha é obrigatório"];
+            loading = false;
+            textoBotao = "Entrar";
             return;
         }
 
@@ -104,6 +109,7 @@
             errorList = result.ErrorList;
         }
         loading = false;
+        textoBotao = "Entrar";
     }
 
     private sealed class InputModel

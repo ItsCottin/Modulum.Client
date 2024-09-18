@@ -3,11 +3,11 @@
 
 @inject IAccountManagement Acct
 
-<h3>Register</h3>
+<h3>Cadastre-se</h3>
 
-<AuthorizeView>
+<AuthorizeView Context="authContext">
     <Authorized>
-        <div class="alert alert-success">Você já está logado como @context.User.Identity?.Name.</div>
+        <div class="alert alert-success">Você já está logado como @authContext.User.Identity?.Name.</div>
     </Authorized>
     <NotAuthorized>
         @if (success)
@@ -23,7 +23,35 @@
                     <div class="alert alert-danger">@error</div>
                 }
             }
-            <div class="flex-outer">
+            <EditForm Model="Input" method="post" FormName="Cadastre-se">
+                <DataAnnotationsValidator />
+                <h2>Crie uma nova conta.</h2>
+                <hr />
+                <div class="form-floating mb-3">
+                    <InputText @bind-Value="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <InputText type="password" @bind-Value="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                    <label for="password">Senha</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <InputText type="password" @bind-Value="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                    <label for="confirm-password">Confirme sua Senha</label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" @onclick="DoRegisterAsync" disabled="@loading">
+                    @if (loading)
+                    {
+                        <span class="spinner-border spinner-border-sm mr-1"></span>
+                        @textoBotao
+                    }
+                    else
+                    {
+                        @textoBotao
+                    }
+                </button>
+            </EditForm>
+            <!--<div class="flex-outer">
                 <div>
                     <label for="email">
                         Email:
@@ -45,66 +73,86 @@
                 <div>
                     <button class="btn btn-primary" @onclick="DoRegisterAsync">Register</button>
                 </div>
-            </div>
+            </div>-->
         }
     </NotAuthorized>
 </AuthorizeView>
 
 @code {
+    private String textoBotao = "Cadastrar";
     private bool success, errors;
     private string email = string.Empty;
     private string password = string.Empty;
     private string confirmPassword = string.Empty;
     private string[] errorList = [];
 
+    [SupplyParameterFromForm]
+    private InputModel Input { get; set; } = new();
+    private bool loading;
+
     public async Task DoRegisterAsync()
     {
+        loading = true;
+        textoBotao = "  Cadastrando...";
         success = errors = false;
         errorList = [];
 
-        if (string.IsNullOrWhiteSpace(email))
+        if (string.IsNullOrWhiteSpace(Input.Email))
         {
             errors = true;
-            errorList = ["Email is required."];
-
+            errorList = ["E-mail é obrigatório"];
+            loading = false;
+            textoBotao = "Cadastrar";
             return;
         }
 
-        if (string.IsNullOrWhiteSpace(password))
+        if (string.IsNullOrWhiteSpace(Input.Password))
         {
             errors = true;
-            errorList = ["Password is required."];
-
+            errorList = ["Senha é obrigatório"];
+            loading = false;
+            textoBotao = "Cadastrar";
             return;
         }
 
-        if (string.IsNullOrWhiteSpace(confirmPassword))
+        if (string.IsNullOrWhiteSpace(Input.ConfirmPassword))
         {
             errors = true;
-            errorList = ["Please confirm your password."];
-
+            errorList = ["Por favor confirme sua senha"];
+            loading = false;
+            textoBotao = "Cadastrar";
             return;
         }
 
-        if (password != confirmPassword)
+        if (Input.Password != Input.ConfirmPassword)
         {
             errors = true;
-            errorList = ["Passwords don't match."];
-
+            errorList = ["Sua senha não é identica"];
+            loading = false;
+            textoBotao = "Cadastrar";
             return;
         }
 
-        var result = await Acct.RegisterAsync(email, password);
+        var result = await Acct.RegisterAsync(Input.Email, Input.Password);
 
         if (result.Succeeded)
         {
             success = true;
-            email = password = confirmPassword = string.Empty;
+            Input.Email = Input.Password = Input.ConfirmPassword = string.Empty;
         }
         else
         {
             errors = true;
             errorList = result.ErrorList;
         }
+        textoBotao = "Cadastrar";
+        loading = false;
+    }
+
+    private sealed class InputModel
+    {
+        public string Email { get; set; } = "";
+        public string Password { get; set; } = "";
+        public string ConfirmPassword { get; set; } = "";
     }
 }

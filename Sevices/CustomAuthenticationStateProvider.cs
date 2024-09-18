@@ -96,7 +96,7 @@ namespace modulum_client.Sevices
 
         public async Task<FormResult> RegisterAsync(string email, string password)
         {
-            string[] defaultDetail = ["An unknown error prevented registration from succeeding."];
+            string[] defaultDetail = ["Um erro desconhecido impediu o sucesso do registro."];
 
             try
             {
@@ -170,7 +170,7 @@ namespace modulum_client.Sevices
             return new FormResult
             {
                 Succeeded = false,
-                ErrorList = ["Invalid email and/or password."]
+                ErrorList = ["E-mail e/ou senha inválidos."]
             };
         }
 
