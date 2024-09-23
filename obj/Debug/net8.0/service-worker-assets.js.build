@@ -41,7 +41,7 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-U1HKDMOyEyhxeZFqpBJlC8ZkM\/XckdILE7IDTubv2a8=",
+      "hash": "sha256-cgYDuqAblB0fjrIEOkvopNaPRSzDOWa7cD34RvKU1Sc=",
       "url": "modulum-client.styles.css"
     },
     {
@@ -61,11 +61,15 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.Authorization.wasm"
     },
     {
-      "hash": "sha256-CMRkrzCDzgX1XUEE5PWWJ6Q9JsVt\/StuycyytVANvQ8=",
+      "hash": "sha256-ZB9Iu49s5SYUpy+xnFe+KIg2LeHGglqjWkohvxQ8m30=",
       "url": "_framework\/Microsoft.AspNetCore.Components.Forms.wasm"
     },
     {
-      "hash": "sha256-supFGv3TIB\/pt7VOZOt4lPKVw0aeRxy3rAjLsoVD1EA=",
+      "hash": "sha256-eDU2079XbCCZKCCQAZIC4Vsrs33nE+eZUmPxAS0DBq0=",
+      "url": "_framework\/Microsoft.AspNetCore.Components.QuickGrid.wasm"
+    },
+    {
+      "hash": "sha256-AXG8nDVuFAkAqYk+rpFBOg7YgamHxzut3Upfr4na8wA=",
       "url": "_framework\/Microsoft.AspNetCore.Components.Web.wasm"
     },
     {
@@ -149,7 +153,7 @@
       "url": "_framework\/Microsoft.Extensions.Primitives.wasm"
     },
     {
-      "hash": "sha256-Mc8kHWq7V5l58xzTOXmPiDoCXg3n1SO7zLVUS4Mov\/I=",
+      "hash": "sha256-okH\/\/v00d9qA97lMQaTcXOMrfK8IIcOYOfzcEhcQle8=",
       "url": "_framework\/Microsoft.JSInterop.wasm"
     },
     {
@@ -869,17 +873,25 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-5PggoMqUW7KCblQ1WO\/4xr4l8e3MB08arRtFGCjaNlg=",
+      "hash": "sha256-V4iWf3tWjXRdxn9\/bo2YPnMuQ1lNWcE4kmAolSHvzZk=",
       "url": "_framework\/modulum-client.wasm"
     },
     {
-      "hash": "sha256-zKEcHSiXc8dixokwQXQm2ctcSzeUCvipFo+aiSAPRMc=",
+      "hash": "sha256-Lubg2aFFgst33OrUI34oR7tMjJFicEVufqtpRDjxARU=",
       "url": "_framework\/modulum-client.pdb"
     },
     {
-      "hash": "sha256-E3MTbtL8UKz6Bd\/WxlGCzNJbD7APALmB2NeonWORWD8=",
+      "hash": "sha256-ODPhcZP7SK7ozfgt7mKFv2PIDCDMwoSmrnT4+u0cjcE=",
       "url": "_framework\/blazor.boot.json"
+    },
+    {
+      "hash": "sha256-tnamWuQ2F5I2J8hbtBt4\/9i8Mb2y2o+9Tepj5tUrSdU=",
+      "url": "_content\/Microsoft.AspNetCore.Components.QuickGrid\/QuickGrid.razor.js"
+    },
+    {
+      "hash": "sha256-Nuu0BHvGBlwN6c5FSVjV9yxX0YPfwg3ufdOucRJCOz0=",
+      "url": "_content\/Microsoft.AspNetCore.Components.QuickGrid\/Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css"
     }
   ],
-  "version": "Jj8VN7ON"
+  "version": "FeIgGbZb"
 };

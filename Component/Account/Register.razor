@@ -3,78 +3,76 @@
 
 @inject IAccountManagement Acct
 
-<h3>Cadastre-se</h3>
+@if (success)
+{
+    <h3>Sucesso</h3>
+}
+else
+{
+    <h3>Cadastre-se</h3>
+}
 
 <AuthorizeView Context="authContext">
     <Authorized>
         <div class="alert alert-success">Você já está logado como @authContext.User.Identity?.Name.</div>
     </Authorized>
     <NotAuthorized>
-        @if (success)
-        {
-            <div class="alert alert-success">Você se registrou com sucesso. Agora você pode <a href="login">login</a>.</div>
-        }
-        else
-        {
-            if (errors)
-            {
-                foreach (var error in errorList)
-                {
-                    <div class="alert alert-danger">@error</div>
-                }
-            }
-            <EditForm Model="Input" method="post" FormName="Cadastre-se">
-                <DataAnnotationsValidator />
-                <h2>Crie uma nova conta.</h2>
-                <hr />
-                <div class="form-floating mb-3">
-                    <InputText @bind-Value="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                    <label for="email">Email</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <InputText type="password" @bind-Value="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                    <label for="password">Senha</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <InputText type="password" @bind-Value="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                    <label for="confirm-password">Confirme sua Senha</label>
-                </div>
-                <button class="w-100 btn btn-lg btn-primary" @onclick="DoRegisterAsync" disabled="@loading">
-                    @if (loading)
+        <div class="row">
+            <div class="col-xxl-4 col-xl-5 col-lg-7 col-md-9 col-sm-11 col-xs-12">
+                <section>
+                    @if (success)
                     {
-                        <span class="spinner-border spinner-border-sm mr-1"></span>
-                        @textoBotao
+                        <div class="alert alert-success">Cadastro realizado com sucesso, Verifique a caixa de entrada do seu e-mail para mais informações </div>
                     }
                     else
                     {
-                        @textoBotao
+                        if (errors)
+                        {
+                            foreach (var error in errorList)
+                            {
+                                <div class="alert alert-danger">@error</div>
+                            }
+                        }
+                        <EditForm Model="Input" method="post" FormName="Cadastre-se">
+                            <DataAnnotationsValidator />
+                            <h2>Crie uma nova conta.</h2>
+                            <hr />
+                            <div class="form-floating mb-3">
+                                <InputText @bind-Value="Input.Nome" class="form-control" autocomplete="" aria-required="true" placeholder="Nom Completo" />
+                                <label for="nome">Nome Completo</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <InputText @bind-Value="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <InputText type="password" @bind-Value="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                                <label for="password">Senha</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <InputText type="password" @bind-Value="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                                <label for="confirm-password">Confirme sua Senha</label>
+                            </div>
+                            <button class="w-100 btn btn-lg btn-primary" @onclick="DoRegisterAsync" disabled="@loading">
+                                @if (loading)
+                                {
+                                    <span class="spinner-border spinner-border-sm mr-1"></span>
+                                    @textoBotao
+                                }
+                                else
+                                {
+                                    @textoBotao
+                                }
+                            </button>
+                        </EditForm>
                     }
-                </button>
-            </EditForm>
-            <!--<div class="flex-outer">
-                <div>
-                    <label for="email">
-                        Email:
-                    </label>
-                    <input autofocus autocomplete="on" required id="email" name="emailInput" placeholder="Enter your email address" type="email" @bind-value="email" />
-                </div>
-                <div>
-                    <label for="password">
-                        Senha:
-                    </label>
-                    <input required id="password" name="passwordInput" placeholder="Enter your password" type="password" @bind-value="password" /><br />
-                </div>
-                <div>
-                    <label for="confirmPassword">
-                        Confirme sua Senha:
-                    </label>
-                    <input required id="confirmPassword" name="confirmPasswordInput" placeholder="Re-enter your password" type="password" @bind-value="confirmPassword" />
-                </div>
-                <div>
-                    <button class="btn btn-primary" @onclick="DoRegisterAsync">Register</button>
-                </div>
-            </div>-->
-        }
+                </section>
+            </div>
+            <div class="col-md-6 col-md-offset-2">
+                <section>
+                </section>
+            </div>
+        </div>
     </NotAuthorized>
 </AuthorizeView>
 
@@ -133,9 +131,9 @@
             return;
         }
 
-        var result = await Acct.RegisterAsync(Input.Email, Input.Password);
+        var result = await Acct.RegisterAsync(Input.Nome, Input.Email, Input.Password);
 
-        if (result.Succeeded)
+        if (result.Status)
         {
             success = true;
             Input.Email = Input.Password = Input.ConfirmPassword = string.Empty;
@@ -143,7 +141,7 @@
         else
         {
             errors = true;
-            errorList = result.ErrorList;
+            errorList = result.Mensagens; // aqui
         }
         textoBotao = "Cadastrar";
         loading = false;
@@ -151,6 +149,7 @@
 
     private sealed class InputModel
     {
+        public string Nome { get; set; } = "";
         public string Email { get; set; } = "";
         public string Password { get; set; } = "";
         public string ConfirmPassword { get; set; } = "";

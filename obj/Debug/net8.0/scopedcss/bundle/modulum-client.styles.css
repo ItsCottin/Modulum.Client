@@ -1,3 +1,37 @@
+@import '_content/Microsoft.AspNetCore.Components.QuickGrid/Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css';
+
+/* /Component/Account/Users.razor.rz.scp.css */
+/* Fix height and enable scrolling */
+.grid[b-727fk57k58] {
+    height: 25rem;
+    overflow-y: auto;
+}
+
+    .grid[b-727fk57k58]  table {
+        min-width: 100%;
+    }
+
+/* Sticky header while scrolling */
+[b-727fk57k58] thead {
+    position: sticky;
+    top: 0;
+    background-color: #d8d8d8;
+    outline: 1px solid gray;
+    z-index: 1;
+}
+
+/* For virtualized grids, it's essential that all rows have the same known height */
+[b-727fk57k58] tr {
+    height: 30px;
+    border-bottom: 0.5px solid silver;
+}
+
+[b-727fk57k58] tbody td {
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 0;
+    text-overflow: ellipsis;
+}
 /* /Layout/MainLayout.razor.rz.scp.css */
 .page[b-xutuwvhek1] {
     position: relative;

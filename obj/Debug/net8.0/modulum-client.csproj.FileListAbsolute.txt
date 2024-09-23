@@ -1070,9 +1070,7 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\modulum-clien
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\modulum-client.csproj.CoreCompileInputs.cache
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\modulum-client.MvcApplicationPartsAssemblyInfo.cache
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\modulum-client.sourcelink.json
-C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\modulum-client.dll
-C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\refint\modulum-client.dll
-C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\modulum-client.pdb
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Blazored.LocalStorage.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\dotnet.js
@@ -1087,6 +1085,7 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_fram
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.wasm
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.QuickGrid.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Web.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.wasm
@@ -1116,6 +1115,8 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_fram
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.VisualBasic.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Win32.Primitives.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Win32.Registry.wasm
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\modulum-client.pdb
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\modulum-client.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\mscorlib.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\netstandard.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.AppContext.wasm
@@ -1280,19 +1281,6 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_fram
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XPath.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XPath.XDocument.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\WindowsBase.wasm
-C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.8.0.5.4d7g4reh3v.js.gz
-C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.gz
-C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.8.0.5.aai8wvqo74.js.gz
-C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.map.gz
-C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.js.map.gz
-C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\icudt_EFIGS.dat.gz
-C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\icudt_CJK.dat.gz
-C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\icudt_no_CJK.dat.gz
-C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.wasm.gz
-C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js.gz
-C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json
-C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\modulum-client.pdb
-C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\modulum-client.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.ComponentModel.DataAnnotations.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.Emit.Lightweight.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.ComponentModel.Annotations.wasm.gz
@@ -1314,7 +1302,9 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_fram
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Net.Security.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.Extensions.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.Extensions.wasm.gz
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.8.0.5.4d7g4reh3v.js.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.ComponentModel.wasm.gz
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Text.Encoding.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Private.DataContractSerialization.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Net.Mail.wasm.gz
@@ -1345,6 +1335,7 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_fram
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.FileSystemGlobbing.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.DispatchProxy.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Xml.Linq.wasm.gz
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.8.0.5.aai8wvqo74.js.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Diagnostics.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Configuration.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.CompilerServices.VisualC.wasm.gz
@@ -1360,6 +1351,7 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_fram
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Security.Claims.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Net.Http.Json.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Text.Encoding.Extensions.wasm.gz
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.map.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.ObjectModel.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Globalization.Extensions.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Net.NameResolution.wasm.gz
@@ -1439,15 +1431,19 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_fram
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Net.Requests.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Threading.Channels.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.DependencyInjection.Abstractions.wasm.gz
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.js.map.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Security.SecureString.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.IO.IsolatedStorage.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Diagnostics.TraceSource.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.Serialization.Xml.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Drawing.Primitives.wasm.gz
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\icudt_EFIGS.dat.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Globalization.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.FileProviders.Physical.wasm.gz
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\icudt_CJK.dat.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.ValueTuple.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Transactions.wasm.gz
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.QuickGrid.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Logging.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Linq.Expressions.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.Numerics.wasm.gz
@@ -1465,9 +1461,12 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_fram
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Collections.Immutable.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.IO.Compression.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.Handles.wasm.gz
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\icudt_no_CJK.dat.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Numerics.wasm.gz
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XPath.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Text.RegularExpressions.wasm.gz
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Data.DataSetExtensions.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Collections.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Logging.Abstractions.wasm.gz
@@ -1503,6 +1502,7 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.Asp
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Authorization.dll
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.dll
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.AspNetCore.Components.WebAssembly.dll
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
@@ -1709,6 +1709,7 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Micros
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.Authorization.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.Forms.wasm
+C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.QuickGrid.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.Web.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.WebAssembly.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Metadata.wasm
@@ -1911,6 +1912,7 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\staticwebasse
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.modulum-client.props
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.modulum-client.props
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\staticwebassets.pack.json
+C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\scopedcss\Component\Account\Users.razor.rz.scp.css
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\scopedcss\Layout\MainLayout.razor.rz.scp.css
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\scopedcss\Layout\NavMenu.razor.rz.scp.css
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\scopedcss\bundle\modulum-client.styles.css
@@ -1921,6 +1923,7 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\mh
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\xoz7cb8mol.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\z0s1bhg8d1.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\yvwddp604h.gz
+C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\rwggnf3zoa.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\h45rzddjvx.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\37ag103rxw.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\89xkrhqus5.gz
@@ -2128,4 +2131,7 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\fv
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\service-worker\service-worker.js
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\service-worker-assets.js.build
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\modulum-.2FCF244D.Up2Date
+C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\modulum-client.dll
+C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\refint\modulum-client.dll
+C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\modulum-client.pdb
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\ref\modulum-client.dll

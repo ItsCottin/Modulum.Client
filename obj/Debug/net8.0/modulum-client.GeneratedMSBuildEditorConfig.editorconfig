@@ -26,6 +26,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/_Programacao/Projetos/_ Modulum/modulum-client/Component/Account/AddRoles.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50XEFjY291bnRcQWRkUm9sZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/_Programacao/Projetos/_ Modulum/modulum-client/Component/Account/EditUpdateUser.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50XEFjY291bnRcRWRpdFVwZGF0ZVVzZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/_Programacao/Projetos/_ Modulum/modulum-client/Component/Account/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50XEFjY291bnRcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -53,6 +61,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/_Programacao/Projetos/_ Modulum/modulum-client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/_Programacao/Projetos/_ Modulum/modulum-client/Component/Account/Users.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50XEFjY291bnRcVXNlcnMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-727fk57k58
 
 [C:/_Programacao/Projetos/_ Modulum/modulum-client/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=

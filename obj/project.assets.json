@@ -72,10 +72,10 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Forms/8.0.5": {
+      "Microsoft.AspNetCore.Components.Forms/8.0.8": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "8.0.5"
+          "Microsoft.AspNetCore.Components": "8.0.8"
         },
         "compile": {
           "lib/net8.0/Microsoft.AspNetCore.Components.Forms.dll": {
@@ -88,14 +88,36 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Web/8.0.5": {
+      "Microsoft.AspNetCore.Components.QuickGrid/8.0.8": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "8.0.5",
-          "Microsoft.AspNetCore.Components.Forms": "8.0.5",
+          "Microsoft.AspNetCore.Components.Web": "8.0.8"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.AspNetCore.Components.QuickGrid.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.Components.QuickGrid.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Microsoft.AspNetCore.Components.QuickGrid.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Microsoft.AspNetCore.Components.QuickGrid.props": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components.Web/8.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "8.0.8",
+          "Microsoft.AspNetCore.Components.Forms": "8.0.8",
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "Microsoft.Extensions.Primitives": "8.0.0",
-          "Microsoft.JSInterop": "8.0.5",
+          "Microsoft.JSInterop": "8.0.8",
           "System.IO.Pipelines": "8.0.0"
         },
         "compile": {
@@ -511,7 +533,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.JSInterop/8.0.5": {
+      "Microsoft.JSInterop/8.0.8": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.JSInterop.dll": {
@@ -698,10 +720,10 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Forms/8.0.5": {
+      "Microsoft.AspNetCore.Components.Forms/8.0.8": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "8.0.5"
+          "Microsoft.AspNetCore.Components": "8.0.8"
         },
         "compile": {
           "lib/net8.0/Microsoft.AspNetCore.Components.Forms.dll": {
@@ -714,14 +736,36 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Web/8.0.5": {
+      "Microsoft.AspNetCore.Components.QuickGrid/8.0.8": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "8.0.5",
-          "Microsoft.AspNetCore.Components.Forms": "8.0.5",
+          "Microsoft.AspNetCore.Components.Web": "8.0.8"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.AspNetCore.Components.QuickGrid.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.Components.QuickGrid.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Microsoft.AspNetCore.Components.QuickGrid.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Microsoft.AspNetCore.Components.QuickGrid.props": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components.Web/8.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "8.0.8",
+          "Microsoft.AspNetCore.Components.Forms": "8.0.8",
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "Microsoft.Extensions.Primitives": "8.0.0",
-          "Microsoft.JSInterop": "8.0.5",
+          "Microsoft.JSInterop": "8.0.8",
           "System.IO.Pipelines": "8.0.0"
         },
         "compile": {
@@ -1137,7 +1181,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.JSInterop/8.0.5": {
+      "Microsoft.JSInterop/8.0.8": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.JSInterop.dll": {
@@ -1330,10 +1374,10 @@
         "microsoft.aspnetcore.components.authorization.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.Forms/8.0.5": {
-      "sha512": "yRtm0OxhqoVxYko6ew4FVHDSG3krBqnLX59mBy/OBzKCxt9ias++SIaHvpTLsDHR9MeYzq7EzkNnyLjZJQbdsA==",
+    "Microsoft.AspNetCore.Components.Forms/8.0.8": {
+      "sha512": "81P0TqjN+Q52QZbMje1Cirb7DOPKBW8CiemLo9x0KITWEGofdNJJECK1FPoMfUkgyaOknuCRQy0L+6G3K6+rPg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.forms/8.0.5",
+      "path": "microsoft.aspnetcore.components.forms/8.0.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1341,14 +1385,35 @@
         "THIRD-PARTY-NOTICES.txt",
         "lib/net8.0/Microsoft.AspNetCore.Components.Forms.dll",
         "lib/net8.0/Microsoft.AspNetCore.Components.Forms.xml",
-        "microsoft.aspnetcore.components.forms.8.0.5.nupkg.sha512",
+        "microsoft.aspnetcore.components.forms.8.0.8.nupkg.sha512",
         "microsoft.aspnetcore.components.forms.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.Web/8.0.5": {
-      "sha512": "KaB8kgNfv/iYW1vdirVHFsfjsuGaAmODCRWf2lzO1Eyvc20Glx17wVpFOjH1FSAa23t6A2VM8y8ktk3n/vqNmQ==",
+    "Microsoft.AspNetCore.Components.QuickGrid/8.0.8": {
+      "sha512": "3o5o08WyBFe8DMutUrl1k9KtJy2bw4/19ZTWR5DKNN4Y1AdpayhjIpQrxVkOyLnLuFO02b6OxAMXrJ0fDeCBQQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.web/8.0.5",
+      "path": "microsoft.aspnetcore.components.quickgrid/8.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/Microsoft.AspNetCore.Components.QuickGrid.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Microsoft.AspNetCore.Components.QuickGrid.props",
+        "buildTransitive/Microsoft.AspNetCore.Components.QuickGrid.props",
+        "lib/net8.0/Microsoft.AspNetCore.Components.QuickGrid.dll",
+        "lib/net8.0/Microsoft.AspNetCore.Components.QuickGrid.xml",
+        "microsoft.aspnetcore.components.quickgrid.8.0.8.nupkg.sha512",
+        "microsoft.aspnetcore.components.quickgrid.nuspec",
+        "staticwebassets/Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
+        "staticwebassets/QuickGrid.razor.js"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.Web/8.0.8": {
+      "sha512": "PX6JYvx2A5R1cQNLiTMMcm+7zvloVCGxvuRf24Ezaj1aUvZDYnSfyNkD2gyVun7AizGAn+x3QYr4mBfbZ9L5TA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.web/8.0.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1356,7 +1421,7 @@
         "THIRD-PARTY-NOTICES.txt",
         "lib/net8.0/Microsoft.AspNetCore.Components.Web.dll",
         "lib/net8.0/Microsoft.AspNetCore.Components.Web.xml",
-        "microsoft.aspnetcore.components.web.8.0.5.nupkg.sha512",
+        "microsoft.aspnetcore.components.web.8.0.8.nupkg.sha512",
         "microsoft.aspnetcore.components.web.nuspec"
       ]
     },
@@ -2178,10 +2243,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.JSInterop/8.0.5": {
-      "sha512": "FzBXOrFd7KAVm+Ot1Gxgu1LdFjxWmn0VGEXXH+LII5nd59oHADrN2yMJGS6gJlDtz4ZcAJ+DWGJLBAFhsLOfRQ==",
+    "Microsoft.JSInterop/8.0.8": {
+      "sha512": "vJhGdkYKvytLIMi5J2vpsyfjPKzSm7dnCfdGwjt4skvJcomlJyKDTA3wAwxIMuMbiWcOi1HuiQ6R+85C+qFJrw==",
       "type": "package",
-      "path": "microsoft.jsinterop/8.0.5",
+      "path": "microsoft.jsinterop/8.0.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2189,7 +2254,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net8.0/Microsoft.JSInterop.dll",
         "lib/net8.0/Microsoft.JSInterop.xml",
-        "microsoft.jsinterop.8.0.5.nupkg.sha512",
+        "microsoft.jsinterop.8.0.8.nupkg.sha512",
         "microsoft.jsinterop.nuspec"
       ]
     },
@@ -2500,6 +2565,7 @@
     "net8.0": [
       "Blazored.LocalStorage >= 4.5.0",
       "Microsoft.AspNetCore.Components.Authorization >= 8.0.8",
+      "Microsoft.AspNetCore.Components.QuickGrid >= 8.0.8",
       "Microsoft.AspNetCore.Components.WebAssembly >= 8.0.5",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 8.0.5",
       "Microsoft.Extensions.Http >= 8.0.0",
@@ -2562,6 +2628,10 @@
             "version": "[4.5.0, )"
           },
           "Microsoft.AspNetCore.Components.Authorization": {
+            "target": "Package",
+            "version": "[8.0.8, )"
+          },
+          "Microsoft.AspNetCore.Components.QuickGrid": {
             "target": "Package",
             "version": "[8.0.8, )"
           },

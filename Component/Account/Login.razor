@@ -8,56 +8,50 @@
         <div class="alert alert-success">Você está logado como @authContext.User.Identity?.Name.</div>
     </Authorized>
     <NotAuthorized>
-        @if (errors)
-        {
-            @foreach (var error in errorList)
-            {
-                <div class="alert alert-danger">@error</div>
-            }
-        }
-        <EditForm Model="Input" method="post" FormName="Bem vindo ao Modulum =)">
-            <DataAnnotationsValidator />
-            <h2>Use uma conta local para entrar.</h2>
-            <hr />
-            <div class="form-floating mb-3">
-                <InputText @bind-Value="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                <label for="email" class="form-label">Email</label>
-            </div>
-            <div class="form-floating mb-3">
-                <InputText type="password" @bind-Value="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
-                <label for="password" class="form-label">Senha</label>
-            </div>
-            <div>
-                <button class="w-100 btn btn-lg btn-primary" @onclick="DoLoginAsync" disabled="@loading">
-                    @if (loading)
+        <div class="row">
+            <div class="col-xxl-4 col-xl-5 col-lg-7 col-md-9 col-sm-11 col-xs-12">
+                <section>
+                    @if (errors)
                     {
-                        <span class="spinner-border spinner-border-sm mr-1"></span>
-                        @textoBotao
-                    } 
-                    else
-                    {
-                        @textoBotao
+                        @foreach (var error in errorList)
+                        {
+                            <div class="alert alert-danger">@error</div>
+                        }
                     }
-                </button>
+                    <EditForm Model="Input" method="post" FormName="Bem vindo ao Modulum =)">
+                        <DataAnnotationsValidator />
+                        <h2>Use uma conta local para entrar.</h2>
+                        <hr />
+                        <div class="form-floating mb-3">
+                            <InputText @bind-Value="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                            <label for="email" class="form-label">Email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <InputText type="password" @bind-Value="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
+                            <label for="password" class="form-label">Senha</label>
+                        </div>
+                        <div>
+                            <button class="w-100 btn btn-lg btn-primary" @onclick="DoLoginAsync" disabled="@loading">
+                                @if (loading)
+                                {
+                                    <span class="spinner-border spinner-border-sm mr-1"></span>
+                                    @textoBotao
+                                } 
+                                else
+                                {
+                                    @textoBotao
+                                }
+                            </button>
+                        </div>
+                    </EditForm>
+                </section>
             </div>
-        </EditForm>
-        <!--div class="flex-outer">
-            <div>
-                <label for="email">
-                    Email:
-                </label>
-                <input required id="email" name="emailInput" placeholder="Enter your email address" type="email" @bind-value="email" />
+            <div class="col-md-6 col-md-offset-2">
+                <section>
+            
+                </section>
             </div>
-            <div>
-                <label for="password">
-                    Senha:
-                </label>
-                <input required id="password" name="passwordInput" placeholder="Enter your password" type="password" @bind-value="password" />
-            </div>
-            <div>
-                <button class="btn btn-primary" @onclick="DoLoginAsync">Login</button>
-            </div>
-        </div>-->
+        </div>
     </NotAuthorized>
 </AuthorizeView>
 @code {
@@ -98,7 +92,7 @@
 
         var result = await Acct.LoginAsync(Input.Email, Input.Password);
 
-        if (result.Succeeded)
+        if (result.Status)
         {
             success = true;
             Input.Email = Input.Password = string.Empty;
@@ -106,7 +100,7 @@
         else
         {
             errors = true;
-            errorList = result.ErrorList;
+            errorList = result.Mensagens!;
         }
         loading = false;
         textoBotao = "Entrar";
