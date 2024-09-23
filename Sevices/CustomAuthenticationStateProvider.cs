@@ -7,6 +7,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Text.Json;
 using System.Collections.Generic;
+using modulum_client.Model.Response;
 namespace modulum_client.Sevices
 {
     public class CustomAuthenticationStateProvider : AuthenticationStateProvider, IAccountManagement
@@ -94,15 +95,17 @@ namespace modulum_client.Sevices
 
         }
 
-        public async Task<BaseResponse> RegisterAsync(string userName, string email, string password)
+        public async Task<CadastroUsuarioResponse> RegisterAsync(string userName, string email, string password)
         {
             string[] defaultDetail = ["Um erro desconhecido impediu o sucesso do registro."];
             try
             {
                 var result = await _httpClient.PostAsJsonAsync("Account/create", new { userName, email, password }); // TODO - Alterar nessa linha para realizar chamada ao endpoint implementado - Implementado
+                var userJson = await result.Content.ReadAsStringAsync();
+                var cadastroUsuarioResponse = JsonSerializer.Deserialize<CadastroUsuarioResponse>(userJson, jsonSerializerOptions);
                 if (result.IsSuccessStatusCode)
                 {
-                    return new BaseResponse { Status = true, Mensagens = ["Conta criada com sucesso." ] };
+                    return cadastroUsuarioResponse!;
                 }
 
                 var details = await result.Content.ReadAsStringAsync();
@@ -123,11 +126,11 @@ namespace modulum_client.Sevices
                         );
                     }
                 }
-                return new BaseResponse { Status = false, Mensagens = mensagens.Any() ? mensagens.ToArray() : defaultDetail };
+                return new CadastroUsuarioResponse { Status = false, Mensagem = mensagens.Any() ? mensagens.ToArray()[0] : defaultDetail[0] };
             }
             catch (Exception ex)
             {
-                return new BaseResponse { Status = false, Mensagens = [ ex.Message ] };
+                return new CadastroUsuarioResponse { Status = false, Mensagem =  ex.Message };
             }
         }
 
@@ -162,6 +165,25 @@ namespace modulum_client.Sevices
                 throw;
             }
             return new BaseResponse { Status = false, Mensagens = [ "E-mail e/ou senha inválidos." ] };
+        }
+
+        public async Task<BaseResponse> ConfirmEmail(string userId, string token) 
+        {
+            try
+            {
+                var result = await _httpClient.GetAsync($"Account/confirmEmail?userId={userId}&token={token}");
+                if (result.IsSuccessStatusCode)
+                {
+                    var emailIsConfirmed = await result.Content.ReadAsStringAsync();
+                    var baseResponse = JsonSerializer.Deserialize<BaseResponse>(emailIsConfirmed, jsonSerializerOptions);
+                    return baseResponse;
+                }
+                return new BaseResponse { Status = false, Mensagens = ["Ocorreu algum erro"] };
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
         }
 
         public async Task LogoutAsync()

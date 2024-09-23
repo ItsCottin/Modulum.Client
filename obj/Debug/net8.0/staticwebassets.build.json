@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "36kgRMY2pIAFPgNcodweFe+cvu8jHbUNd8iJPn6Guo8=",
+  "Hash": "7fmd1dP0cdR3wYkcfIVlXnqZ+0S5fR/IFv+JHMBSmhU=",
   "Source": "modulum-client",
   "BasePath": "/",
   "Mode": "Root",
@@ -395,6 +395,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\obj\\Debug\\net8.0\\webcil\\Microsoft.AspNetCore.Metadata.wasm"
+    },
+    {
+      "Identity": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.wasm",
+      "SourceId": "modulum-client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.WebUtilities.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\obj\\Debug\\net8.0\\webcil\\Microsoft.AspNetCore.WebUtilities.wasm"
     },
     {
       "Identity": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.CSharp.wasm",
@@ -794,6 +813,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\obj\\Debug\\net8.0\\webcil\\Microsoft.JSInterop.WebAssembly.wasm"
+    },
+    {
+      "Identity": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.wasm",
+      "SourceId": "modulum-client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Net.Http.Headers.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\obj\\Debug\\net8.0\\webcil\\Microsoft.Net.Http.Headers.wasm"
     },
     {
       "Identity": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.VisualBasic.Core.wasm",
@@ -4634,6 +4672,25 @@
       "OriginalItemSpec": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Linq.Queryable.wasm"
     },
     {
+      "Identity": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\obj\\Debug\\net8.0\\compressed\\6ry3ytoevx.gz",
+      "SourceId": "modulum-client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Net.Http.Headers.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.wasm"
+    },
+    {
       "Identity": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\obj\\Debug\\net8.0\\compressed\\6zftsgm19y.gz",
       "SourceId": "modulum-client",
       "SourceType": "Computed",
@@ -7254,6 +7311,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.ComponentModel.Primitives.wasm"
+    },
+    {
+      "Identity": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\obj\\Debug\\net8.0\\compressed\\sig9tunzwd.gz",
+      "SourceId": "modulum-client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.WebUtilities.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.wasm"
     },
     {
       "Identity": "C:\\_Programacao\\Projetos\\_ Modulum\\modulum-client\\obj\\Debug\\net8.0\\compressed\\t5z19rzqkw.gz",

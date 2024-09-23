@@ -22,7 +22,7 @@ else
                 <section>
                     @if (success)
                     {
-                        <div class="alert alert-success">Cadastro realizado com sucesso, Verifique a caixa de entrada do seu e-mail para mais informações </div>
+                        <div class="alert alert-success">Cadastro realizado com sucesso, Verifique a caixa de entrada do seu e-mail para mais informações ou clique nesse link para ativar seu email: <a href="@urlAtivaEmail">Aqui</a> </div>
                     }
                     else
                     {
@@ -83,6 +83,7 @@ else
     private string password = string.Empty;
     private string confirmPassword = string.Empty;
     private string[] errorList = [];
+    private string urlAtivaEmail = string.Empty;
 
     [SupplyParameterFromForm]
     private InputModel Input { get; set; } = new();
@@ -141,8 +142,9 @@ else
         else
         {
             errors = true;
-            errorList = result.Mensagens; // aqui
+            errorList = [ result.Mensagem! ];
         }
+        urlAtivaEmail = result.url!;
         textoBotao = "Cadastrar";
         loading = false;
     }

@@ -1090,6 +1090,7 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_fram
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Web.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Metadata.wasm
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.CSharp.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Configuration.Abstractions.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Configuration.Binder.wasm
@@ -1111,6 +1112,7 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_fram
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Primitives.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.JSInterop.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.JSInterop.WebAssembly.wasm
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Net.Http.Headers.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.VisualBasic.Core.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.VisualBasic.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Win32.Primitives.wasm
@@ -1313,6 +1315,7 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_fram
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.IO.Pipes.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Threading.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Linq.Queryable.wasm.gz
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Net.Http.Headers.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.DependencyInjection.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Threading.Timer.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Resources.ResourceManager.wasm.gz
@@ -1451,6 +1454,7 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_fram
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Security.Cryptography.Primitives.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\WindowsBase.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.ComponentModel.Primitives.wasm.gz
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Diagnostics.Abstractions.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.IO.FileSystem.AccessControl.wasm.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XDocument.wasm.gz
@@ -1506,6 +1510,7 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.Asp
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.AspNetCore.Components.WebAssembly.dll
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.AspNetCore.WebUtilities.dll
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
@@ -1526,6 +1531,7 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.Ext
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.JSInterop.dll
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.JSInterop.WebAssembly.dll
+C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.Net.Http.Headers.dll
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\System.IO.Pipelines.dll
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.CSharp.dll
 C:\_Programacao\Projetos\_ Modulum\modulum-client\bin\Debug\net8.0\Microsoft.VisualBasic.Core.dll
@@ -1713,6 +1719,7 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Micros
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.Web.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.WebAssembly.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Metadata.wasm
+C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.WebUtilities.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Microsoft.Extensions.Configuration.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Microsoft.Extensions.Configuration.Abstractions.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Microsoft.Extensions.Configuration.Binder.wasm
@@ -1733,6 +1740,7 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Micros
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Microsoft.Extensions.Primitives.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Microsoft.JSInterop.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Microsoft.JSInterop.WebAssembly.wasm
+C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Microsoft.Net.Http.Headers.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\System.IO.Pipelines.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Microsoft.CSharp.wasm
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\webcil\Microsoft.VisualBasic.Core.wasm
@@ -1927,6 +1935,7 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\rw
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\h45rzddjvx.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\37ag103rxw.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\89xkrhqus5.gz
+C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\sig9tunzwd.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\glijlbvlrh.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\nbtk5st4v7.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\hz47dlbw0f.gz
@@ -1947,6 +1956,7 @@ C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\oc
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\lqs7xqe2hs.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\1rrh6d73wi.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\mnl4hm8jhc.gz
+C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\6ry3ytoevx.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\en3q5629ge.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\z3mexrzqsa.gz
 C:\_Programacao\Projetos\_ Modulum\modulum-client\obj\Debug\net8.0\compressed\y6advnrdm3.gz

@@ -1,4 +1,4 @@
-﻿namespace modulum_client.Model
+﻿namespace modulum_client.Model.Response
 {
     public class BaseResponse
     {

@@ -1,13 +1,16 @@
-﻿using modulum_client.Model;
+﻿using modulum_client.Model.Response;
+using modulum_client.Model;
 using System.Data;
 
 namespace modulum_client.Sevices
 {
     public interface IAccountManagement
     {
-        public Task<BaseResponse> RegisterAsync(string nome, string email, string password);
+        public Task<CadastroUsuarioResponse> RegisterAsync(string nome, string email, string password);
 
         public Task<BaseResponse> LoginAsync(string email, string password);
+
+        public Task<BaseResponse> ConfirmEmail(string userId, string token);
 
         public Task LogoutAsync();
 

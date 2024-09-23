@@ -21,7 +21,7 @@ builder.Services.AddScoped(sp => new HttpClient
 {
     BaseAddress =
     new Uri(builder.Configuration["FrontendUrl"] ?? "https://ashy-plant-0122bb30f.5.azurestaticapps.net")
-    //new Uri(builder.Configuration["FrontendUrl"] ?? "https://localhost:5002")
+    //new Uri(builder.Configuration["FrontendUrl"] ?? "https://localhost:7195")
 });
 
 
