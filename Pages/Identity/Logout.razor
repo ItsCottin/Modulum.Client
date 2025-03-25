@@ -1,0 +1,31 @@
+﻿@page "/logout"
+
+@*using modulum_client.Sevices
+@inject IAccountManagement Acct*@
+
+<h3>Logout</h3>
+<AuthorizeView @ref="authView">
+    <Authorized>
+        <div class="alert alert-info">Desconectando você...</div>
+    </Authorized>
+    <NotAuthorized>
+        <div class="alert alert-success">Você está desconectado. <a href="/login">Conecte-se.</a></div>
+    </NotAuthorized>
+</AuthorizeView>
+
+
+@code {
+
+    private AuthorizeView? authView;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Console.WriteLine(await _authenticationManager.CheckAuthenticatedAsync());
+        if (await _authenticationManager.CheckAuthenticatedAsync())
+        {
+            await _authenticationManager.Logout();
+        }
+        await base.OnInitializedAsync();
+    }
+
+}

@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Pages\Weather.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.14" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.14" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="8.0.14" />
+    <PackageReference Include="Blazored.FluentValidation" Version="2.2.0" />
+    <PackageReference Include="Blazored.LocalStorage" Version="4.5.0" />
+    <PackageReference Include="bootstrap" Version="5.3.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="8.0.14" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.3.1" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.14" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="8.0.14" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.14" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="8.0.14" />
+    <PackageReference Include="MudBlazor" Version="8.3.0" />
+    <PackageReference Include="RCF.Modulum.Client.Infrastructure" Version="0.0.1-beta.6" />
+    <PackageReference Include="System.Net.Http.Json" Version="8.0.1" />
+
+    <!-- Pacotes proprios do projeto
+    <PackageReference Include="RCF.Modulum.Client.Infrastructure" Version="0.0.1-beta.5" />  -->
+    <PackageReference Include="RCF.Modulum.Shared" Version="0.0.1-beta.5" />
+  </ItemGroup>
+
+  <!-- Referencia dos proprios pacotes para debug 
+  <ItemGroup>
+    <ProjectReference Include="..\RCF.Modulum.Client.Infrastructure\RCF.Modulum.Client.Infrastructure.csproj" />
+    <ProjectReference Include="..\RCF.Modulum.Shared\RCF.Modulum.Shared.csproj" />
+  </ItemGroup>-->
+
+  <ItemGroup>
+    <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
+  </ItemGroup>
+
+</Project>

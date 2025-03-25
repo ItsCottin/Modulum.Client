@@ -1,0 +1,59 @@
+﻿@using Blazored.FluentValidation
+
+@page "/login"
+
+@attribute [AllowAnonymous]
+<h3>Login</h3>
+
+<AuthorizeView Context="authContext">
+    <Authorized>
+        <div class="alert alert-success">Você está logado como @authContext.User.Identity?.Name.</div>
+    </Authorized>
+    <NotAuthorized>
+        <div class="row">
+            <div class="col-xxl-4 col-xl-5 col-lg-7 col-md-9 col-sm-11 col-xs-12">
+                <section>
+                    @if (errors)
+                    {
+                        @foreach (var error in errorList)
+                        {
+                            <div class="alert alert-danger">@error</div>
+                        }
+                    }
+                    <EditForm Model="@_tokenModel" method="post" FormName="Bem vindo ao Modulum =)">
+                        <DataAnnotationsValidator />
+                        <FluentValidationValidator @ref="_fluentValidationValidator" />
+                        <h2>Use uma conta local para entrar.</h2>
+                        <hr />
+                        <div class="form-floating mb-3">
+                            <InputText @bind-Value="_tokenModel.Email" For="@(() => _tokenModel.Email)" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                            <label for="email" class="form-label">Email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <InputText type="password" @bind-Value="_tokenModel.Password" For="@(() => _tokenModel.Password)" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
+                            <label for="password" class="form-label">Senha</label>
+                        </div>
+                        <div>
+                            <button class="w-100 btn btn-lg btn-primary" @onclick="DoLoginAsync" disabled="@loading">
+                                @if (loading)
+                                {
+                                    <span class="spinner-border spinner-border-sm mr-1"></span>
+                                    @textoBotao
+                                } 
+                                else
+                                {
+                                    @textoBotao
+                                }
+                            </button>
+                        </div>
+                    </EditForm>
+                </section>
+            </div>
+            <div class="col-md-6 col-md-offset-2">
+                <section>
+            
+                </section>
+            </div>
+        </div>
+    </NotAuthorized>
+</AuthorizeView>

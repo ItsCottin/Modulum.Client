@@ -1,6 +1,6 @@
 {
-  "name": "modulum-client",
-  "short_name": "modulum-client",
+  "name": "Modulum.Client",
+  "short_name": "Modulum.Client",
   "id": "./",
   "start_url": "./",
   "display": "standalone",
