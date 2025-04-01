@@ -1,0 +1,28 @@
+﻿@page "/Account/Manage"
+
+<PageTitle>Perfil</PageTitle>
+
+<h3>Perfil</h3>
+
+<div class="row">
+    <div class="col-md-6">
+        <EditForm Model="Input" FormName="profile" OnValidSubmit="OnValidSubmitAsync" method="post">
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" role="alert" />
+            <div class="form-floating mb-3">
+                <input type="text" value="@username" class="form-control" placeholder="Por favor escolha seu nome de usuário." disabled />
+                <label for="username" class="form-label">Nome de usuário</label>
+            </div>
+            <div class="form-floating mb-3">
+                <InputText @bind-Value="Input.PhoneNumber" class="form-control" placeholder="Por favor, insira seu número de telefone." />
+                <label for="phone-number" class="form-label">Phone number</label>
+                <ValidationMessage For="() => Input.PhoneNumber" class="text-danger" />
+            </div>
+            <button type="submit" class="w-100 btn btn-lg btn-primary">Salvar</button>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+
+}

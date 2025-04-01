@@ -2,6 +2,7 @@
 
 @*using modulum_client.Sevices
 @inject IAccountManagement Acct*@
+@attribute [AllowAnonymous]
 
 <h3>Logout</h3>
 <AuthorizeView @ref="authView">
@@ -20,7 +21,6 @@
 
     protected override async Task OnInitializedAsync()
     {
-        Console.WriteLine(await _authenticationManager.CheckAuthenticatedAsync());
         if (await _authenticationManager.CheckAuthenticatedAsync())
         {
             await _authenticationManager.Logout();

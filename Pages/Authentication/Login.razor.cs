@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 using modulum.Application.Requests.Identity;
+using modulum.Client.Infrastructure.FormValidators;
+using modulum.Shared.Wrapper;
 using System.Security.Claims;
 
 namespace Modulum.Client.Pages.Authentication
@@ -9,17 +11,24 @@ namespace Modulum.Client.Pages.Authentication
     public partial class Login
     {
         private FluentValidationValidator _fluentValidationValidator;
+        private FormValidator _loginFormValidator = new();
         private bool Validated => _fluentValidationValidator.Validate(options => { options.IncludeAllRuleSets(); });
+        private TokenRequest _tokenModel = new();
 
         private String textoBotao = "Entrar";
-        private bool success, errors;
+        private bool success;
         private bool loading;
         private string email = string.Empty;
         private string password = string.Empty;
-        private string[] errorList = [];
 
-        private TokenRequest _tokenModel = new();
         
+
+        private void AddApiErrors(IResult response)
+        {
+            _loginFormValidator.ClearAllErrors();
+            _loginFormValidator.DisplayAllErrors(response.Fields);
+        }
+
         protected override async Task OnInitializedAsync()
         {
             var state = await _stateProvider.GetAuthenticationStateAsync();
@@ -33,24 +42,20 @@ namespace Modulum.Client.Pages.Authentication
         {
             loading = true;
             textoBotao = "  Entrando...";
-            success = errors = false;
-            errorList = [];
-
+            success = false;
             if (!Validated)
             {
-                errors = true;
                 loading = false;
                 textoBotao = "Entrar";
                 return;
             }
 
             var result = await _authenticationManager.Login(_tokenModel);
+            AddApiErrors(result);
+            //if (!result.Succeeded)
+            //{
 
-            if (!result.Succeeded)
-            {
-                errors = true;
-                errorList = result.Messages.ToArray();
-            }
+            //}
             loading = false;
             textoBotao = "Entrar";
         }

@@ -60,7 +60,8 @@ namespace modulum.Client.Extensions
                 .AddHttpClient(ClientName, client =>
                 {
                     //client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress);
-                    client.BaseAddress = new Uri("https://modulum-api.azurewebsites.net/");  // Essa URL é onde é configurado a URL da API - Ajustar essa linha para não expor a url da API
+                    client.BaseAddress = new Uri("https://modulum-api.azurewebsites.net/");
+                    //client.BaseAddress = new Uri("https://localhost:7051/"); // Essa URL é onde é configurado a URL da API - Ajustar essa linha para não expor a url da API
                 })
                 .AddHttpMessageHandler<AuthenticationHeaderHandler>();
             builder.Services.AddHttpClientInterceptor();

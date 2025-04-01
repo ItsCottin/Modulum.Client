@@ -1,8 +1,5 @@
 ﻿@page "/register"
 
-@*using modulum_client.Sevices
-@inject IAccountManagement Acct*@
-
 @attribute [AllowAnonymous]
 @if (success)
 {
@@ -27,41 +24,43 @@ else
                     }
                     else
                     {
-                        if (errors)
-                        {
-                            foreach (var error in errorList)
-                            {
-                                <div class="alert alert-danger">@error</div>
-                            }
-                        }
-                        <EditForm Model="@_registerUserModel" method="post" FormName="Cadastre-se">
-                            <DataAnnotationsValidator />
-                            <!--<FluentValidationValidator @ref="_fluentValidationValidator" />-->
+                        <EditForm Model="@_registerUserModel" method="post" FormName="Cadastre-se" OnValidSubmit="DoRegisterAsync">
+                            <FluentValidationValidator @ref="_fluentValidationValidator" />
+                            <FormValidator @ref="_registerFormValidator"></FormValidator>
                             <h2>Crie uma nova conta.</h2>
                             <hr />
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <InputText @bind-Value="_registerUserModel.UserName" class="form-control" autocomplete="" aria-required="true" placeholder="Nome de Usuario" />
-                                    <label for="nome">Nome de Usuario</label>
+                            <ValidationSummary />
+                            <div class="row g-2">
+                                <div class="col-md-12 col-sm-5">
+                                    <div class="form-floating mb-3">
+                                        <InputText @bind-Value="_registerUserModel.UserName" For="@(() => _registerUserModel.UserName)" class="form-control" autocomplete="" aria-required="true" placeholder="Nome de Usuario" />
+                                        <label for="nome">Usuario</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <InputText @bind-Value="_registerUserModel.NomeCompleto" class="form-control" autocomplete="" aria-required="true" placeholder="Primeiro Nome" />
-                                    <label for="nome">Primeiro Nome</label>
+                                <div class="col-md-12 col-sm-7">
+                                    <div class="form-floating mb-3">
+                                        <InputText @bind-Value="_registerUserModel.NomeCompleto" For="@(() => _registerUserModel.NomeCompleto)" class="form-control" autocomplete="" aria-required="true" placeholder="nome" />
+                                        <label for="nome">Nome Completo</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-floating mb-3">
-                                <InputText @bind-Value="_registerUserModel.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                                <InputText @bind-Value="_registerUserModel.Email" For="@(() => _registerUserModel.Email)" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
                                 <label for="email">Email</label>
                             </div>
-                            <div class="form-floating mb-3">
-                                <InputText type="password" @bind-Value="_registerUserModel.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                                <label for="password">Senha</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <InputText type="password" @bind-Value="_registerUserModel.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                                <label for="confirm-password">Confirme sua Senha</label>
+                            <div class="row g-2">
+                                <div class="col-md-12 col-sm-6">
+                                    <div class="form-floating mb-3">
+                                        <InputText type="password" @bind-Value="_registerUserModel.Password" For="@(() => _registerUserModel.Password)" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                                        <label for="password">Senha</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-6">
+                                    <div class="form-floating mb-3">
+                                        <InputText type="password" @bind-Value="_registerUserModel.ConfirmPassword" For="@(() => _registerUserModel.ConfirmPassword)" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                                        <label for="confirm-password">Confirme sua Senha</label>
+                                    </div>
+                                </div>
                             </div>
                             <button class="w-100 btn btn-lg btn-primary" @onclick="DoRegisterAsync" disabled="@loading">
                                 @if (loading)

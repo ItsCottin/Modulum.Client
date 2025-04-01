@@ -1,0 +1,24 @@
+
+
+Date:2025-03-31 22:20:09,548
+Thread:[1]
+Level:ERROR
+Logger:InsertBlazorCode.SyncfusionCodeGeneratorMenuCommand                         [(null)]
+Message:System.NullReferenceException: Referência de objeto não definida para uma instância de um objeto.
+   em InsertBlazorCode.SyncfusionCodeGeneratorMenuCommand.queryStatusMenuCommand_BeforeQueryStatus(Object sender, EventArgs e) na C:\Git\RP\vsext_insertblazorcode\SyncfusionBlazorcodegenerator\SyncfusionCodeGeneratorMenuCommand.cs:linha 322
+
+
+Date:2025-03-31 22:22:20,189
+Thread:[1]
+Level:ERROR
+Logger:InsertBlazorCode.SyncfusionCodeGeneratorMenuCommand                         [(null)]
+Message:System.NullReferenceException: Referência de objeto não definida para uma instância de um objeto.
+   em InsertBlazorCode.SyncfusionCodeGeneratorMenuCommand.queryStatusMenuCommand_BeforeQueryStatus(Object sender, EventArgs e) na C:\Git\RP\vsext_insertblazorcode\SyncfusionBlazorcodegenerator\SyncfusionCodeGeneratorMenuCommand.cs:linha 322
+
+
+Date:2025-03-31 22:22:58,092
+Thread:[1]
+Level:ERROR
+Logger:InsertBlazorCode.SyncfusionCodeGeneratorMenuCommand                         [(null)]
+Message:System.NullReferenceException: Referência de objeto não definida para uma instância de um objeto.
+   em InsertBlazorCode.SyncfusionCodeGeneratorMenuCommand.queryStatusMenuCommand_BeforeQueryStatus(Object sender, EventArgs e) na C:\Git\RP\vsext_insertblazorcode\SyncfusionBlazorcodegenerator\SyncfusionCodeGeneratorMenuCommand.cs:linha 322

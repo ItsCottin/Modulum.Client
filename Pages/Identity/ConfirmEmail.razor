@@ -1,9 +1,7 @@
-﻿@page "/confirm-email/{userId}/{token}"
-
-@*using modulum_client.Sevices
-@inject IAccountManagement Acct*@
+﻿@page "/confirm-email"
 
 @inject NavigationManager Navigation
+@attribute [AllowAnonymous]
 <h3>Confirmação de Email</h3>
 
 <AuthorizeView Context="authContext">
@@ -45,10 +43,11 @@
 </AuthorizeView>
 @code {
 
-    [Parameter]
+
+    [Parameter, SupplyParameterFromQuery]
     public string userId { get; set; }
 
-    [Parameter]
+    [Parameter, SupplyParameterFromQuery]
     public string token { get; set; }
 
     private string[] errorList = new string[] { };
@@ -60,9 +59,9 @@
     {
         isSucesso = false;
         loading = true;
-        @*var response = await Acct.ConfirmEmail(userId, token);
-        errorList = response.Mensagens;
-        isSucesso = response.Status;*@
+        var response = await _userManager.ConfirmEmail(userId, token);
+        errorList = response.Messages.ToArray();
+        isSucesso = response.Succeeded;
         loading = false;
         base.OnInitializedAsync();
     }

@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="Pages\Weather.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.14" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.14" PrivateAssets="all" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="8.0.14" />
@@ -26,20 +22,15 @@
     <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.14" />
     <PackageReference Include="Microsoft.Extensions.Localization" Version="8.0.14" />
     <PackageReference Include="MudBlazor" Version="8.3.0" />
-    <PackageReference Include="RCF.Modulum.Client.Infrastructure" Version="0.0.1-beta.6" />
+    <PackageReference Include="RCF.Modulum.Client.Infrastructure" Version="0.0.1-beta.7" />
+    <PackageReference Include="RCF.Modulum.Shared" Version="0.0.1-beta.8" />
     <PackageReference Include="System.Net.Http.Json" Version="8.0.1" />
 
     <!-- Pacotes proprios do projeto
-    <PackageReference Include="RCF.Modulum.Client.Infrastructure" Version="0.0.1-beta.5" />  -->
-    <PackageReference Include="RCF.Modulum.Shared" Version="0.0.1-beta.5" />
+    <PackageReference Include="RCF.Modulum.Client.Infrastructure" Version="0.0.1-beta.6" />
+    <PackageReference Include="RCF.Modulum.Shared" Version="0.0.1-beta.5" />  -->
   </ItemGroup>
-
-  <!-- Referencia dos proprios pacotes para debug 
-  <ItemGroup>
-    <ProjectReference Include="..\RCF.Modulum.Client.Infrastructure\RCF.Modulum.Client.Infrastructure.csproj" />
-    <ProjectReference Include="..\RCF.Modulum.Shared\RCF.Modulum.Shared.csproj" />
-  </ItemGroup>-->
-
+  
   <ItemGroup>
     <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
   </ItemGroup>

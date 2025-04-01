@@ -13,18 +13,12 @@
         <div class="row">
             <div class="col-xxl-4 col-xl-5 col-lg-7 col-md-9 col-sm-11 col-xs-12">
                 <section>
-                    @if (errors)
-                    {
-                        @foreach (var error in errorList)
-                        {
-                            <div class="alert alert-danger">@error</div>
-                        }
-                    }
-                    <EditForm Model="@_tokenModel" method="post" FormName="Bem vindo ao Modulum =)">
-                        <DataAnnotationsValidator />
+                    <EditForm Model="@_tokenModel" method="post" FormName="Bem vindo ao Modulum =)" OnValidSubmit="DoLoginAsync">
                         <FluentValidationValidator @ref="_fluentValidationValidator" />
+                        <FormValidator @ref="_loginFormValidator"></FormValidator>
                         <h2>Use uma conta local para entrar.</h2>
                         <hr />
+                        <ValidationSummary />
                         <div class="form-floating mb-3">
                             <InputText @bind-Value="_tokenModel.Email" For="@(() => _tokenModel.Email)" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
                             <label for="email" class="form-label">Email</label>
