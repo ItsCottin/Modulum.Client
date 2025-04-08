@@ -40,6 +40,11 @@
 @using modulum.Client.Infrastructure.Authentication
 @using modulum.Client.Extensions
 
+@using modulum.Components.Custom
+@using modulum.Components.Buttons
+@using modulum.Components.Indexes
+@using modulum.Components.Passwords
+
 @attribute [Authorize]
 @inject IAuthenticationManager _authenticationManager
 @inject IAccountManager _accountManager
@@ -47,9 +52,10 @@
 @inject BlazorHeroStateProvider _stateProvider
 @inject IAuthorizationService _authorizationService
 @inject ISnackbar _snackBar
-@inject IDialogService _dialogService
+@inject MudBlazor.IDialogService _dialogService
 @inject HttpClient _httpClient
 @inject IHttpInterceptorManager _interceptor
 @inject IUserManager _userManager
 @inject ILocalStorageService _localStorage;
 @inject IJSRuntime _jsRuntime;
+@inject IBrowserViewportService BrowserViewportService

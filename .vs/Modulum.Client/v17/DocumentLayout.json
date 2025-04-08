@@ -3,20 +3,180 @@
   "WorkspaceRootPath": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\pages\\criacao\\nome.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:pages\\criacao\\nome.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\modulum.client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:modulum.client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\pages\\criacao\\criacao.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:pages\\criacao\\criacao.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\pages\\criacao\\desenho.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:pages\\criacao\\desenho.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\pages\\criacao\\campos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:pages\\criacao\\campos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\components\\indexes\\indexcard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:components\\indexes\\indexcard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\pages\\identity\\logout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:pages\\identity\\logout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\pages\\content\\systemlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:pages\\content\\systemlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\pages\\content\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:pages\\content\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\shared\\loading.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:shared\\loading.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\pages\\authentication\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:pages\\authentication\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\pages\\authentication\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:pages\\authentication\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\pages\\authentication\\login.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:pages\\authentication\\login.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\pages\\authentication\\register.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:pages\\authentication\\register.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\components\\passwords\\passwordtextfield.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:components\\passwords\\passwordtextfield.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\components\\passwords\\passwordrequeriment.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:components\\passwords\\passwordrequeriment.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\shared\\redirectlogin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:shared\\redirectlogin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\components\\custom\\sykitextfield.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:components\\custom\\sykitextfield.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\shared\\managenavmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:shared\\managenavmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\components\\summaries\\summarycard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:components\\summaries\\summarycard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\components\\custom\\sykitablepager.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:components\\custom\\sykitablepager.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\components\\custom\\sykiprogresscircular.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:components\\custom\\sykiprogresscircular.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\components\\custom\\sykipagetitle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:components\\custom\\sykipagetitle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\components\\custom\\sykipageheader.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:components\\custom\\sykipageheader.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\components\\custom\\sykipagealert.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:components\\custom\\sykipagealert.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\components\\custom\\sykidialogtitle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:components\\custom\\sykidialogtitle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\components\\custom\\sykidatepicker.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:components\\custom\\sykidatepicker.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\components\\custom\\sykidatagridsearchtextfield.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:components\\custom\\sykidatagridsearchtextfield.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\components\\custom\\sykidatagridpager.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:components\\custom\\sykidatagridpager.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\components\\buttons\\themeiconbutton.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:components\\buttons\\themeiconbutton.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\components\\buttons\\mfaiconbutton.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:components\\buttons\\mfaiconbutton.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\components\\buttons\\loginbutton.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:components\\buttons\\loginbutton.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\components\\buttons\\homebutton.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:components\\buttons\\homebutton.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\components\\buttons\\dialogsavebutton.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:components\\buttons\\dialogsavebutton.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\components\\buttons\\dialogcancelbutton.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:components\\buttons\\dialogcancelbutton.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\modulum.client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:modulum.client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\pages\\account\\email.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:pages\\account\\email.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\extensions\\webassemblyhostbuilderextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:extensions\\webassemblyhostbuilderextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\shared\\accountlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:shared\\accountlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +186,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,55 +206,541 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-04-01T01:44:19.279Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Modulum.Client",
-              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Modulum.Client.csproj",
-              "RelativeDocumentMoniker": "Modulum.Client.csproj",
-              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Modulum.Client.csproj",
-              "RelativeToolTip": "Modulum.Client.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-01T01:17:43.529Z",
+              "DocumentIndex": 4,
+              "Title": "IndexCard.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Indexes\\IndexCard.razor",
+              "RelativeDocumentMoniker": "Components\\Indexes\\IndexCard.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Indexes\\IndexCard.razor",
+              "RelativeToolTip": "Components\\Indexes\\IndexCard.razor",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACUAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:26:02.387Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Desenho.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Criacao\\Desenho.razor",
+              "RelativeDocumentMoniker": "Pages\\Criacao\\Desenho.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Criacao\\Desenho.razor",
+              "RelativeToolTip": "Pages\\Criacao\\Desenho.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAABqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T06:07:48.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\_Imports.razor",
+              "RelativeDocumentMoniker": "_Imports.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\_Imports.razor",
+              "RelativeToolTip": "_Imports.razor",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAC0AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-01T00:55:42.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\NavMenu.razor",
               "RelativeDocumentMoniker": "Shared\\NavMenu.razor",
               "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\NavMenu.razor",
               "RelativeToolTip": "Shared\\NavMenu.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAQAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-01T01:00:34.919Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Imports.razor",
-              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\_Imports.razor",
-              "RelativeDocumentMoniker": "_Imports.razor",
-              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\_Imports.razor",
-              "RelativeToolTip": "_Imports.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "Nome.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Criacao\\Nome.razor",
+              "RelativeDocumentMoniker": "Pages\\Criacao\\Nome.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Criacao\\Nome.razor",
+              "RelativeToolTip": "Pages\\Criacao\\Nome.razor",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACcAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-01T00:55:42.319Z",
+              "WhenOpened": "2025-04-06T05:46:35.722Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Criacao.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Criacao\\Criacao.razor",
+              "RelativeDocumentMoniker": "Pages\\Criacao\\Criacao.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Criacao\\Criacao.razor",
+              "RelativeToolTip": "Pages\\Criacao\\Criacao.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T05:41:24.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SystemList.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Content\\SystemList.razor",
+              "RelativeDocumentMoniker": "Pages\\Content\\SystemList.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Content\\SystemList.razor",
+              "RelativeToolTip": "Pages\\Content\\SystemList.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-03T03:59:55.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Shared\\MainLayout.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\MainLayout.razor",
+              "RelativeToolTip": "Shared\\MainLayout.razor",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABkAAACBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T07:49:13.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Campos.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Criacao\\Campos.razor",
+              "RelativeDocumentMoniker": "Pages\\Criacao\\Campos.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Criacao\\Campos.razor",
+              "RelativeToolTip": "Pages\\Criacao\\Campos.razor",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAACUAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T05:54:54.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Logout.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Identity\\Logout.razor",
+              "RelativeDocumentMoniker": "Pages\\Identity\\Logout.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Identity\\Logout.razor",
+              "RelativeToolTip": "Pages\\Identity\\Logout.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-04T14:25:34.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Register.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Register.razor",
+              "RelativeDocumentMoniker": "Pages\\Authentication\\Register.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Register.razor",
+              "RelativeToolTip": "Pages\\Authentication\\Register.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T23:41:54.348Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Login.razor",
+              "RelativeDocumentMoniker": "Pages\\Authentication\\Login.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Login.razor",
+              "RelativeToolTip": "Pages\\Authentication\\Login.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T23:12:18.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Content\\Home.razor",
+              "RelativeDocumentMoniker": "Pages\\Content\\Home.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Content\\Home.razor",
+              "RelativeToolTip": "Pages\\Content\\Home.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:57:56.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Login.razor.cs",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Login.razor.cs",
+              "RelativeDocumentMoniker": "Pages\\Authentication\\Login.razor.cs",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Login.razor.cs",
+              "RelativeToolTip": "Pages\\Authentication\\Login.razor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T23:14:30.958Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Loading.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\Loading.razor",
+              "RelativeDocumentMoniker": "Shared\\Loading.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\Loading.razor",
+              "RelativeToolTip": "Shared\\Loading.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:56:15.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ManageNavMenu.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\ManageNavMenu.razor",
+              "RelativeDocumentMoniker": "Shared\\ManageNavMenu.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\ManageNavMenu.razor",
+              "RelativeToolTip": "Shared\\ManageNavMenu.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-05T22:47:36.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Register.razor.cs",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Register.razor.cs",
+              "RelativeDocumentMoniker": "Pages\\Authentication\\Register.razor.cs",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Register.razor.cs",
+              "RelativeToolTip": "Pages\\Authentication\\Register.razor.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAIwAEAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T23:47:40.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PasswordRequeriment.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Passwords\\PasswordRequeriment.razor",
+              "RelativeDocumentMoniker": "Components\\Passwords\\PasswordRequeriment.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Passwords\\PasswordRequeriment.razor",
+              "RelativeToolTip": "Components\\Passwords\\PasswordRequeriment.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:26:12.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PasswordTextField.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Passwords\\PasswordTextField.razor",
+              "RelativeDocumentMoniker": "Components\\Passwords\\PasswordTextField.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Passwords\\PasswordTextField.razor",
+              "RelativeToolTip": "Components\\Passwords\\PasswordTextField.razor",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAADMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:27:52.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RedirectLogin.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\RedirectLogin.razor",
+              "RelativeDocumentMoniker": "Shared\\RedirectLogin.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\RedirectLogin.razor",
+              "RelativeToolTip": "Shared\\RedirectLogin.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:41:14.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "SykiTextField.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiTextField.razor",
+              "RelativeDocumentMoniker": "Components\\Custom\\SykiTextField.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiTextField.razor",
+              "RelativeToolTip": "Components\\Custom\\SykiTextField.razor",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACkAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:23:21.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Layout\\MainLayout.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Layout\\MainLayout.razor",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAC0AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-05T23:44:28.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "SummaryCard.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Summaries\\SummaryCard.razor",
+              "RelativeDocumentMoniker": "Components\\Summaries\\SummaryCard.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Summaries\\SummaryCard.razor",
+              "RelativeToolTip": "Components\\Summaries\\SummaryCard.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:28:16.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SykiTablePager.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiTablePager.razor",
+              "RelativeDocumentMoniker": "Components\\Custom\\SykiTablePager.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiTablePager.razor",
+              "RelativeToolTip": "Components\\Custom\\SykiTablePager.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:23:15.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "SykiProgressCircular.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiProgressCircular.razor",
+              "RelativeDocumentMoniker": "Components\\Custom\\SykiProgressCircular.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiProgressCircular.razor",
+              "RelativeToolTip": "Components\\Custom\\SykiProgressCircular.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:23:10.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "SykiPageTitle.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiPageTitle.razor",
+              "RelativeDocumentMoniker": "Components\\Custom\\SykiPageTitle.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiPageTitle.razor",
+              "RelativeToolTip": "Components\\Custom\\SykiPageTitle.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:23:04.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "SykiPageHeader.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiPageHeader.razor",
+              "RelativeDocumentMoniker": "Components\\Custom\\SykiPageHeader.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiPageHeader.razor",
+              "RelativeToolTip": "Components\\Custom\\SykiPageHeader.razor",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAAAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:22:59.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "SykiPageAlert.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiPageAlert.razor",
+              "RelativeDocumentMoniker": "Components\\Custom\\SykiPageAlert.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiPageAlert.razor",
+              "RelativeToolTip": "Components\\Custom\\SykiPageAlert.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:22:54.902Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "SykiDialogTitle.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiDialogTitle.razor",
+              "RelativeDocumentMoniker": "Components\\Custom\\SykiDialogTitle.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiDialogTitle.razor",
+              "RelativeToolTip": "Components\\Custom\\SykiDialogTitle.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:22:50.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "SykiDatePicker.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiDatePicker.razor",
+              "RelativeDocumentMoniker": "Components\\Custom\\SykiDatePicker.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiDatePicker.razor",
+              "RelativeToolTip": "Components\\Custom\\SykiDatePicker.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:22:45.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "SykiDataGridSearchTextField.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiDataGridSearchTextField.razor",
+              "RelativeDocumentMoniker": "Components\\Custom\\SykiDataGridSearchTextField.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiDataGridSearchTextField.razor",
+              "RelativeToolTip": "Components\\Custom\\SykiDataGridSearchTextField.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:22:38.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "SykiDataGridPager.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiDataGridPager.razor",
+              "RelativeDocumentMoniker": "Components\\Custom\\SykiDataGridPager.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiDataGridPager.razor",
+              "RelativeToolTip": "Components\\Custom\\SykiDataGridPager.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:22:26.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "DialogCancelButton.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Buttons\\DialogCancelButton.razor",
+              "RelativeDocumentMoniker": "Components\\Buttons\\DialogCancelButton.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Buttons\\DialogCancelButton.razor",
+              "RelativeToolTip": "Components\\Buttons\\DialogCancelButton.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:19:31.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "DialogSaveButton.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Buttons\\DialogSaveButton.razor",
+              "RelativeDocumentMoniker": "Components\\Buttons\\DialogSaveButton.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Buttons\\DialogSaveButton.razor",
+              "RelativeToolTip": "Components\\Buttons\\DialogSaveButton.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:19:39.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "HomeButton.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Buttons\\HomeButton.razor",
+              "RelativeDocumentMoniker": "Components\\Buttons\\HomeButton.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Buttons\\HomeButton.razor",
+              "RelativeToolTip": "Components\\Buttons\\HomeButton.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:19:48.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "LoginButton.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Buttons\\LoginButton.razor",
+              "RelativeDocumentMoniker": "Components\\Buttons\\LoginButton.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Buttons\\LoginButton.razor",
+              "RelativeToolTip": "Components\\Buttons\\LoginButton.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:20:05.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "MfaIconButton.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Buttons\\MfaIconButton.razor",
+              "RelativeDocumentMoniker": "Components\\Buttons\\MfaIconButton.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Buttons\\MfaIconButton.razor",
+              "RelativeToolTip": "Components\\Buttons\\MfaIconButton.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:20:17.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ThemeIconButton.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Buttons\\ThemeIconButton.razor",
+              "RelativeDocumentMoniker": "Components\\Buttons\\ThemeIconButton.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Buttons\\ThemeIconButton.razor",
+              "RelativeToolTip": "Components\\Buttons\\ThemeIconButton.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T22:20:25.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Layout\\NavMenu.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "Layout\\NavMenu.razor",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T07:31:20.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "WebAssemblyHostBuilderExtensions.cs",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Extensions\\WebAssemblyHostBuilderExtensions.cs",
+              "RelativeDocumentMoniker": "Extensions\\WebAssemblyHostBuilderExtensions.cs",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Extensions\\WebAssemblyHostBuilderExtensions.cs",
+              "RelativeToolTip": "Extensions\\WebAssemblyHostBuilderExtensions.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAADwvyYAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T04:34:04.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-01T01:44:19.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Modulum.Client.csproj",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Modulum.Client.csproj",
+              "RelativeDocumentMoniker": "Modulum.Client.csproj",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Modulum.Client.csproj",
+              "RelativeToolTip": "Modulum.Client.csproj",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-01T01:17:43.529Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Email.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Account\\Email.razor",
+              "RelativeDocumentMoniker": "Pages\\Account\\Email.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Account\\Email.razor",
+              "RelativeToolTip": "Pages\\Account\\Email.razor",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T06:54:50.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "AccountLayout.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\AccountLayout.razor",
+              "RelativeDocumentMoniker": "Shared\\AccountLayout.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\AccountLayout.razor",
+              "RelativeToolTip": "Shared\\AccountLayout.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-05T23:00:17.885Z"
             }
           ]
         }

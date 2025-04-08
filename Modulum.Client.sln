@@ -5,10 +5,6 @@ VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modulum.Client", "Modulum.Client.csproj", "{768BA5D0-76D5-4535-9477-3FBF6FBC7502}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCF.Modulum.Client.Infrastructure", "..\RCF.Modulum.Client.Infrastructure\RCF.Modulum.Client.Infrastructure.csproj", "{020E50B2-7C5F-4E0D-B27C-469CE580DB41}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RCF.Modulum.Application", "..\RCF.Modulum.Application\RCF.Modulum.Application.csproj", "{CCAFF7EA-30B5-4D46-BF27-EACBEF9E160B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +15,6 @@ Global
 		{768BA5D0-76D5-4535-9477-3FBF6FBC7502}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{768BA5D0-76D5-4535-9477-3FBF6FBC7502}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{768BA5D0-76D5-4535-9477-3FBF6FBC7502}.Release|Any CPU.Build.0 = Release|Any CPU
-		{020E50B2-7C5F-4E0D-B27C-469CE580DB41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{020E50B2-7C5F-4E0D-B27C-469CE580DB41}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{020E50B2-7C5F-4E0D-B27C-469CE580DB41}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{020E50B2-7C5F-4E0D-B27C-469CE580DB41}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CCAFF7EA-30B5-4D46-BF27-EACBEF9E160B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CCAFF7EA-30B5-4D46-BF27-EACBEF9E160B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CCAFF7EA-30B5-4D46-BF27-EACBEF9E160B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CCAFF7EA-30B5-4D46-BF27-EACBEF9E160B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

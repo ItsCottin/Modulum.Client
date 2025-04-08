@@ -1,23 +1,24 @@
 ﻿@page "/logout"
 
-@*using modulum_client.Sevices
-@inject IAccountManagement Acct*@
 @attribute [AllowAnonymous]
-
-<h3>Logout</h3>
-<AuthorizeView @ref="authView">
-    <Authorized>
-        <div class="alert alert-info">Desconectando você...</div>
-    </Authorized>
-    <NotAuthorized>
-        <div class="alert alert-success">Você está desconectado. <a href="/login">Conecte-se.</a></div>
-    </NotAuthorized>
-</AuthorizeView>
+<MudContainer Class="mt-4 mb-8" MaxWidth="MaxWidth.ExtraSmall">
+    <AuthorizeView @ref="authView">
+        <Authorized>
+            <MudOverlay @bind-Visible="@loading" DarkBackground="true" Absolute="false">
+                <modulum.Shared.Loading />
+            </MudOverlay>
+        </Authorized>
+        <NotAuthorized>
+            <MudAlert Severity="Severity.Success">Você está desconectado. <MudLink href="/login">Conecte-se.</MudLink></MudAlert>
+        </NotAuthorized>
+    </AuthorizeView>
+</MudContainer>
 
 
 @code {
 
     private AuthorizeView? authView;
+    private bool loading = true;
 
     protected override async Task OnInitializedAsync()
     {
@@ -25,6 +26,7 @@
         {
             await _authenticationManager.Logout();
         }
+        loading = false;
         await base.OnInitializedAsync();
     }
 

@@ -1,5 +1,5 @@
 ﻿@inherits LayoutComponentBase
-<div class="page">
+<!-- <div class="page"> Layout antigo
     <div class="sidebar">
         <NavMenu />
     </div>
@@ -13,4 +13,38 @@
             @Body
         </article>
     </main>
-</div>
+</div>-->
+
+<MudThemeProvider />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+<MudLayout>
+    <MudAppBar Elevation="1">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+        <MudSpacer />
+        <MudIconButton Icon="@Icons.Material.Filled.MoreVert" Color="Color.Inherit" Edge="Edge.End" />
+    </MudAppBar>
+    <MudDrawerContainer Class="mud-height-full">
+        <MudDrawer @bind-Open="@_drawerOpen" Fixed="false" Elevation="1" Variant="@DrawerVariant.Mini" OpenMiniOnHover="true">
+            <MudDrawerHeader>
+                <MudText Typo="Typo.h5" Class="mt-1">MODULUM</MudText>
+            </MudDrawerHeader>
+            <NavMenu />
+        </MudDrawer>
+        <MudMainContent>
+            <div class="d-flex justify-center align-center mud-height-full">
+                @Body
+            </div>
+        </MudMainContent>
+    </MudDrawerContainer>
+</MudLayout>
+
+@code {
+    bool _drawerOpen = true;
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+}

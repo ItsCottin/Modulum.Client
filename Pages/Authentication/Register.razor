@@ -1,86 +1,104 @@
 ﻿@page "/register"
 
 @attribute [AllowAnonymous]
-@if (success)
-{
-    <h3>Sucesso</h3>
-}
-else
-{
-    <h3>Cadastre-se</h3>
-}
 
-<AuthorizeView Context="authContext">
-    <Authorized>
-        <div class="alert alert-success">Você já está logado como @authContext.User.Identity?.Name.</div>
-    </Authorized>
-    <NotAuthorized>
-        <div class="row">
-            <div class="col-xxl-4 col-xl-5 col-lg-7 col-md-9 col-sm-11 col-xs-12">
-                <section>
-                    @if (success)
-                    {
-                        <div class="alert alert-success">Cadastro realizado com sucesso, Verifique a caixa de entrada do seu e-mail para mais informações ou clique nesse link para ativar seu email: <a href="@urlAtivaEmail">Aqui</a> </div>
-                    }
-                    else
-                    {
-                        <EditForm Model="@_registerUserModel" method="post" FormName="Cadastre-se" OnValidSubmit="DoRegisterAsync">
-                            <FluentValidationValidator @ref="_fluentValidationValidator" />
-                            <FormValidator @ref="_registerFormValidator"></FormValidator>
-                            <h2>Crie uma nova conta.</h2>
-                            <hr />
-                            <ValidationSummary />
-                            <div class="row g-2">
-                                <div class="col-md-12 col-sm-5">
-                                    <div class="form-floating mb-3">
-                                        <InputText @bind-Value="_registerUserModel.UserName" For="@(() => _registerUserModel.UserName)" class="form-control" autocomplete="" aria-required="true" placeholder="Nome de Usuario" />
-                                        <label for="nome">Usuario</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-sm-7">
-                                    <div class="form-floating mb-3">
-                                        <InputText @bind-Value="_registerUserModel.NomeCompleto" For="@(() => _registerUserModel.NomeCompleto)" class="form-control" autocomplete="" aria-required="true" placeholder="nome" />
-                                        <label for="nome">Nome Completo</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <InputText @bind-Value="_registerUserModel.Email" For="@(() => _registerUserModel.Email)" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                                <label for="email">Email</label>
-                            </div>
-                            <div class="row g-2">
-                                <div class="col-md-12 col-sm-6">
-                                    <div class="form-floating mb-3">
-                                        <InputText type="password" @bind-Value="_registerUserModel.Password" For="@(() => _registerUserModel.Password)" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                                        <label for="password">Senha</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-sm-6">
-                                    <div class="form-floating mb-3">
-                                        <InputText type="password" @bind-Value="_registerUserModel.ConfirmPassword" For="@(() => _registerUserModel.ConfirmPassword)" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                                        <label for="confirm-password">Confirme sua Senha</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="w-100 btn btn-lg btn-primary" @onclick="DoRegisterAsync" disabled="@loading">
-                                @if (loading)
-                                {
-                                    <span class="spinner-border spinner-border-sm mr-1"></span>
-                                    @textoBotao
-                                }
-                                else
-                                {
-                                    @textoBotao
-                                }
-                            </button>
-                        </EditForm>
-                    }
-                </section>
-            </div>
-            <div class="col-md-6 col-md-offset-2">
-                <section>
-                </section>
-            </div>
-        </div>
-    </NotAuthorized>
-</AuthorizeView>
+<MudContainer Class="mt-4 mb-8" MaxWidth="MaxWidth.ExtraSmall">
+    <AuthorizeView Context="authContext">
+        <Authorized>
+            <MudAlert Severity="Severity.Success">Você já está logado como @authContext.User.Identity?.Name.</MudAlert>
+        </Authorized>
+        <NotAuthorized>
+            @if (success)
+            {
+                <MudAlert Severity="Severity.Success">Cadastro realizado com sucesso, Verifique a caixa de entrada do seu e-mail para mais informações ou clique nesse link para ativar seu email: <MudLink href="@urlAtivaEmail">Aqui</MudLink> </MudAlert>
+            }
+            else
+            {
+                <MudOverlay @bind-Visible="@loading" DarkBackground="true" Absolute="false">
+                    <modulum.Shared.Loading />
+                </MudOverlay>
+                <EditForm Model="@_registerUserModel" method="post" FormName="Cadastre-se" OnValidSubmit="DoRegisterAsync">
+                    <MudCard Class="px-4 pt-0 pb-4">
+                    <MudImage Src="logo_512x512.png" Alt="Syki" Elevation="25" Class="rounded-lg mx-20 mt-10 mb-5" />
+                    <MudCardContent>
+                        <FluentValidationValidator @ref="_fluentValidationValidator" />
+                        <FormValidator @ref="_registerFormValidator"></FormValidator>
+                        <MudTextField InputType="InputType.Text"
+                                      Margin="Margin.Dense"
+                                      AutoFocus="true"
+                                      Label="Usuario"
+                                      Class="mt-0 pb-3"
+                                      OnlyValidateIfDirty="true"
+                                      @bind-Value="@_registerUserModel.UserName"
+                                      Variant="Variant.Outlined"
+                                      Required="true"
+                                      RequiredError="Informe!"
+                                      For="@(() => _registerUserModel.UserName)" />
+                        <MudTextField InputType="InputType.Text"
+                                      Margin="Margin.Dense"
+                                      AutoFocus="true"
+                                      Label="Nome Completo"
+                                      Class="mt-0 pb-3"
+                                      OnlyValidateIfDirty="true"
+                                      @bind-Value="@_registerUserModel.NomeCompleto"
+                                      Variant="Variant.Outlined"
+                                      Required="true"
+                                      RequiredError="Informe!"
+                                      For="@(() => _registerUserModel.NomeCompleto)" />
+                        <MudTextField InputType="InputType.Email"
+                                      Margin="Margin.Dense"
+                                      AutoFocus="true"
+                                      Label="Email"
+                                      Class="mt-0 pb-3"
+                                      OnlyValidateIfDirty="true"
+                                      @bind-Value="@_registerUserModel.Email"
+                                      Variant="Variant.Outlined"
+                                      Required="true"
+                                      RequiredError="Informe!"
+                                      For="@(() => _registerUserModel.Email)" />
+                        <MudTextField Margin="Margin.Dense"
+                                      Adornment="Adornment.End"
+                                      AdornmentIcon="@_passwordIcon"
+                                      OnAdornmentClick="@PasswordIconClick"
+                                      InputType="@_passwordInputType"
+                                      Label="Senha"
+                                      Class="@Class"
+                                      Immediate="true"
+                                      OnlyValidateIfDirty="true"
+                                      Variant="Variant.Outlined"
+                                      Required="@Required"
+                                      RequiredError="Informe!"
+                                      @bind-Value="@_registerUserModel.Password"
+                                      For="@(() => _registerUserModel.Password)" />
+                        <MudTextField Margin="Margin.Dense"
+                                      Adornment="Adornment.End"
+                                      AdornmentIcon="@_passwordIcon"
+                                      OnAdornmentClick="@PasswordIconClick"
+                                      InputType="@_passwordInputType"
+                                      Label="Confirmar Senha"
+                                      Class="@Class"
+                                      Immediate="true"
+                                      OnlyValidateIfDirty="true"
+                                      Variant="Variant.Outlined"
+                                      Required="@Required"
+                                      RequiredError="Informe!"
+                                      @bind-Value="@_registerUserModel.ConfirmPassword"
+                                      For="@(() => _registerUserModel.ConfirmPassword)" />
+                    </MudCardContent>
+                    <MudCardActions Class="justify-center">
+                        <MudStack Spacing="1">
+                            <MudButton Size="Size.Large"
+                                       OnClick="@DoRegisterAsync"
+                                       Variant="Variant.Filled"
+                                       Color="Color.Primary"
+                                       Class="mx-auto mb-4 px-12">
+                                Cadastrar
+                            </MudButton>
+                        </MudStack>
+                    </MudCardActions>
+                </MudCard>
+            </EditForm>
+            }
+        </NotAuthorized>
+    </AuthorizeView>
+</MudContainer>

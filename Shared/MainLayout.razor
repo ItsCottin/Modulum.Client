@@ -1,25 +1,152 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+<MudPopoverProvider />
+<MudSnackbarProvider />
+<MudThemeProvider IsDarkMode="@_isDark" Theme="@SykiTheme" />
+<MudDialogProvider CloseOnEscapeKey="true" CloseButton="true" />
 
-    <main>
-        <div class="top-row px-4">
-            <AuthorizeView>
-                <Authorized>
-                    Logado como @context.User.Identity?.Name. <!--<a href="logout"><span class="bi bi-door-closed-fill" aria-hidden="true" style="vertical-align:middle"></span> Sair</a>-->
-                </Authorized>
-                <!--<NotAuthorized>
-                    <a href="login"><span class="bi bi-door-open" aria-hidden="true" style="vertical-align:middle"></span> Entrar</a>
-                    <a href="register"><span class="bi bi-pencil-square" aria-hidden="true" style="vertical-align:middle"></span> Cadastre-se</a>
-                </NotAuthorized>-->
-            </AuthorizeView>
-        </div>
+<AuthorizeView>
+    <Authorized>
+        <MudLayout>
+            <MudAppBar Elevation="0" Dense="false" ToolBarClass="pl-1 pr-1">
+                @if (_breakpoint != Breakpoint.Xs)
+                {
+                    <MudIconButton OnClick="@ToggleLeftOpen" Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" />
+                }
+                <HomeButton />
+                <MudSpacer />
+                <NotificationsIconButton />
+                <ThemeIconButton @bind-IsDark="@_isDark" OnClick="@ToggleTheme" />
+                <MudIconButton Icon="@Icons.Material.Filled.Settings" Color="Color.Inherit" Href="Account/Manage" />
+                <MudIconButton Href="logout" Icon="@Icons.Material.Filled.Logout" Color="Color.Inherit" />
+            </MudAppBar>
+            <MudDrawer @bind-Open="@_leftOpen" ClipMode="DrawerClipMode.Always" Elevation="2">
+                <Modulum.Client.Shared.NavMenu />
+            </MudDrawer>
+            <MudDrawer Anchor="Anchor.Right" @bind-Open="@_rightOpen" ClipMode="DrawerClipMode.Always" Variant="DrawerVariant.Temporary" OverlayAutoClose="true" Elevation="2" Width="160px">
+                <modulum.Shared.SettingsMenu />
+            </MudDrawer>
+            <MudMainContent Class="pb-12">
+                @Body
+                @if (_breakpoint == Breakpoint.Xs)
+                {
+                    <MudFab OnClick="@ToggleLeftOpen" Size="@Size.Large" Style="position:fixed; bottom:15px; right:25px;" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Menu" />
+                }
+            </MudMainContent>
+        </MudLayout>
+    </Authorized>
+    <NotAuthorized>
+        @if (IsAnonymous())
+        {
+            <MudAppBar Elevation="1" Dense="false">
+                <MudStack Row="true" Class="d-flex justify-space-around flex-grow-1">
+                    <HomeButton />
+                    <MudSpacer />
+                    <ThemeIconButton @bind-IsDark="@_isDark" OnClick="@ToggleTheme" />
+                    <LoginButton />
+                    <MudButton
+                        Href="/register"
+                        Target="_self"
+                        IconSize="Size.Large"
+                        Variant="Variant.Text"
+                        Style="color: white; margin-left: -11px;"
+                    >
+                        Cadastro
+                    </MudButton>
+                </MudStack>
+            </MudAppBar>
+            <CascadingValue Name="IsDarkTheme" Value="@_isDark">
+                <MudMainContent>
+                    @Body
+                </MudMainContent>
+            </CascadingValue>
+        }
+        else
+        {
+            <modulum.Shared.RedirectLogin />
+        }
+    </NotAuthorized>
+</AuthorizeView>
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+@code {
+
+    private MudTheme SykiTheme = new MudTheme()
+        {
+            LayoutProperties = new LayoutProperties()
+            {
+                DrawerWidthLeft = "180px"
+            }
+        };
+
+    private bool _isDark = true;
+    private bool _leftOpen = true;
+    private bool _rightOpen = false;
+    private Breakpoint _breakpoint;
+
+    private bool IsAnonymous()
+    {
+        var uri =  _navigationManager.Uri.ToLower();
+        return uri.EndsWith("/") || uri.Contains("register") || uri.Contains("login") || uri.Contains("reset-password");
+    }
+
+    private void ToggleLeftOpen()
+    {
+        _leftOpen = !_leftOpen;
+    }
+
+    private void ToggleRightOpen()
+    {
+        _rightOpen = !_rightOpen;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _breakpoint = await BrowserViewportService.GetCurrentBreakpointAsync();
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        //var user = await AuthManager.GetUser();
+        //if (user.Role.IsIn(UserRole.Teacher, UserRole.Student))
+        //{
+        //    SykiTheme.LayoutProperties.DrawerWidthLeft = "260px";
+        //}
+        //else
+        //{
+        //    SykiTheme.LayoutProperties.DrawerWidthLeft = "180px";
+        //}
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+        await UpdateChartsTheme();
+    }
+
+    private async Task ToggleTheme()
+    {
+        _isDark = !_isDark;
+
+        await UpdateChartsTheme();
+
+        //await LocalStorage.SetItemAsync("IsDark", _isDark.ToString());
+    }
+
+    private async Task UpdateChartsTheme()
+    {
+        //var options = new ApexCharts.ApexChartBaseOptions
+        //    {
+        //        Theme = new ApexCharts.Theme
+        //        {
+        //            Mode = _isDark ? ApexCharts.Mode.Dark : ApexCharts.Mode.Light
+        //        }
+        //    };
+
+        //await ApexChartService.SetGlobalOptionsAsync(options, true);
+    }
+
+    private async Task Logout()
+    {
+        _navigationManager.NavigateTo("/logout");
+    }
+}

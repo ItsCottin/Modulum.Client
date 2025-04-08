@@ -1,56 +1,15 @@
 ﻿@implements IDisposable
 
-<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">MODULUM</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-</div>
-
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Início
-            </NavLink>
-        </div>
-        <AuthorizeView>
-             <Authorized>
-                <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="system">
-                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Sistemas
-                    </NavLink>
-                </div>
-                <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="Account/Manage">
-                        <span class="bi bi-person-badge" aria-hidden="true"></span> @context.User.Identity?.Name
-                    </NavLink>
-                </div>
-                <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="logout">
-                        <span class="bi bi bi-arrow-bar-left" aria-hidden="true"></span> Sair
-                    </NavLink>
-                </div>
-            </Authorized>
-            <NotAuthorized>
-                <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="register">
-                        <span class="bi bi-person-nav-menu" aria-hidden="true"></span> Cadastre-se
-                    </NavLink>
-                </div>
-                <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="login">
-                        <span class="bi bi-person-badge-nav-menu" aria-hidden="true"></span> Entrar
-                    </NavLink>
-                </div>
-            </NotAuthorized>
-        </AuthorizeView>
-    </nav>
-</div>
-
+<AuthorizeView>
+    <Authorized>
+        <MudNavMenu Dense="false" Margin="Margin.Normal">
+            <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Store" Href="System">Sistemas</MudNavLink>
+            <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.LibraryBooks" Href="">@context.User.Identity?.Name</MudNavLink>
+        </MudNavMenu>
+    </Authorized>
+</AuthorizeView>
 @code {
+    private int margin = 10;
     private bool collapseNavMenu = true;
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;

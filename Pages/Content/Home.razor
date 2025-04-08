@@ -1,9 +1,34 @@
 ﻿@page "/"
 
 @attribute [AllowAnonymous]
-<PageTitle>Início</PageTitle>
+<PageTitle>MODULUM</PageTitle>
 
-<span class="pageheader">Modulum</span>
-<br />
-<p class="pagecontent">Esta aplicação está em desenvolvimento, seu nome é "Modulum", essa aplicação tem como objetivo cadastrar seu proprio sistema dentro dessa plataforma que será apresentado como projeto final na Faculdade das Americas em junho de 2025</p>
-<h5 class="productheader"> Versao do dia 22/09/2024</h5>
+<!--<AuthorizeView Roles="@UserRole.Adm.ToString()">
+    <Authorized>
+        <AdmInsightsPage />
+    </Authorized>
+</AuthorizeView>
+
+<AuthorizeView Roles="@UserRole.Academic.ToString()">
+    <Authorized>
+        <AcademicInsightsPage />
+    </Authorized>
+</AuthorizeView>
+
+<AuthorizeView Roles="@UserRole.Student.ToString()">
+    <Authorized>
+        <StudentInsightsPage />
+    </Authorized>
+</AuthorizeView>
+
+<AuthorizeView Roles="@UserRole.Teacher.ToString()">
+    <Authorized>
+        <TeacherInsightsPage />
+    </Authorized>
+</AuthorizeView>-->
+
+<AuthorizeView>
+    <NotAuthorized>
+        <IndexAnonymous />
+    </NotAuthorized>
+</AuthorizeView>

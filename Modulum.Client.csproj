@@ -21,7 +21,7 @@
     <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="8.0.14" />
     <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.14" />
     <PackageReference Include="Microsoft.Extensions.Localization" Version="8.0.14" />
-    <PackageReference Include="MudBlazor" Version="8.3.0" />
+    <PackageReference Include="MudBlazor" Version="8.5.1" />
     <PackageReference Include="RCF.Modulum.Client.Infrastructure" Version="0.0.1-beta.7" />
     <PackageReference Include="RCF.Modulum.Shared" Version="0.0.1-beta.8" />
     <PackageReference Include="System.Net.Http.Json" Version="8.0.1" />

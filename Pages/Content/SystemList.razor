@@ -1,0 +1,50 @@
+﻿@page "/System"
+
+<MudContainer Class="mt-4 mb-8" MaxWidth="MaxWidth.Large">
+    <MudText Typo="Typo.h4" Align="Align.Center" Class="mb-4">Meus Sistemas</MudText>
+
+    <MudGrid GutterSize="3">
+        @foreach (var sistema in Sistemas)
+        {
+            <MudItem xs="12" sm="6" md="4">
+                <MudCard Class="h-100">
+                    <MudCardContent Class="text-center">
+                        <MudText Typo="Typo.h6">@sistema.Nome</MudText>
+                        <MudText Typo="Typo.body2" Color="Color.Secondary">@sistema.Descricao</MudText>
+                    </MudCardContent>
+                    <MudCardActions Class="justify-center">
+                        <MudButton Variant="Variant.Filled" Color="Color.Primary" FullWidth="true">Acessar</MudButton>
+                    </MudCardActions>
+                </MudCard>
+            </MudItem>
+        }
+
+        <!-- Card de adicionar novo sistema -->
+        <MudItem xs="12" sm="6" md="4">
+            <MudCard Class="h-100 d-flex justify-center align-center" Style="cursor:pointer;" @onclick="AdicionarNovoSistema">
+                <MudCardContent Class="d-flex justify-center align-center" Style="height: 100px;">
+                    <MudIcon Icon="@Icons.Material.Filled.Add" Size="Size.Large" Color="Color.Default" />
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+
+@code {
+    private List<SistemaModel> Sistemas = new()
+    {
+        new SistemaModel { Nome = "Gestor Financeiro", Descricao = "Gerencie suas finanças com facilidade" },
+        new SistemaModel { Nome = "Controle de Estoque", Descricao = "Monitore seus produtos e pedidos" }
+    };
+
+    private void AdicionarNovoSistema()
+    {
+        _navigationManager.NavigateTo("/System/Create");
+    }
+
+    public class SistemaModel
+    {
+        public string Nome { get; set; } = "";
+        public string Descricao { get; set; } = "";
+    }
+}

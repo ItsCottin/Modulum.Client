@@ -1,0 +1,98 @@
+﻿<h3>Campos</h3>
+
+<MudContainer MaxWidth="MaxWidth.Large" Class="mt-4">
+    <MudGrid>
+        <!-- Formulário de adição de campos -->
+        <MudItem xs="12" md="4">
+            <MudPaper Class="pa-4">
+                <MudText Typo="Typo.h6">Adicionar Campo</MudText>
+
+                <MudTextField @bind-Value="novoCampo.Nome" Label="Nome do Campo" Variant="Variant.Filled" Class="mb-3" />
+
+                <MudSelect T="string" Label="Tipo do Campo" @bind-Value="novoCampo.Tipo" Variant="Variant.Filled" Class="mb-3">
+                    @foreach (var tipo in _tipos)
+                    {
+                        <MudSelectItem Value="@tipo.Key">@tipo.Value</MudSelectItem>
+                    }
+                </MudSelect>
+
+                <MudButton Color="Color.Primary" OnClick="AdicionarCampo" Variant="Variant.Filled">Adicionar</MudButton>
+            </MudPaper>
+        </MudItem>
+
+        <!-- Lista de campos adicionados -->
+        <MudItem xs="12" md="8">
+            <MudPaper Class="pa-4">
+                <MudText Typo="Typo.h6">Campos Adicionados</MudText>
+
+                <MudList Class="mt-2" T="string">
+                    @foreach (var campo in campos)
+                    {
+                        <MudListItem>
+                            <MudGrid>
+                                <MudItem xs="9">
+                                    <MudText>@campo.Nome (@campo.Tipo)</MudText>
+                                </MudItem>
+                                <MudItem xs="3" Class="text-end">
+                                    <MudIconButton Icon="@Icons.Material.Filled.Delete"
+                                                    Color="Color.Error"
+                                                    Size="Size.Small"
+                                                    OnClick="@(() => RemoverCampo(campo))" />
+                                </MudItem>
+                            </MudGrid>
+                        </MudListItem>
+                    }
+                </MudList>
+
+                <!-- Botão Avançar (comentado) -->
+                <!--
+                <div class="mt-4 text-end">
+                    <MudButton Color="Color.Success" OnClick="AvancarParaLayout">Avançar</MudButton>
+                </div>
+                -->
+            </MudPaper>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+
+@code {
+    private Campo novoCampo = new();
+    private List<Campo> campos = new();
+    private readonly Dictionary<string, string> _tipos = new()
+    {
+        { "text", "Texto" },
+        { "number", "Número" },
+        { "date", "Data" },
+        { "checkbox", "Checkbox" }
+    };
+
+    private void AdicionarCampo()
+    {
+        if (!string.IsNullOrWhiteSpace(novoCampo.Nome))
+        {
+            campos.Add(new Campo
+                {
+                    Nome = novoCampo.Nome,
+                    Tipo = novoCampo.Tipo
+                });
+
+            novoCampo = new(); // limpa
+        }
+    }
+
+    private void RemoverCampo(Campo campo)
+    {
+        campos.Remove(campo);
+    }
+
+    private void AvancarParaLayout()
+    {
+        // implementar a navegação para a próxima etapa
+    }
+
+    public class Campo
+    {
+        public string Nome { get; set; } = "";
+        public string Tipo { get; set; } = "";
+    }
+}

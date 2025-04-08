@@ -1,4 +1,4 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿<!--<div class="top-row ps-3 navbar navbar-dark"> layout antigo
     <div class="container-fluid">
         <a class="navbar-brand" href="">Modulum.Client</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
@@ -25,15 +25,23 @@
             </NavLink>
         </div>
     </nav>
-</div>
+</div>-->
+
+<MudNavMenu>
+    <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Store">Store</MudNavLink>
+    <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.LibraryBooks">Library</MudNavLink>
+    <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Group">Community</MudNavLink>
+</MudNavMenu>
+
 
 @code {
-    private bool collapseNavMenu = true;
+    @*private bool collapseNavMenu = true; codigo antigo
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
-    }
+    }*@
+
 }
