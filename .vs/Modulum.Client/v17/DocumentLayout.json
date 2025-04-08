@@ -220,7 +220,7 @@
               "RelativeDocumentMoniker": "wwwroot\\index.html",
               "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\wwwroot\\index.html",
               "RelativeToolTip": "wwwroot\\index.html",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABIAAAAHAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAkwBsAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-04-08T04:10:26.679Z",
               "EditorCaption": ""
@@ -233,7 +233,7 @@
               "RelativeDocumentMoniker": "wwwroot\\css\\style.css",
               "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\wwwroot\\css\\style.css",
               "RelativeToolTip": "wwwroot\\css\\style.css",
-              "ViewState": "AQIAABgAAAAAAAAAAAAwwEIAAAAAAAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAAAwwEIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-04-08T04:09:52.183Z",
               "EditorCaption": ""
@@ -296,8 +296,7 @@
               "RelativeToolTip": "Pages\\Criacao\\Nome.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T05:46:35.722Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T05:46:35.722Z"
             },
             {
               "$type": "Document",
@@ -309,8 +308,7 @@
               "RelativeToolTip": "Pages\\Criacao\\Criacao.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T05:41:24.564Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T05:41:24.564Z"
             },
             {
               "$type": "Document",
