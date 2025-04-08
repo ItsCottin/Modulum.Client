@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\pages\\criacao\\nome.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:pages\\criacao\\nome.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\pages\\criacao\\criacao.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:pages\\criacao\\criacao.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\pages\\criacao\\nome.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:pages\\criacao\\nome.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\pages\\criacao\\desenho.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -186,7 +194,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -206,7 +214,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "wwwroot\\index.html",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\wwwroot\\index.html",
+              "RelativeToolTip": "wwwroot\\index.html",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABIAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-08T04:10:26.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\style.css",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "wwwroot\\css\\style.css",
+              "ViewState": "AQIAABgAAAAAAAAAAAAwwEIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-08T04:09:52.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "IndexCard.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Indexes\\IndexCard.razor",
               "RelativeDocumentMoniker": "Components\\Indexes\\IndexCard.razor",
@@ -214,12 +248,11 @@
               "RelativeToolTip": "Components\\Indexes\\IndexCard.razor",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAACUAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T22:26:02.387Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T22:26:02.387Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Desenho.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Criacao\\Desenho.razor",
               "RelativeDocumentMoniker": "Pages\\Criacao\\Desenho.razor",
@@ -227,12 +260,11 @@
               "RelativeToolTip": "Pages\\Criacao\\Desenho.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAABqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T06:07:48.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T06:07:48.254Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "_Imports.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\_Imports.razor",
               "RelativeDocumentMoniker": "_Imports.razor",
@@ -244,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\NavMenu.razor",
               "RelativeDocumentMoniker": "Shared\\NavMenu.razor",
@@ -252,25 +284,24 @@
               "RelativeToolTip": "Shared\\NavMenu.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-01T01:00:34.919Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-01T01:00:34.919Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Nome.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Criacao\\Nome.razor",
               "RelativeDocumentMoniker": "Pages\\Criacao\\Nome.razor",
               "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Criacao\\Nome.razor",
               "RelativeToolTip": "Pages\\Criacao\\Nome.razor",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACcAAAAWAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-06T05:46:35.722Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Criacao.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Criacao\\Criacao.razor",
               "RelativeDocumentMoniker": "Pages\\Criacao\\Criacao.razor",
@@ -283,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "SystemList.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Content\\SystemList.razor",
               "RelativeDocumentMoniker": "Pages\\Content\\SystemList.razor",
@@ -291,12 +322,11 @@
               "RelativeToolTip": "Pages\\Content\\SystemList.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-03T03:59:55.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T03:59:55.496Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\MainLayout.razor",
               "RelativeDocumentMoniker": "Shared\\MainLayout.razor",
@@ -304,12 +334,11 @@
               "RelativeToolTip": "Shared\\MainLayout.razor",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAABkAAACBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T07:49:13.939Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T07:49:13.939Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Campos.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Criacao\\Campos.razor",
               "RelativeDocumentMoniker": "Pages\\Criacao\\Campos.razor",
@@ -317,12 +346,11 @@
               "RelativeToolTip": "Pages\\Criacao\\Campos.razor",
               "ViewState": "AQIAAEIAAAAAAAAAAAAAACUAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T05:54:54.845Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T05:54:54.845Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Logout.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Identity\\Logout.razor",
               "RelativeDocumentMoniker": "Pages\\Identity\\Logout.razor",
@@ -330,12 +358,11 @@
               "RelativeToolTip": "Pages\\Identity\\Logout.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-04T14:25:34.984Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T14:25:34.984Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Register.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Register.razor",
               "RelativeDocumentMoniker": "Pages\\Authentication\\Register.razor",
@@ -347,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Login.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Login.razor",
               "RelativeDocumentMoniker": "Pages\\Authentication\\Login.razor",
@@ -359,7 +386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Content\\Home.razor",
               "RelativeDocumentMoniker": "Pages\\Content\\Home.razor",
@@ -367,12 +394,11 @@
               "RelativeToolTip": "Pages\\Content\\Home.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T22:57:56.285Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T22:57:56.285Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Login.razor.cs",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Login.razor.cs",
               "RelativeDocumentMoniker": "Pages\\Authentication\\Login.razor.cs",
@@ -384,7 +410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Loading.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\Loading.razor",
               "RelativeDocumentMoniker": "Shared\\Loading.razor",
@@ -396,7 +422,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "ManageNavMenu.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\ManageNavMenu.razor",
               "RelativeDocumentMoniker": "Shared\\ManageNavMenu.razor",
@@ -408,7 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Register.razor.cs",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Register.razor.cs",
               "RelativeDocumentMoniker": "Pages\\Authentication\\Register.razor.cs",
@@ -420,7 +446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "PasswordRequeriment.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Passwords\\PasswordRequeriment.razor",
               "RelativeDocumentMoniker": "Components\\Passwords\\PasswordRequeriment.razor",
@@ -432,7 +458,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "PasswordTextField.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Passwords\\PasswordTextField.razor",
               "RelativeDocumentMoniker": "Components\\Passwords\\PasswordTextField.razor",
@@ -444,7 +470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "RedirectLogin.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\RedirectLogin.razor",
               "RelativeDocumentMoniker": "Shared\\RedirectLogin.razor",
@@ -456,7 +482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "SykiTextField.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiTextField.razor",
               "RelativeDocumentMoniker": "Components\\Custom\\SykiTextField.razor",
@@ -468,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Layout\\MainLayout.razor",
               "RelativeDocumentMoniker": "Layout\\MainLayout.razor",
@@ -480,7 +506,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "SummaryCard.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Summaries\\SummaryCard.razor",
               "RelativeDocumentMoniker": "Components\\Summaries\\SummaryCard.razor",
@@ -492,7 +518,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "SykiTablePager.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiTablePager.razor",
               "RelativeDocumentMoniker": "Components\\Custom\\SykiTablePager.razor",
@@ -504,7 +530,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "SykiProgressCircular.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiProgressCircular.razor",
               "RelativeDocumentMoniker": "Components\\Custom\\SykiProgressCircular.razor",
@@ -516,7 +542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "SykiPageTitle.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiPageTitle.razor",
               "RelativeDocumentMoniker": "Components\\Custom\\SykiPageTitle.razor",
@@ -528,7 +554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "SykiPageHeader.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiPageHeader.razor",
               "RelativeDocumentMoniker": "Components\\Custom\\SykiPageHeader.razor",
@@ -540,7 +566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "SykiPageAlert.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiPageAlert.razor",
               "RelativeDocumentMoniker": "Components\\Custom\\SykiPageAlert.razor",
@@ -552,7 +578,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "SykiDialogTitle.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiDialogTitle.razor",
               "RelativeDocumentMoniker": "Components\\Custom\\SykiDialogTitle.razor",
@@ -564,7 +590,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "SykiDatePicker.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiDatePicker.razor",
               "RelativeDocumentMoniker": "Components\\Custom\\SykiDatePicker.razor",
@@ -576,7 +602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "SykiDataGridSearchTextField.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiDataGridSearchTextField.razor",
               "RelativeDocumentMoniker": "Components\\Custom\\SykiDataGridSearchTextField.razor",
@@ -588,7 +614,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "SykiDataGridPager.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Custom\\SykiDataGridPager.razor",
               "RelativeDocumentMoniker": "Components\\Custom\\SykiDataGridPager.razor",
@@ -600,7 +626,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "DialogCancelButton.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Buttons\\DialogCancelButton.razor",
               "RelativeDocumentMoniker": "Components\\Buttons\\DialogCancelButton.razor",
@@ -612,7 +638,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "DialogSaveButton.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Buttons\\DialogSaveButton.razor",
               "RelativeDocumentMoniker": "Components\\Buttons\\DialogSaveButton.razor",
@@ -624,7 +650,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "HomeButton.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Buttons\\HomeButton.razor",
               "RelativeDocumentMoniker": "Components\\Buttons\\HomeButton.razor",
@@ -636,7 +662,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "LoginButton.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Buttons\\LoginButton.razor",
               "RelativeDocumentMoniker": "Components\\Buttons\\LoginButton.razor",
@@ -648,7 +674,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "MfaIconButton.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Buttons\\MfaIconButton.razor",
               "RelativeDocumentMoniker": "Components\\Buttons\\MfaIconButton.razor",
@@ -660,7 +686,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "ThemeIconButton.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Components\\Buttons\\ThemeIconButton.razor",
               "RelativeDocumentMoniker": "Components\\Buttons\\ThemeIconButton.razor",
@@ -672,7 +698,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "Layout\\NavMenu.razor",
@@ -684,7 +710,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 43,
               "Title": "WebAssemblyHostBuilderExtensions.cs",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Extensions\\WebAssemblyHostBuilderExtensions.cs",
               "RelativeDocumentMoniker": "Extensions\\WebAssemblyHostBuilderExtensions.cs",
@@ -696,7 +722,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 44,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -708,7 +734,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "Modulum.Client.csproj",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Modulum.Client.csproj",
               "RelativeDocumentMoniker": "Modulum.Client.csproj",
@@ -720,7 +746,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "Email.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Account\\Email.razor",
               "RelativeDocumentMoniker": "Pages\\Account\\Email.razor",
@@ -732,7 +758,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 45,
               "Title": "AccountLayout.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\AccountLayout.razor",
               "RelativeDocumentMoniker": "Shared\\AccountLayout.razor",
