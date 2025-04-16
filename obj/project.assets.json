@@ -1671,7 +1671,7 @@
           }
         }
       },
-      "RCF.Modulum.Application/0.0.2-beta.1": {
+      "RCF.Modulum.Application/0.0.2-beta.3": {
         "type": "package",
         "dependencies": {
           "AutoMapper": "14.0.0",
@@ -1682,8 +1682,8 @@
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.EntityFrameworkCore": "8.0.14",
           "Newtonsoft.Json": "13.0.3",
-          "RCF.Modulum.Domain": "0.0.1-beta.7",
-          "RCF.Modulum.Shared": "0.0.1-beta.8",
+          "RCF.Modulum.Domain": "0.0.1-beta.9",
+          "RCF.Modulum.Shared": "0.0.2-beta.2",
           "System.Linq.Dynamic.Core": "1.6.0.2"
         },
         "compile": {
@@ -1693,7 +1693,7 @@
           "lib/net8.0/RCF.Modulum.Application.dll": {}
         }
       },
-      "RCF.Modulum.Client.Infrastructure/0.0.1-beta.7": {
+      "RCF.Modulum.Client.Infrastructure/0.0.1-beta.8": {
         "type": "package",
         "dependencies": {
           "AutoMapper": "14.0.0",
@@ -1702,8 +1702,8 @@
           "Microsoft.AspNetCore.Components.Authorization": "8.0.14",
           "Microsoft.AspNetCore.Components.WebAssembly": "8.0.14",
           "MudBlazor": "8.3.0",
-          "RCF.Modulum.Application": "0.0.2-beta.1",
-          "RCF.Modulum.Shared": "0.0.1-beta.8",
+          "RCF.Modulum.Application": "0.0.2-beta.3",
+          "RCF.Modulum.Shared": "0.0.2-beta.2",
           "Toolbelt.Blazor.HttpClientInterceptor": "10.2.0"
         },
         "compile": {
@@ -1713,7 +1713,7 @@
           "lib/net8.0/RCF.Modulum.Client.Infrastructure.dll": {}
         }
       },
-      "RCF.Modulum.Domain/0.0.1-beta.7": {
+      "RCF.Modulum.Domain/0.0.1-beta.9": {
         "type": "package",
         "compile": {
           "lib/net8.0/RCF.Modulum.Domain.dll": {}
@@ -1722,7 +1722,7 @@
           "lib/net8.0/RCF.Modulum.Domain.dll": {}
         }
       },
-      "RCF.Modulum.Shared/0.0.1-beta.8": {
+      "RCF.Modulum.Shared/0.0.2-beta.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Identity.Stores": "8.0.14",
@@ -3589,7 +3589,7 @@
           }
         }
       },
-      "RCF.Modulum.Application/0.0.2-beta.1": {
+      "RCF.Modulum.Application/0.0.2-beta.3": {
         "type": "package",
         "dependencies": {
           "AutoMapper": "14.0.0",
@@ -3600,8 +3600,8 @@
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.EntityFrameworkCore": "8.0.14",
           "Newtonsoft.Json": "13.0.3",
-          "RCF.Modulum.Domain": "0.0.1-beta.7",
-          "RCF.Modulum.Shared": "0.0.1-beta.8",
+          "RCF.Modulum.Domain": "0.0.1-beta.9",
+          "RCF.Modulum.Shared": "0.0.2-beta.2",
           "System.Linq.Dynamic.Core": "1.6.0.2"
         },
         "compile": {
@@ -3611,7 +3611,7 @@
           "lib/net8.0/RCF.Modulum.Application.dll": {}
         }
       },
-      "RCF.Modulum.Client.Infrastructure/0.0.1-beta.7": {
+      "RCF.Modulum.Client.Infrastructure/0.0.1-beta.8": {
         "type": "package",
         "dependencies": {
           "AutoMapper": "14.0.0",
@@ -3620,8 +3620,8 @@
           "Microsoft.AspNetCore.Components.Authorization": "8.0.14",
           "Microsoft.AspNetCore.Components.WebAssembly": "8.0.14",
           "MudBlazor": "8.3.0",
-          "RCF.Modulum.Application": "0.0.2-beta.1",
-          "RCF.Modulum.Shared": "0.0.1-beta.8",
+          "RCF.Modulum.Application": "0.0.2-beta.3",
+          "RCF.Modulum.Shared": "0.0.2-beta.2",
           "Toolbelt.Blazor.HttpClientInterceptor": "10.2.0"
         },
         "compile": {
@@ -3631,7 +3631,7 @@
           "lib/net8.0/RCF.Modulum.Client.Infrastructure.dll": {}
         }
       },
-      "RCF.Modulum.Domain/0.0.1-beta.7": {
+      "RCF.Modulum.Domain/0.0.1-beta.9": {
         "type": "package",
         "compile": {
           "lib/net8.0/RCF.Modulum.Domain.dll": {}
@@ -3640,7 +3640,7 @@
           "lib/net8.0/RCF.Modulum.Domain.dll": {}
         }
       },
-      "RCF.Modulum.Shared/0.0.1-beta.8": {
+      "RCF.Modulum.Shared/0.0.2-beta.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Identity.Stores": "8.0.14",
@@ -5965,59 +5965,59 @@
         "polly.extensions.http.nuspec"
       ]
     },
-    "RCF.Modulum.Application/0.0.2-beta.1": {
-      "sha512": "lkoF14QMwd98smgJQu1bYFWP7BxL9edB7n/c5rrk10qLVMZLP1eCwlLAPtmHMUjhosT/Xsfc0MJZ32zohU2eQg==",
+    "RCF.Modulum.Application/0.0.2-beta.3": {
+      "sha512": "9ZuWaof8Lt/ycqLm3lbqNpUuwDOGsI0Ec6nTvIir20r7ugslJtFCPrvyVMZkft80HolR2tDg2UmqTQHNiG3vTw==",
       "type": "package",
-      "path": "rcf.modulum.application/0.0.2-beta.1",
+      "path": "rcf.modulum.application/0.0.2-beta.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Licence.txt",
         "README.md",
         "lib/net8.0/RCF.Modulum.Application.dll",
-        "rcf.modulum.application.0.0.2-beta.1.nupkg.sha512",
+        "rcf.modulum.application.0.0.2-beta.3.nupkg.sha512",
         "rcf.modulum.application.nuspec"
       ]
     },
-    "RCF.Modulum.Client.Infrastructure/0.0.1-beta.7": {
-      "sha512": "1f8r+HivJCfTDt2vzb9ebRfheNUVNO1+fiAnYCfs3oi4r+oKPDMahSvTE05Q1QkxfUig/sst9JJ8/w8RVtvuGg==",
+    "RCF.Modulum.Client.Infrastructure/0.0.1-beta.8": {
+      "sha512": "9A7VD6IITeOB/RPg0YBU+1rg/05AUjKl8NLfsqDxA+HKTr4cLcBqVdU+82855PWBuBDoPbdiFznBqIkXM0zIIA==",
       "type": "package",
-      "path": "rcf.modulum.client.infrastructure/0.0.1-beta.7",
+      "path": "rcf.modulum.client.infrastructure/0.0.1-beta.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Licence.txt",
         "README.md",
         "lib/net8.0/RCF.Modulum.Client.Infrastructure.dll",
-        "rcf.modulum.client.infrastructure.0.0.1-beta.7.nupkg.sha512",
+        "rcf.modulum.client.infrastructure.0.0.1-beta.8.nupkg.sha512",
         "rcf.modulum.client.infrastructure.nuspec"
       ]
     },
-    "RCF.Modulum.Domain/0.0.1-beta.7": {
-      "sha512": "RoQso8bq5eRzWGsEtyxkdDxBiC0gEGqsN47JoeNjDINePDdUHr8ZKzJ0w/t+P6BwfV3M5ZuYW9T2tLvvrl/OSw==",
+    "RCF.Modulum.Domain/0.0.1-beta.9": {
+      "sha512": "9FDWGjI5+Atl30GXxeHjygzOfLbapGPSBLsmnBG8LcS+VdWulUqUA6yrCx+BX6vzRuEElCh55JaVgWwlcmf7aw==",
       "type": "package",
-      "path": "rcf.modulum.domain/0.0.1-beta.7",
+      "path": "rcf.modulum.domain/0.0.1-beta.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Licence.txt",
         "README.md",
         "lib/net8.0/RCF.Modulum.Domain.dll",
-        "rcf.modulum.domain.0.0.1-beta.7.nupkg.sha512",
+        "rcf.modulum.domain.0.0.1-beta.9.nupkg.sha512",
         "rcf.modulum.domain.nuspec"
       ]
     },
-    "RCF.Modulum.Shared/0.0.1-beta.8": {
-      "sha512": "3k94EzhTCeR8mIkJBSBxkzhIX2C2tn+uyat9FoLphdCcxIx2/ZdiWDulhXmvWyFKHZ9mmu3kWUHOwKyVUkR8zw==",
+    "RCF.Modulum.Shared/0.0.2-beta.2": {
+      "sha512": "sdehxbdKPZghdTKJK1ymI27lzhlqsc8LSBpey1tXFn4zheeGs1MN4g0r5Yq2d6uNL9jzMDCC2Fz86dmpLxY7Vg==",
       "type": "package",
-      "path": "rcf.modulum.shared/0.0.1-beta.8",
+      "path": "rcf.modulum.shared/0.0.2-beta.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Licence.txt",
         "README.md",
         "lib/net8.0/RCF.Modulum.Shared.dll",
-        "rcf.modulum.shared.0.0.1-beta.8.nupkg.sha512",
+        "rcf.modulum.shared.0.0.2-beta.2.nupkg.sha512",
         "rcf.modulum.shared.nuspec"
       ]
     },
@@ -6425,8 +6425,8 @@
       "Microsoft.NET.ILLink.Tasks >= 8.0.5",
       "Microsoft.NET.Sdk.WebAssembly.Pack >= 8.0.5",
       "MudBlazor >= 8.5.1",
-      "RCF.Modulum.Client.Infrastructure >= 0.0.1-beta.7",
-      "RCF.Modulum.Shared >= 0.0.1-beta.8",
+      "RCF.Modulum.Client.Infrastructure >= 0.0.1-beta.8",
+      "RCF.Modulum.Shared >= 0.0.2-beta.2",
       "System.Net.Http.Json >= 8.0.1",
       "bootstrap >= 5.3.3"
     ]
@@ -6548,11 +6548,11 @@
           },
           "RCF.Modulum.Client.Infrastructure": {
             "target": "Package",
-            "version": "[0.0.1-beta.7, )"
+            "version": "[0.0.1-beta.8, )"
           },
           "RCF.Modulum.Shared": {
             "target": "Package",
-            "version": "[0.0.1-beta.8, )"
+            "version": "[0.0.2-beta.2, )"
           },
           "System.Net.Http.Json": {
             "target": "Package",

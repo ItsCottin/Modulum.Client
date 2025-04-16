@@ -69,13 +69,30 @@
 </AuthorizeView>
 
 @code {
-
     private MudTheme SykiTheme = new MudTheme()
         {
             LayoutProperties = new LayoutProperties()
             {
-                DrawerWidthLeft = "180px"
-            }
+                DrawerWidthLeft = "200px",
+                DrawerWidthRight = "200px",
+                DefaultBorderRadius = "12px",
+            },
+            Typography = new Typography()
+            {
+                
+                Default = new DefaultTypography() { FontSize = "1.2rem", LetterSpacing = "0.05em" },
+                H1 = new H1Typography() { FontSize = "2.5rem" },
+                H2 = new H2Typography() { FontSize = "2rem" },
+                H3 = new H3Typography() { FontSize = "1.8rem" },
+                Button = new ButtonTypography() { FontSize = "1.1rem" },
+                Body1 = new Body1Typography() { FontSize = "1.2rem" },
+                Body2 = new Body2Typography() { FontSize = "1.1rem" },
+                Caption = new CaptionTypography() { FontSize = "1rem" },
+            },
+            //Spacing = new Spacing()
+            //{
+                //Default = 8 // você pode aumentar esse valor para ter mais "espaço" entre elementos
+            //}
         };
 
     private bool _isDark = true;
@@ -85,7 +102,7 @@
 
     private bool IsAnonymous()
     {
-        var uri =  _navigationManager.Uri.ToLower();
+        var uri = _navigationManager.Uri.ToLower();
         return uri.EndsWith("/") || uri.Contains("register") || uri.Contains("login") || uri.Contains("reset-password");
     }
 
@@ -149,4 +166,5 @@
     {
         _navigationManager.NavigateTo("/logout");
     }
+    
 }

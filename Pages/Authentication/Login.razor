@@ -35,7 +35,8 @@
                             Variant="Variant.Outlined"
                             Required="true"
                             RequiredError="Informe!"
-                            For="@(() => _tokenModel.Email)" />
+                            For="@(() => _tokenModel.Email)"
+                            Typo="Typo.h5" />
                         <MudTextField Margin="Margin.Dense"
                             Adornment="Adornment.End"
                             AdornmentIcon="@_passwordIcon"
@@ -49,7 +50,8 @@
                             Required="@Required"
                             RequiredError="Informe!"
                             @bind-Value="@_tokenModel.Password"
-                            For="@(() => _tokenModel.Password)" />
+                            For="@(() => _tokenModel.Password)"
+                            Typo="Typo.h5" />
                     </MudCardContent>
                     <MudCardActions Class="justify-center">
                         <MudStack Spacing="1">
