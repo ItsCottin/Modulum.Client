@@ -18,7 +18,7 @@
                     <modulum.Shared.Loading />
                 </MudOverlay>
                 <EditForm Model="@_registerUserModel" method="post" FormName="Cadastre-se" OnValidSubmit="DoRegisterAsync">
-                    <MudCard Class="px-4 pt-0 pb-4">
+                    <MudCard Class="px-4 pt-0 pb-4" Outlined="true">
                     <MudImage Src="logo_512x512.png" Alt="Syki" Elevation="25" Class="rounded-lg mx-20 mt-10 mb-5" />
                     <MudCardContent>
                         <FluentValidationValidator @ref="_fluentValidationValidator" />

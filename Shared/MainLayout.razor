@@ -2,7 +2,7 @@
 
 <MudPopoverProvider />
 <MudSnackbarProvider />
-<MudThemeProvider IsDarkMode="@_isDark" Theme="@SykiTheme" />
+<MudThemeProvider IsDarkMode="@_isDark" Theme="@ModulumTheme" />
 <MudDialogProvider CloseOnEscapeKey="true" CloseButton="true" />
 
 <AuthorizeView>
@@ -69,8 +69,9 @@
 </AuthorizeView>
 
 @code {
-    private MudTheme SykiTheme = new MudTheme()
+    private MudTheme ModulumTheme = new MudTheme()
         {
+
             LayoutProperties = new LayoutProperties()
             {
                 DrawerWidthLeft = "200px",
@@ -79,7 +80,6 @@
             },
             Typography = new Typography()
             {
-
                 Default = new DefaultTypography() { FontSize = "1.2rem", LetterSpacing = "0.05em" },
                 H1 = new H1Typography() { FontSize = "2.5rem" },
                 H2 = new H2Typography() { FontSize = "2rem" },
@@ -96,17 +96,17 @@
             PaletteDark = new PaletteDark()
             {
                 // Fundos
-                Background = "#0d0d0d",       // Fundo geral bem escuro
-                Surface = "#121212",          // Cards, containers
-                DrawerBackground = "#0d0d0d", // Menu lateral (caso use)
-                AppbarBackground = "#121212", // Top bar
+                Background = "#000000",       // Fundo geral bem escuro
+                Surface = "#000000",          // Cards, containers
+                DrawerBackground = "#000000", // Menu lateral (caso use)
+                AppbarBackground = "#000000", // Top bar
 
                 // Texto
                 TextPrimary = "#f5f5f5",      // Branco quase puro para texto principal
                 TextSecondary = "#c0c0c0",    // Cinza claro para subtítulos
 
                 // Elementos de UI
-                Primary = "#2e2e2e",          // Botões principais (cinza médio)
+                Primary = "#505050",          // Botões principais (cinza médio)
                 Secondary = "#3a3a3a",        // Alternativo, menus, etc
                 Info = "#6b7280",             // Cinza mais claro (informações)
                 Success = "#10b981",          // Verde discreto
@@ -114,8 +114,8 @@
                 Error = "#ef4444",            // Vermelho para erros
 
                 // Bordas e linhas
-                LinesDefault = "#2a2a2a",     // Borda padrão em cinza escuro
-                Divider = "#1f1f1f",          // Linhas divisórias sutis
+                LinesDefault = "#2d2d2d",     // Borda padrão em cinza escuro
+                Divider = "#2d2d2d",          // Linhas divisórias sutis
 
                 // Interação
                 ActionDefault = "#5e5e5e",    // Ícones inativos
@@ -123,7 +123,7 @@
                 ActionDisabledBackground = "#1a1a1a",
 
                 // Hover e efeitos
-                HoverOpacity = 0.04f,
+                HoverOpacity = 0.07f,
                 OverlayDark = "#000000aa",   // Overlay escuro com opacidade
             },
         };
@@ -159,11 +159,11 @@
         //var user = await AuthManager.GetUser();
         //if (user.Role.IsIn(UserRole.Teacher, UserRole.Student))
         //{
-        //    SykiTheme.LayoutProperties.DrawerWidthLeft = "260px";
+        //    ModulumTheme.LayoutProperties.DrawerWidthLeft = "260px";
         //}
         //else
         //{
-        //    SykiTheme.LayoutProperties.DrawerWidthLeft = "180px";
+        //    ModulumTheme.LayoutProperties.DrawerWidthLeft = "180px";
         //}
     }
 
