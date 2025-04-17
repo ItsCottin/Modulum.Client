@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\pages\\authentication\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:pages\\authentication\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,6 +43,55 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Shared\\MainLayout.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\MainLayout.razor",
+              "RelativeToolTip": "Shared\\MainLayout.razor",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAAAHwAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-17T04:12:56.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T03:36:13.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Register.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Register.razor",
+              "RelativeDocumentMoniker": "Pages\\Authentication\\Register.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Register.razor",
+              "RelativeToolTip": "Pages\\Authentication\\Register.razor",
+              "ViewState": "AQIAABEAAAAAAAAAAIAwwCQAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-17T03:16:52.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "wwwroot\\index.html",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\wwwroot\\index.html",
+              "RelativeToolTip": "wwwroot\\index.html",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABwAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-17T03:16:07.313Z"
             }
           ]
         }
