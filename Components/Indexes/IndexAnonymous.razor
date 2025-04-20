@@ -1,82 +1,39 @@
 ﻿@namespace modulum.Components.Indexes
 
-<MudContainer MaxWidth="MaxWidth.Large">
-    <MudGrid Class="mt-7">
-        <MudItem xs="12" sm="12" md="4" lg="4">
-            <MudStack Row="true">
-                <MudImage Src="logo.png" Width="90" Height="90" />
-                <MudText Typo="Typo.h3" Class="mb-6">
-                    <strong>Gerencie seu negocio com maestria</strong>
+    <MudContainer MaxWidth="MaxWidth.Large">
+            <MudItem xs="12" md="10" lg="8">
+                <MudImage Src="logo.png" Width="80" Height="80" Class="mb-4" />
+                <MudText Typo="Typo.h2" Class="fw-bold mb-2">
+                    Gerencie seu negócio com maestria
                 </MudText>
-            </MudStack>
-            <MudText Typo="Typo.h5" Class="mb-8">
-                Escola, Estacionamento, Eventos, Estoque: tudo integrado de maneira fácil e intuitiva.
-            </MudText>
-
-            <MudButton 
-                Class="px-8"
-                EndIcon="@Icons.Material.Filled.ArrowForward"
-                IconSize="Size.Large"
-                Variant="Variant.Filled"
-                Style="height: 60px;"
-                Color="Color.Primary"
-                Href="/register/email">
-                <MudText Typo="Typo.h6">
-                    Cadastre-se agora
+                <MudText Typo="Typo.subtitle1" Class="mb-6">
+                    Escola, Estacionamento, Eventos, Estoque: tudo integrado de maneira fácil e intuitiva.
                 </MudText>
-            </MudButton>
-        </MudItem>
 
-        <MudItem xs="12" sm="12" md="8" lg="8">
-            <MudPaper Outlined="true" Class="pa-4" Elevation="0">
-                @if (IsDarkTheme)
+                <MudStack Row="true" JustifyContent="Center" Spacing="2" Class="mb-6">
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary" Href="/register/email" Size="Size.Large">
+                        Cadastre-se agora
+                    </MudButton>
+                    <MudButton Variant="Variant.Outlined" Color="Color.Default" Href="/login" Size="Size.Large">
+                        Já tenho conta
+                    </MudButton>
+                </MudStack>
+
+                <MudDivider Class="my-6" />
+
+                <MudText Typo="Typo.h6" Class="mb-4">
+                    Modulum é um sistema que gerencia o seu negócio com diversas funcionalidades:
+                </MudText>
+
+                @foreach (var item in Beneficios)
                 {
-                    <img src="modulum_home_dark.png" width="100%">
+                    <MudStack Row="true" AlignItems="AlignItems.Center" Class="mb-2">
+                        <MudIcon Icon="@Icons.Material.Filled.CheckCircleOutline" Color="Color.Success" Size="Size.Medium" />
+                        <MudText Class="ml-2" Style="font-size: 17px;">@item</MudText>
+                    </MudStack>
                 }
-                else
-                {
-                    <img src="modulum_home_light.png" width="100%">
-                }
-            </MudPaper>
-        </MudItem>
-
-        <MudItem xs="12" sm="12" md="12" lg="12">
-            <MudText Typo="Typo.h6" Class="mt-6 mb-4">
-                Modulum é um sistema que gerencia o seu negocio, que possui diversas funcionalidades para agilizar sua gestão:
-            </MudText>
-
-                <MudStack Row="true" AlignItems="AlignItems.Center" Class="mb-2">
-                    <MudIcon Icon="@Icons.Material.Filled.CheckCircleOutline" Color="Color.Success" Size="Size.Medium"/>
-                    <MudText Style="font-size: 18px">Conheça nossa plataforma, todas as ferramentas disponiveis para testar</MudText>
-                </MudStack>
-
-                <MudStack Row="true" AlignItems="AlignItems.Center" Class="mb-2">
-                    <MudIcon Icon="@Icons.Material.Filled.CheckCircleOutline" Color="Color.Success" Size="Size.Medium"/>
-                    <MudText Style="font-size: 18px">Crie seu sistema para seu negocio, criação de sistema intuitiva com templetes disponíveis</MudText>
-                </MudStack>
-
-                <MudStack Row="true" AlignItems="AlignItems.Center" Class="mb-2">
-                    <MudIcon Icon="@Icons.Material.Filled.CheckCircleOutline" Color="Color.Success" Size="Size.Medium"/>
-                    <MudText Style="font-size: 18px">Seu sistema do jeitinho que você quiser, você decide quais informações quer armazenar no seu sistema</MudText>
-                </MudStack>
-
-                <MudStack Row="true" AlignItems="AlignItems.Center" Class="mb-2">
-                    <MudIcon Icon="@Icons.Material.Filled.CheckCircleOutline" Color="Color.Success" Size="Size.Medium"/>
-                    <MudText Style="font-size: 18px">Criação simples e facil, com ajuda de templetes e dicas, seu sistema pode ser unico no mercado.</MudText>
-                </MudStack>
-
-                <MudStack Row="true" AlignItems="AlignItems.Center" Class="mb-2">
-                    <MudIcon Icon="@Icons.Material.Filled.CheckCircleOutline" Color="Color.Success" Size="Size.Medium"/>
-                    <MudText Style="font-size: 18px">Permissões para funcionarios, voce decide quem vê e quem mexe com nossas diretivas de acesso configuráveis por usuário</MudText>
-                </MudStack>
-
-                <MudStack Row="true" AlignItems="AlignItems.Center" Class="mb-2">
-                    <MudIcon Icon="@Icons.Material.Filled.CheckCircleOutline" Color="Color.Success" Size="Size.Medium"/>
-                    <MudText Style="font-size: 18px">Suporte aprimorado, plataforma sempre em evolução permitindo que voce fique a frente do mercado</MudText>
-                </MudStack>
-        </MudItem>
-    </MudGrid>
-</MudContainer>
+            </MudItem>
+    </MudContainer>
 
 
 @code
@@ -88,4 +45,14 @@
     {
         
     }
+
+    List<string> Beneficios = new()
+    {
+        "Conheça nossa plataforma com ferramentas disponíveis para testar",
+        "Crie seu sistema com templates intuitivos",
+        "Personalize o que você quer armazenar",
+        "Criação fácil com ajuda de dicas e modelos",
+        "Controle de permissões por usuário",
+        "Suporte contínuo e evolução constante"
+    };
 }

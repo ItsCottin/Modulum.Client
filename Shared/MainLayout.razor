@@ -41,8 +41,10 @@
                 <HomeButton Rota="/"/>
             </MudAppBar>
             <CascadingValue Name="IsDarkTheme" Value="@_isDark">
-                <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="vh-100 d-flex justify-content-center align-items-center">
+                <MudContainer Class="d-flex justify-center align-center" Style="height: 100vh;">
+                    <!--<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="min-vh-100 d-flex flex-column justify-content-center align-items-center overflow-auto">-->
                     @Body
+                    <!-- </MudContainer>-->
                 </MudContainer>
             </CascadingValue>
         }
