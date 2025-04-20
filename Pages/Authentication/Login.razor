@@ -4,19 +4,22 @@
 
 @attribute [AllowAnonymous]
 
-<MudContainer Class="mt-4 mb-8" MaxWidth="MaxWidth.ExtraSmall">
+<MudContainer Class="" MaxWidth="MaxWidth.ExtraExtraLarge">
     <AuthorizeView Context="authContext">
         <Authorized>
             <MudAlert Severity="Severity.Success">Você está logado como @authContext.User.Identity?.Name.</MudAlert>
         </Authorized>
         <NotAuthorized>
-            <MudOverlay @bind-Visible="@loading" DarkBackground="true" Absolute="true">
+            <MudOverlay @bind-Visible="@loading" DarkBackground="true" Absolute="true" >
                 <modulum.Shared.Loading />
             </MudOverlay>
             <EditForm Model="@_tokenModel" method="post" FormName="Bem vindo ao Modulum =)" OnValidSubmit="DoLoginAsync">
-                <MudCard Outlined="true" Class="px-4 pt-0 pb-4">
-                    <MudImage Src="logo_512x512.png" Alt="Syki" Elevation="25" Class="rounded-lg mx-20 mt-10 mb-5"/>
-                    <MudCardContent>
+                <MudCard Outlined="true" Class="@($"{GetResponsivePadding()} mx-auto")" Style="max-width: 700px;">
+                    <MudCardContent Class="@GetResponsivePadding()">
+                        <MudText Typo="Typo.h4" Style="font-weight: bold" Class="mb-20">
+                            <MudIcon Icon="@Icons.Material.Filled.Insights" Class="mr-1 mb-n1" Size="Size.Large" />
+                            Entrar
+                        </MudText>
                         <FluentValidationValidator @ref="_fluentValidationValidator" />
                         <FormValidator @ref="_loginFormValidator"></FormValidator>
                         <MudText Color="@Color.Error">
@@ -24,48 +27,46 @@
                                 <ValidationSummary />
                             </MudText>-->
                         </MudText>
-                        <MudTextField
-                            InputType="InputType.Email"
-                            Margin="Margin.Dense"
-                            AutoFocus="true"
-                            Label="Email"
-                            Class="mt-0 pb-3"
-                            OnlyValidateIfDirty="true"
-                            @bind-Value="@_tokenModel.Email"
-                            Variant="Variant.Outlined"
-                            Required="true"
-                            RequiredError="Informe!"
-                            For="@(() => _tokenModel.Email)"
-                            Typo="Typo.h5" />
-                        <MudTextField Margin="Margin.Dense"
-                            Adornment="Adornment.End"
-                            AdornmentIcon="@_passwordIcon"
-                            OnAdornmentClick="@PasswordIconClick"
-                            InputType="@_passwordInputType"
-                            Label="Senha"
-                            Class="@Class"
-                            Immediate="true"
-                            OnlyValidateIfDirty="true"
-                            Variant="Variant.Outlined"
-                            Required="@Required"
-                            RequiredError="Informe!"
-                            @bind-Value="@_tokenModel.Password"
-                            For="@(() => _tokenModel.Password)"
-                            Typo="Typo.h5" />
-                    </MudCardContent>
-                    <MudCardActions Class="justify-center">
-                        <MudStack Spacing="1">
-                            <MudButton
-                                Size="Size.Large"
-                                OnClick="@DoLoginAsync"
-                                Variant="Variant.Filled"
-                                Color="Color.Primary"
-                                Class="mx-auto mb-4 px-12">
+                        <MudTextField InputType="InputType.Email"
+                                      Margin="Margin.Normal"
+                                      AutoFocus="true"
+                                      Label="Email"
+                                      Class="mt-6 pb-3"
+                                      OnlyValidateIfDirty="true"
+                                      @bind-Value="@_tokenModel.Email"
+                                      Variant="Variant.Text"
+                                      Required="true"
+                                      RequiredError="Informe!"
+                                      For="@(() => _tokenModel.Email)"
+                                      Typo="Typo.h5" />
+                        <MudTextField Margin="Margin.Normal"
+                                      Adornment="Adornment.End"
+                                      AdornmentIcon="@_passwordIcon"
+                                      OnAdornmentClick="@PasswordIconClick"
+                                      InputType="@_passwordInputType"
+                                      Label="Senha"
+                                      Class="mt-6"
+                                      Immediate="true"
+                                      OnlyValidateIfDirty="true"
+                                      Variant="Variant.Text"
+                                      Required="@Required"
+                                      RequiredError="Informe!"
+                                      @bind-Value="@_tokenModel.Password"
+                                      For="@(() => _tokenModel.Password)"
+                                      Typo="Typo.h5" />
+                        <MudStack Spacing="1" Class="mt-10">
+                            <MudButton Size="Size.Large"
+                                   OnClick="@DoLoginAsync"
+                                   Variant="Variant.Filled"
+                                   Color="Color.Primary"
+                                   Class="pa-3">
                                 Entrar
                             </MudButton>
-                            <MudLink Href="/reset-password-token">Esqueci minha senha</MudLink>
                         </MudStack>
-                    </MudCardActions>
+                        <MudStack Spacing="1" Class="mt-10" AlignItems="AlignItems.Center">
+                            <MudLink Color="Color.Info" Underline="Underline.None" Href="/reset-password-token">Esqueci minha senha</MudLink>
+                        </MudStack>
+                    </MudCardContent>
                 </MudCard>
             </EditForm>
         </NotAuthorized>

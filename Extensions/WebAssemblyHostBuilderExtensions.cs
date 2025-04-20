@@ -16,6 +16,7 @@ using System.Reflection;
 using Toolbelt.Blazor.Extensions.DependencyInjection;
 using Modulum.Client;
 using modulum.Shared.Constants.Application;
+using modulum.Application.Interfaces.Common;
 
 namespace modulum.Client.Extensions
 {
@@ -90,6 +91,8 @@ namespace modulum.Client.Extensions
                     services.AddTransient(type.Service, type.Implementation);
                 }
             }
+
+            services.AddSingleton<NavigationHistoryService>();
 
             return services;
         }

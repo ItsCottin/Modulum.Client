@@ -1,19 +1,15 @@
 ﻿using Blazored.FluentValidation;
-using Microsoft.AspNetCore.Components;
 using modulum.Application.Requests.Identity;
-using modulum.Shared.Wrapper;
 using modulum.Client.Infrastructure.FormValidators;
 using MudBlazor;
+using modulum.Shared.Wrapper;
+using nodulum.Application.Requests.Identity;
+using modulum.Shared.Constants.Storage;
 
-namespace Modulum.Client.Pages.Authentication
+namespace Modulum.Client.Pages.Authentication.Register
 {
-    public partial class Register
+    public partial class Senha
     {
-        [Parameter]
-        public bool Required { get; set; }
-        [Parameter]
-        public string Class { get; set; }
-
         private bool _showPassword;
         private InputType _passwordInputType = InputType.Password;
         private string _passwordIcon = Icons.Material.Filled.VisibilityOff;
@@ -35,13 +31,10 @@ namespace Modulum.Client.Pages.Authentication
         }
 
         private FluentValidationValidator _fluentValidationValidator;
-        private FormValidator _registerFormValidator = new ();
+        private FormValidator _registerFormValidator = new();
         private bool Validated => _fluentValidationValidator.Validate(options => { options.IncludeAllRuleSets(); });
-        private RegisterRequest _registerUserModel = new();
-
+        private FinishRegisterRequest _finishRegisterModel = new();
         private bool loading;
-        private bool success;
-        private string urlAtivaEmail = string.Empty;
 
         private void AddApiErrors(IResult response)
         {
@@ -49,30 +42,48 @@ namespace Modulum.Client.Pages.Authentication
             _registerFormValidator.DisplayAllErrors(response.Fields);
         }
 
-        public async Task DoRegisterAsync()
+        public async Task DoFinalizaRegistroAsync()
         {
             loading = true;
-            success = false;
             if (!Validated)
             {
                 loading = false;
                 return;
             }
-            var response = await _userManager.RegisterUserAsync(_registerUserModel);
-            AddApiErrors(response);
-            if (response.Succeeded)
+            var response = await _userManager.FimRegisterUserAsync(_finishRegisterModel);
+            if (!response.Succeeded)
             {
-                if (response.Fields.TryGetValue("AtivacaoEmail", out var ativacaoEmail))
-                {
-                    urlAtivaEmail = ativacaoEmail?.ToString();
-                }
-                success = true;
-                _registerUserModel = new RegisterRequest();
+                AddApiErrors(response);
+                loading = false;
+                return;
             }
             else
             {
                 loading = false;
+                _navigationManager.NavigateTo("/login");
             }
         }
+
+
+        protected override async Task OnInitializedAsync()
+        {
+            _breakpoint = await BrowserViewportService.GetCurrentBreakpointAsync();
+            string emailLocalSessao = await _userManager.GetItemLocalStorage(StorageConstants.Local.EmailCadastro);
+            if (string.IsNullOrEmpty(emailLocalSessao))
+            {
+                // Tratar erro
+            }
+            _finishRegisterModel.Email = emailLocalSessao;
+        }
+
+        private Breakpoint _breakpoint = Breakpoint.Xs;
+        private string GetResponsivePadding() =>
+            _breakpoint switch
+            {
+                Breakpoint.Xs => "pa-6",
+                Breakpoint.Sm => "pa-10",
+                Breakpoint.Md => "pa-15",
+                _ => "pa-20"
+            };
     }
 }

@@ -1,0 +1,25 @@
+@inject NavigationHistoryService HistoryService
+@namespace modulum.Components.Buttons
+
+<MudButton StartIcon="@Icons.Material.Filled.ArrowBack"
+           Color="Color.Default"
+           Class="btn-voltar"
+           Style=""
+           OnClick="Voltar">  Voltar</MudButton>
+
+@code{
+    private void Voltar()
+    {
+        var previous = HistoryService.GoBack();
+
+        if (!string.IsNullOrEmpty(previous))
+        {
+            HistoryService.MarkAsNavigatingBack();
+            _navigationManager.NavigateTo(previous);
+        }
+        else
+        {
+            _navigationManager.NavigateTo("/"); // fallback
+        }
+    }
+}

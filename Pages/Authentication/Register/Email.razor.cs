@@ -1,26 +1,19 @@
 ﻿using Blazored.FluentValidation;
 using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Authorization;
 using modulum.Application.Requests.Identity;
-using modulum.Client.Infrastructure.FormValidators;
 using modulum.Shared.Wrapper;
+using modulum.Client.Infrastructure.FormValidators;
 using MudBlazor;
-using System.Security.Claims;
+using static MudBlazor.Colors;
 
-namespace Modulum.Client.Pages.Authentication
+namespace Modulum.Client.Pages.Authentication.Register
 {
-    public partial class Login
+    public partial class Email
     {
-        // Novo login MudBlazor
-        private MudForm _form;
         [Parameter]
         public bool Required { get; set; }
-
         [Parameter]
         public string Class { get; set; }
-
-        [Parameter]
-        public EventCallback<string> ValueChanged { get; set; }
 
         private bool _showPassword;
         private InputType _passwordInputType = InputType.Password;
@@ -28,7 +21,7 @@ namespace Modulum.Client.Pages.Authentication
 
         private void PasswordIconClick()
         {
-            if(_showPassword)
+            if (_showPassword)
             {
                 _showPassword = false;
                 _passwordIcon = Icons.Material.Filled.VisibilityOff;
@@ -42,31 +35,20 @@ namespace Modulum.Client.Pages.Authentication
             }
         }
 
-
         private FluentValidationValidator _fluentValidationValidator;
-        private FormValidator _loginFormValidator = new();
+        private FormValidator _registerFormValidator = new ();
         private bool Validated => _fluentValidationValidator.Validate(options => { options.IncludeAllRuleSets(); });
-        private TokenRequest _tokenModel = new();
+        private PreRegisterRequest _registerUserModel = new();
 
-        private bool loading;        
+        private bool loading;
 
         private void AddApiErrors(IResult response)
         {
-            _loginFormValidator.ClearAllErrors();
-            _loginFormValidator.DisplayAllErrors(response.Fields);
+            _registerFormValidator.ClearAllErrors();
+            _registerFormValidator.DisplayAllErrors(response.Fields);
         }
 
-        protected override async Task OnInitializedAsync()
-        {
-            var state = await _stateProvider.GetAuthenticationStateAsync();
-            _breakpoint = await BrowserViewportService.GetCurrentBreakpointAsync();
-            //if (state != new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity()))) // Verificar a nescessidade desse if
-            //{
-            //    _navigationManager.NavigateTo("/");
-            //}
-        }
-
-        public async Task DoLoginAsync()
+        public async Task DoRegisterAsync()
         {
             loading = true;
             if (!Validated)
@@ -74,14 +56,22 @@ namespace Modulum.Client.Pages.Authentication
                 loading = false;
                 return;
             }
-
-            var result = await _authenticationManager.Login(_tokenModel);
-            AddApiErrors(result);
-            if (result.Succeeded)
+            var response = await _userManager.PreRegisterUserAsync(_registerUserModel);
+            AddApiErrors(response);
+            if (response.Succeeded)
             {
-                _navigationManager.NavigateTo("/System"); // Redirecionar para pagina principal do sistema
+                loading = false;
+                _navigationManager.NavigateTo("/register/confirmacao");
             }
-            loading = false;
+            else
+            {
+                loading = false;
+            }
+        }
+
+        protected override async Task OnInitializedAsync()
+        {
+            _breakpoint = await BrowserViewportService.GetCurrentBreakpointAsync();
         }
 
         private Breakpoint _breakpoint = Breakpoint.Xs;

@@ -1,0 +1,72 @@
+﻿@page "/register/senha"
+
+@attribute [AllowAnonymous]
+
+<MudContainer Class="" MaxWidth="MaxWidth.ExtraExtraLarge">
+    <AuthorizeView Context="authContext">
+        <Authorized>
+            <MudAlert Severity="Severity.Success">Você já está logado como @authContext.User.Identity?.Name.</MudAlert>
+        </Authorized>
+        <NotAuthorized>
+            <MudOverlay @bind-Visible="@loading" DarkBackground="true" Absolute="false">
+                <modulum.Shared.Loading />
+            </MudOverlay>
+            <EditForm Model="@_finishRegisterModel" method="post" FormName="Cadastre-se" OnValidSubmit="DoFinalizaRegistroAsync">
+                <MudCard Outlined="true" Class="@($"{GetResponsivePadding()} mx-auto")" Style="max-width: 700px;">
+                    <!--<MudImage Src="logo_512x512.png" Alt="Syki" Elevation="25" Class="rounded-lg mx-20 mt-10 mb-5" />-->
+                    <MudCardContent Class="@GetResponsivePadding()">
+                        <MudText Typo="Typo.h4" Align="Align.Center" Class="mb-1">Criar uma conta</MudText>
+                        <MudText Typo="Typo.subtitle2" Align="Align.Center" Color="Color.Info" Class="mb-4">
+                            Informe seu e-mail abaixo para criar sua conta
+                        </MudText>
+                        <FluentValidationValidator @ref="_fluentValidationValidator" />
+                        <FormValidator @ref="_registerFormValidator"></FormValidator>
+                        <MudTextField Margin="Margin.Normal"
+                                      Adornment="Adornment.End"
+                                      AdornmentIcon="@_passwordIcon"
+                                      OnAdornmentClick="@PasswordIconClick"
+                                      InputType="@_passwordInputType"
+                                      Label="Senha"
+                                      Class=""
+                                      Immediate="true"
+                                      OnlyValidateIfDirty="true"
+                                      Variant="Variant.Outlined"
+                                      Required="true"
+                                      RequiredError="Informe!"
+                                      @bind-Value="@_finishRegisterModel.Password"
+                                      For="@(() => _finishRegisterModel.Password)" />
+                        <MudTextField Margin="Margin.Normal"
+                                      Adornment="Adornment.End"
+                                      AdornmentIcon="@_passwordIcon"
+                                      OnAdornmentClick="@PasswordIconClick"
+                                      InputType="@_passwordInputType"
+                                      Label="Confirmar Senha"
+                                      Class=""
+                                      Immediate="true"
+                                      OnlyValidateIfDirty="true"
+                                      Variant="Variant.Outlined"
+                                      Required="true"
+                                      RequiredError="Informe!"
+                                      @bind-Value="@_finishRegisterModel.ConfirmPassword"
+                                      For="@(() => _finishRegisterModel.ConfirmPassword)" />
+
+
+                        <MudStack Spacing="1" Class="mt-10">
+                            <MudButton Size="Size.Large"
+                                       OnClick="@DoFinalizaRegistroAsync"
+                                       Variant="Variant.Filled"
+                                       Color="Color.Primary"
+                                       Class="pa-3">
+                                Concluir
+                            </MudButton>
+                        </MudStack>
+                    </MudCardContent>
+                </MudCard>
+            </EditForm>
+        </NotAuthorized>
+    </AuthorizeView>
+</MudContainer>
+
+@code {
+
+}

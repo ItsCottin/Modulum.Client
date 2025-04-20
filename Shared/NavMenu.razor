@@ -2,9 +2,11 @@
 
 <AuthorizeView>
     <Authorized>
-        <MudNavMenu Dense="false" Margin="Margin.Normal">
-            <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Store" Href="System">Sistemas</MudNavLink>
-            <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.LibraryBooks" Href="">@context.User.Identity?.Name</MudNavLink>
+        <MudNavMenu Dense="false" Margin="Margin.Normal" Class="pt-5" Rounded="true">
+            <MudNavLink Class="pa-1" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Store" Href="System">Sistemas</MudNavLink>
+            <MudNavLink Class="pa-1" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.LibraryBooks" Href="Account/Manage">@context.User.Identity?.Name</MudNavLink>
+            <MudSpacer/>
+            <MudNavLink Class="pa-1" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Logout" Href="logout">Sair</MudNavLink>
         </MudNavMenu>
     </Authorized>
 </AuthorizeView>

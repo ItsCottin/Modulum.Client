@@ -8,26 +8,22 @@
 <AuthorizeView>
     <Authorized>
         <MudLayout>
-            <MudAppBar Elevation="0" Dense="false" ToolBarClass="pl-1 pr-1">
+            <MudAppBar Elevation="0" Dense="false" ToolBarClass="pt-10 pb-10 pl-3">
                 @if (_breakpoint != Breakpoint.Xs)
                 {
                     <MudIconButton OnClick="@ToggleLeftOpen" Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" />
                 }
-                <HomeButton />
                 <MudSpacer />
-                <NotificationsIconButton />
                 <ThemeIconButton @bind-IsDark="@_isDark" OnClick="@ToggleTheme" />
-                <MudIconButton Icon="@Icons.Material.Filled.Settings" Color="Color.Inherit" Href="Account/Manage" />
-                <MudIconButton Href="logout" Icon="@Icons.Material.Filled.Logout" Color="Color.Inherit" />
+                <HomeButton />
             </MudAppBar>
-            <MudDrawer @bind-Open="@_leftOpen" ClipMode="DrawerClipMode.Always" Elevation="2">
+            <MudDrawer @bind-Open="@_leftOpen" ClipMode="DrawerClipMode.Docked" Elevation="0" Class="" Variant="DrawerVariant.Responsive">
                 <Modulum.Client.Shared.NavMenu />
             </MudDrawer>
-            <MudDrawer Anchor="Anchor.Right" @bind-Open="@_rightOpen" ClipMode="DrawerClipMode.Always" Variant="DrawerVariant.Temporary" OverlayAutoClose="true" Elevation="2" Width="160px">
-                <modulum.Shared.SettingsMenu />
-            </MudDrawer>
-            <MudMainContent Class="pb-12">
-                @Body
+            <MudMainContent Class="pb-12 pt-20">
+                <MudStack Class="pa-10">
+                        @Body
+                </MudStack>
                 @if (_breakpoint == Breakpoint.Xs)
                 {
                     <MudFab OnClick="@ToggleLeftOpen" Size="@Size.Large" Style="position:fixed; bottom:15px; right:25px;" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Menu" />
@@ -38,27 +34,16 @@
     <NotAuthorized>
         @if (IsAnonymous())
         {
-            <MudAppBar Elevation="1" Dense="false">
-                <MudStack Row="true" Class="d-flex justify-space-around flex-grow-1">
-                    <HomeButton />
-                    <MudSpacer />
-                    <ThemeIconButton @bind-IsDark="@_isDark" OnClick="@ToggleTheme" />
-                    <LoginButton />
-                    <MudButton
-                        Href="/register"
-                        Target="_self"
-                        IconSize="Size.Large"
-                        Variant="Variant.Text"
-                        Style="color: white; margin-left: -11px;"
-                    >
-                        Cadastro
-                    </MudButton>
-                </MudStack>
+            <MudAppBar Elevation="0" Dense="false" ToolBarClass="pt-10 pb-10 pl-3">
+                <VoltarButton />
+                <MudSpacer />
+                <ThemeIconButton @bind-IsDark="@_isDark" OnClick="@ToggleTheme" />
+                <HomeButton />
             </MudAppBar>
             <CascadingValue Name="IsDarkTheme" Value="@_isDark">
-                <MudMainContent>
+                <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="vh-100 d-flex justify-content-center align-items-center">
                     @Body
-                </MudMainContent>
+                </MudContainer>
             </CascadingValue>
         }
         else
@@ -74,9 +59,9 @@
 
             LayoutProperties = new LayoutProperties()
             {
-                DrawerWidthLeft = "200px",
-                DrawerWidthRight = "200px",
-                DefaultBorderRadius = "12px",
+                DrawerWidthLeft = "300px",
+                DrawerWidthRight = "300px",
+                DefaultBorderRadius = "26px",
             },
             Typography = new Typography()
             {
@@ -97,7 +82,7 @@
             {
                 // Fundos
                 Background = "#000000",       // Fundo geral bem escuro
-                Surface = "#000000",          // Cards, containers
+                Surface = "#1A1A1A",          // Cards, containers
                 DrawerBackground = "#000000", // Menu lateral (caso use)
                 AppbarBackground = "#000000", // Top bar
 
@@ -106,12 +91,7 @@
                 TextSecondary = "#c0c0c0",    // Cinza claro para subtítulos
 
                 // Elementos de UI
-                Primary = "#505050",          // Botões principais (cinza médio)
-                Secondary = "#3a3a3a",        // Alternativo, menus, etc
-                Info = "#6b7280",             // Cinza mais claro (informações)
-                Success = "#10b981",          // Verde discreto
-                Warning = "#f59e0b",          // Amarelo vibrante (alertas)
-                Error = "#ef4444",            // Vermelho para erros
+                Primary = "#9900ff",          // Botões principais (cinza médio)
 
                 // Bordas e linhas
                 LinesDefault = "#2d2d2d",     // Borda padrão em cinza escuro
@@ -120,12 +100,8 @@
                 // Interação
                 ActionDefault = "#5e5e5e",    // Ícones inativos
                 ActionDisabled = "#3a3a3a",   // Elementos desabilitados
-                ActionDisabledBackground = "#1a1a1a",
-
-                // Hover e efeitos
-                HoverOpacity = 0.07f,
-                OverlayDark = "#000000aa",   // Overlay escuro com opacidade
-            },
+                ActionDisabledBackground = "#1a1a1a"
+            }
         };
 
     private bool _isDark = true;
@@ -199,5 +175,4 @@
     {
         _navigationManager.NavigateTo("/logout");
     }
-    
 }
