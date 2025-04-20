@@ -1,6 +1,6 @@
 @namespace modulum.Components.Buttons
 
-<MudLink Href="/System"
+<MudLink Href="@Rota"
     Class="ml-3"
     Target="_self"
     Color="Color.Inherit"
@@ -9,3 +9,8 @@
 >
     <MudText Style="letter-spacing: 2.5px;"><b>MODULUM</b></MudText>
 </MudLink>
+
+@code {
+    [Parameter]
+    public string? Rota { get; set; }
+}

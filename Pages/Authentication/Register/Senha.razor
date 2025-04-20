@@ -16,8 +16,9 @@
                     <!--<MudImage Src="logo_512x512.png" Alt="Syki" Elevation="25" Class="rounded-lg mx-20 mt-10 mb-5" />-->
                     <MudCardContent Class="@GetResponsivePadding()">
                         <MudText Typo="Typo.h4" Align="Align.Center" Class="mb-1">Criar uma conta</MudText>
-                        <MudText Typo="Typo.subtitle2" Align="Align.Center" Color="Color.Info" Class="mb-4">
-                            Informe seu e-mail abaixo para criar sua conta
+                        <MudText Typo="Typo.overline" Align="Align.Center" Class="mb-1">E-mail: "@_finishRegisterModel.Email"</MudText>
+                        <MudText Typo="Typo.subtitle2" Align="Align.Center" Color="Color.Secondary" Class="mb-4">
+                            Informe uma senha valida para finalizar o cadastro
                         </MudText>
                         <FluentValidationValidator @ref="_fluentValidationValidator" />
                         <FormValidator @ref="_registerFormValidator"></FormValidator>
@@ -49,8 +50,6 @@
                                       RequiredError="Informe!"
                                       @bind-Value="@_finishRegisterModel.ConfirmPassword"
                                       For="@(() => _finishRegisterModel.ConfirmPassword)" />
-
-
                         <MudStack Spacing="1" Class="mt-10">
                             <MudButton Size="Size.Large"
                                        OnClick="@DoFinalizaRegistroAsync"

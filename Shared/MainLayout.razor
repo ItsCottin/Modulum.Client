@@ -15,7 +15,7 @@
                 }
                 <MudSpacer />
                 <ThemeIconButton @bind-IsDark="@_isDark" OnClick="@ToggleTheme" />
-                <HomeButton />
+                <HomeButton Rota="/System" />
             </MudAppBar>
             <MudDrawer @bind-Open="@_leftOpen" ClipMode="DrawerClipMode.Docked" Elevation="0" Class="" Variant="DrawerVariant.Responsive">
                 <Modulum.Client.Shared.NavMenu />
@@ -38,7 +38,7 @@
                 <VoltarButton />
                 <MudSpacer />
                 <ThemeIconButton @bind-IsDark="@_isDark" OnClick="@ToggleTheme" />
-                <HomeButton />
+                <HomeButton Rota="/"/>
             </MudAppBar>
             <CascadingValue Name="IsDarkTheme" Value="@_isDark">
                 <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="vh-100 d-flex justify-content-center align-items-center">
@@ -108,6 +108,18 @@
     private bool _leftOpen = true;
     private bool _rightOpen = false;
     private Breakpoint _breakpoint;
+
+    private string SetRotaModulum()
+    {
+        if(IsAnonymous())
+        {
+            return "/";
+        }
+        else
+        {
+            return "/System";
+        }
+    }
 
     private bool IsAnonymous()
     {

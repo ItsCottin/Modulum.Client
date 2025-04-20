@@ -60,7 +60,7 @@ namespace Modulum.Client.Pages.Authentication.Register
             else
             {
                 loading = false;
-                _navigationManager.NavigateTo("/login");
+                _navigationManager.NavigateTo("/register/concluido");
             }
         }
 

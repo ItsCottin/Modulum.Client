@@ -15,13 +15,62 @@
                 <MudCard Outlined="true" Class="@($"{GetResponsivePadding()} mx-auto")" Style="max-width: 700px;">
                     <MudCardContent Class="@GetResponsivePadding()">
                         <MudText Typo="Typo.h4" Align="Align.Center" Class="mb-1">Confirme seu email</MudText>
-                        <MudText Typo="Typo.overline" Align="Align.Center" Class="mb-1">@_twoFactorModel.Email</MudText>
-                        <MudText Typo="Typo.subtitle2" Align="Align.Center" Color="Color.Info" Class="mb-4">
+                        <MudText Typo="Typo.overline" Align="Align.Center" Class="mb-1">E-mail: "@_twoFactorModel.Email"</MudText>
+                        <MudText Typo="Typo.subtitle2" Align="Align.Center" Color="Color.Secondary" Class="mb-4">
                             Informe abaixo o código de confirmação que enviamos para o seu E-mail
                         </MudText>
                         <FluentValidationValidator @ref="_fluentValidationValidator" />
                         <FormValidator @ref="_registerFormValidator"></FormValidator>
-                        <MudTextField InputType="InputType.Text"
+                        <MudText Color="@Color.Error">
+                            <MudText Color="@Color.Error">
+                                <ValidationSummary />
+                            </MudText>
+                        </MudText>
+                        <MudStack Row="true" Justify="Justify.Center" Spacing="2">
+                            <MudTextField @bind-Value="Code0"
+                                          MaxLength="1"
+                                          Immediate="true"
+                                          T="string"
+                                          TextChanged="@(() => HandleInput())"
+                                          Style="width: 50px;" />
+
+                            <MudTextField @bind-Value="Code1"
+                                          MaxLength="1"
+                                          Immediate="true"
+                                          T="string"
+                                          TextChanged="@(() => HandleInput())"
+                                          Style="width: 50px;" />
+
+                            <MudTextField @bind-Value="Code2"
+                                          MaxLength="1"
+                                          Immediate="true"
+                                          T="string"
+                                          TextChanged="@(() => HandleInput())"
+                                          Style="width: 50px;" />
+
+                            <MudTextField @bind-Value="Code3"
+                                          MaxLength="1"
+                                          Immediate="true"
+                                          T="string"
+                                          TextChanged="@(() => HandleInput())"
+                                          Style="width: 50px;" />
+
+                            <MudTextField @bind-Value="Code4"
+                                          MaxLength="1"
+                                          Immediate="true"
+                                          T="string"
+                                          TextChanged="@(() => HandleInput())"
+                                          Style="width: 50px;" />
+
+                            <MudTextField @bind-Value="Code5"
+                                          MaxLength="1"
+                                          Immediate="true"
+                                          T="string"
+                                          TextChanged="@(() => HandleInput())"
+                                          Style="width: 50px;" />
+                        </MudStack>
+
+                        <!--<MudTextField InputType="InputType.Text"
                                       Margin="Margin.Normal"
                                       AutoFocus="true"
                                       Label="Codigo de verificação"
@@ -31,7 +80,7 @@
                                       Variant="Variant.Text"
                                       Required="true"
                                       RequiredError="Informe!"
-                                      For="@(() => _twoFactorModel.Code)" />
+                                      For="@(() => _twoFactorModel.Code)" />-->
                         <MudStack Spacing="1" Class="mt-10">
                             <MudButton Size="Size.Large"
                                        OnClick="@DoConfirmaEmail"
@@ -41,6 +90,9 @@
                                 Validar
                             </MudButton>
                         </MudStack>
+                        <MudStack Spacing="1" Class="mt-10" AlignItems="AlignItems.Start">
+                            <MudLink Color="Color.Info" Underline="Underline.None" OnClick="SetTwoFactorCode">Resgate o código Aqui</MudLink>
+                        </MudStack>
                     </MudCardContent>
                 </MudCard>
             </EditForm>
@@ -48,6 +100,9 @@
     </AuthorizeView>
 </MudContainer>
 
-@code {
-
-}
+<style>
+    .digit-box input {
+        font-size: 24px;
+        text-align: center;
+    }
+</style>
