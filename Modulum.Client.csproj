@@ -33,6 +33,7 @@
   
   <ItemGroup>
     <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
+    <None Include=".github\workflows\azure-static-web-apps-salmon-wave-08a7a950f.yml" />
   </ItemGroup>
 
 </Project>
