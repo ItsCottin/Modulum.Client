@@ -2,7 +2,7 @@
 
 <MudPopoverProvider />
 <MudSnackbarProvider />
-<MudThemeProvider IsDarkMode="@_isDark" Theme="@ModulumTheme" />
+<MudThemeProvider IsDarkMode="@_isDark" />
 <MudDialogProvider CloseOnEscapeKey="true" CloseButton="true" />
 
 <AuthorizeView>
@@ -41,11 +41,14 @@
                 <HomeButton Rota="/"/>
             </MudAppBar>
             <CascadingValue Name="IsDarkTheme" Value="@_isDark">
-                <MudContainer Class="d-flex justify-center align-center" Style="height: 100vh;">
-                    <!--<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="min-vh-100 d-flex flex-column justify-content-center align-items-center overflow-auto">-->
+                <MudStack AlignItems="AlignItems.Center" Justify="Justify.Center" Style="height: 100vh;">
+                    <!-- MudBlazor não sabe lidar com height: 100vh;-->
+                <!--<MudContainer Class="d-flex justify-center align-center" Style="height: 100vh;">
+                   <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="min-vh-100 d-flex flex-column justify-content-center align-items-center overflow-auto">-->
                     @Body
-                    <!-- </MudContainer>-->
-                </MudContainer>
+                    <!-- </MudContainer>
+                </MudContainer>-->
+                </MudStack>
             </CascadingValue>
         }
         else
@@ -76,10 +79,6 @@
                 Body2 = new Body2Typography() { FontSize = "1.1rem" },
                 Caption = new CaptionTypography() { FontSize = "1rem" },
             },
-            //Spacing = new Spacing()
-            //{
-                //Default = 8 // você pode aumentar esse valor para ter mais "espaço" entre elementos
-            //}
             PaletteDark = new PaletteDark()
             {
                 // Fundos

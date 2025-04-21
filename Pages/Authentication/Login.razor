@@ -16,9 +16,9 @@
             <EditForm Model="@_tokenModel" method="post" FormName="Bem vindo ao Modulum =)" OnValidSubmit="DoLoginAsync">
                 <MudCard Outlined="true" Class="@($"{GetResponsivePadding()} mx-auto")" Style="max-width: 700px;">
                     <MudCardContent Class="@GetResponsivePadding()">
-                        <MudText Typo="Typo.h4" Style="font-weight: bold" Class="mb-20">
-                            <MudIcon Icon="@Icons.Material.Filled.Insights" Class="mr-1 mb-n1" Size="Size.Large" />
-                            Entrar
+                        <MudText Typo="Typo.h4" Align="Align.Center" Class="mb-1">Entrar</MudText>
+                        <MudText Typo="Typo.subtitle2" Align="Align.Center" Color="Color.Info" Class="mb-4">
+                            Informe seu e-mail e senha abaixo para acessar a plataforma
                         </MudText>
                         <FluentValidationValidator @ref="_fluentValidationValidator" />
                         <FormValidator @ref="_loginFormValidator"></FormValidator>

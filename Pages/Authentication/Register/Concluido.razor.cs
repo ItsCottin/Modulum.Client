@@ -10,7 +10,7 @@ namespace Modulum.Client.Pages.Authentication.Register
         private string GetResponsivePadding() =>
             _breakpoint switch
             {
-                Breakpoint.Xs => "pa-6",
+                Breakpoint.Xs => "pt-3 pb-3",
                 Breakpoint.Sm => "pa-10",
                 Breakpoint.Md => "pa-15",
                 _ => "pa-20"
