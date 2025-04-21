@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\pages\\authentication\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:pages\\authentication\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -41,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\pages\\authentication\\register\\email.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:pages\\authentication\\register\\email.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|solutionrelative:shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{768BA5D0-76D5-4535-9477-3FBF6FBC7502}|Modulum.Client.csproj|c:\\_programacao\\_testenewarquiteture\\modulum.client\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -142,7 +142,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -162,33 +162,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Login.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Login.razor",
               "RelativeDocumentMoniker": "Pages\\Authentication\\Login.razor",
               "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Login.razor",
               "RelativeToolTip": "Pages\\Authentication\\Login.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAA+AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-18T02:51:55.627Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Email.razor",
-              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Register\\Email.razor",
-              "RelativeDocumentMoniker": "Pages\\Authentication\\Register\\Email.razor",
-              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Register\\Email.razor",
-              "RelativeToolTip": "Pages\\Authentication\\Register\\Email.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-18T04:40:41.177Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Concluido.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Register\\Concluido.razor",
               "RelativeDocumentMoniker": "Pages\\Authentication\\Register\\Concluido.razor",
@@ -201,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Confirmacao.razor",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Register\\Confirmacao.razor",
               "RelativeDocumentMoniker": "Pages\\Authentication\\Register\\Confirmacao.razor",
@@ -214,7 +201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Login.razor.cs",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Login.razor.cs",
               "RelativeDocumentMoniker": "Pages\\Authentication\\Login.razor.cs",
@@ -227,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Concluido.razor.cs",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Register\\Concluido.razor.cs",
               "RelativeDocumentMoniker": "Pages\\Authentication\\Register\\Concluido.razor.cs",
@@ -240,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Confirmacao.razor.cs",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Register\\Confirmacao.razor.cs",
               "RelativeDocumentMoniker": "Pages\\Authentication\\Register\\Confirmacao.razor.cs",
@@ -253,7 +240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Email.razor.cs",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Register\\Email.razor.cs",
               "RelativeDocumentMoniker": "Pages\\Authentication\\Register\\Email.razor.cs",
@@ -266,7 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Senha.razor.cs",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Register\\Senha.razor.cs",
               "RelativeDocumentMoniker": "Pages\\Authentication\\Register\\Senha.razor.cs",
@@ -279,7 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "index.html",
               "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\wwwroot\\index.html",
               "RelativeDocumentMoniker": "wwwroot\\index.html",
@@ -288,6 +275,32 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAABaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-04-18T02:46:26.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Shared\\MainLayout.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\MainLayout.razor",
+              "RelativeToolTip": "Shared\\MainLayout.razor",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-18T02:44:33.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Email.razor",
+              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Register\\Email.razor",
+              "RelativeDocumentMoniker": "Pages\\Authentication\\Register\\Email.razor",
+              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Pages\\Authentication\\Register\\Email.razor",
+              "RelativeToolTip": "Pages\\Authentication\\Register\\Email.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-18T04:40:41.177Z",
               "EditorCaption": ""
             },
             {
@@ -362,19 +375,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-19T03:45:19.175Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\MainLayout.razor",
-              "RelativeDocumentMoniker": "Shared\\MainLayout.razor",
-              "ToolTip": "C:\\_Programacao\\_TesteNewArquiteture\\Modulum.Client\\Shared\\MainLayout.razor",
-              "RelativeToolTip": "Shared\\MainLayout.razor",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACsAAABnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-18T02:44:33.169Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
