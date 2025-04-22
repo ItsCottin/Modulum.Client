@@ -1,6 +1,9 @@
 ﻿@page "/System/Create"
 
 <MudContainer Class="my-4 px-4">
+    <MudOverlay @bind-Visible="@_loading" DarkBackground="true" Absolute="true">
+        <modulum.Shared.Loading />
+    </MudOverlay>
     <MudText Typo="Typo.h4" Style="font-weight: bold" Class="ml-4">
         <MudIcon Icon="@Icons.Material.Filled.Insights" Class="mr-1 mb-n1" Size="Size.Large" />
         Criação
@@ -10,36 +13,81 @@
             <MudText>Aqui você pode criar seu sistema unico e personalizado diferente de tudo no mercado</MudText>
         </MudStack>
     </MudAlert>
-    <MudGrid Class="pt-4" Style="padding: 24px;">
-        <IndexCard Loading="@_loading" Icon="@Icons.Material.Filled.CenterFocusStrong" Text="Nome" Link="System/Create/Nome" />
-        <IndexCard Loading="@_loading" Icon="@Icons.Material.Filled.FitScreen" Text="Telas" />
-        <IndexCard Loading="@_loading" Icon="@Icons.Material.Filled.PlaylistAddCheck" Text="Campos" />
-        <IndexCard Loading="@_loading" Icon="@Icons.Material.Filled.AppRegistration" Text="Desenho" />
-        <IndexCard Loading="@_loading" Icon="@Icons.Material.Filled.Settings" Text="Configuração" />
-        <IndexCard Loading="@_loading" Icon="@Icons.Material.Filled.AccountTree" Text="Ligação" />
-        <IndexCard Loading="@_loading" Icon="@Icons.Material.Filled.ScreenshotMonitor" Text="Visualização" />
-        <IndexCard Loading="@_loading" Icon="@Icons.Material.Filled.SettingsEthernet" Text="Validar" />
-        <IndexCard Loading="@_loading" Icon="@Icons.Material.Filled.NotificationsNone" Text="Dicas" />
-    </MudGrid>
-    <MudGrid Class="pt-4 mt-4" Spacing="0">
-        <MudItem xs="12">
-            <MudStack Justify="Justify.FlexEnd">
-                <MudButton Class="px-8"
-                        StartIcon="@Icons.Material.Filled.SaveAlt"
-                        IconSize="Size.Large"
-                        Variant="Variant.Filled"
-                        Style="height: 60px;"
-                        Color="Color.Primary"
-                        Href=""
-                        Disabled="true">
-                    <MudText Typo="Typo.h6">
-                        Criar
-                    </MudText>
-                </MudButton>
-            </MudStack>
-        </MudItem>
-    </MudGrid>
+    <EditForm Model="@_model" method="post" FormName="Bem vindo ao Modulum =)" OnValidSubmit="DoSalvarAsync">
+        <MudGrid Class="pt-4">
+            <FluentValidationValidator @ref="_fluentValidationValidator" />
+            <FormValidator @ref="_criacaoFormValidator"></FormValidator>
+             <MudItem xs="12" md="12">
+                <MudPaper Class="pa-4" Elevation="0" Outlined="true">
+                    <MudTextField Label="Título do Sistema" @bind-Value="_model._modelTabela.NomeTela" Variant="Variant.Text" Class="mb-1 mud-width-full" />
+                </MudPaper>
+            </MudItem>
+            <MudItem xs="12" md="4">
+                <MudPaper Class="pa-4" Elevation="0" Outlined="true">
+                    <MudText Typo="Typo.h6">Adicionar Campo</MudText>
+
+                    <MudTextField @bind-Value="_model._modelCampo.NomeCampoTela" Label="Nome do Campo" Variant="Variant.Text" Class="mb-3" />
+
+                    <MudSelect T="string" Label="Tipo do Campo" @bind-Value="_tipoChapeu" Variant="Variant.Text" Class="mb-3">
+                        @foreach (var tipo in _tipos)
+                        {
+                            <MudSelectItem Value="@tipo.Key">@tipo.Value</MudSelectItem>
+                        }
+                    </MudSelect>
+
+                    <MudTextField @bind-Value="_model._modelCampo.Tamanho" Label="Nome do Campo" Variant="Variant.Text" InputType="InputType.Number" Class="mb-3" T="int?" />
+
+                    <MudButton Color="Color.Primary" OnClick="AdicionarCampo" Variant="Variant.Text">Adicionar</MudButton>
+                </MudPaper>
+            </MudItem>
+
+            <!-- Lista de campos adicionados -->
+            <MudItem xs="12" md="8">
+                <MudPaper Class="pa-4" Elevation="0" Outlined="true">
+                    <MudText Typo="Typo.h6">Campos Adicionados</MudText>
+
+                    <MudList Class="mt-2" T="string">
+                        @foreach (var campo in _modelCampos)
+                        {
+                            <MudListItem>
+                                <MudGrid>
+                                    <MudItem xs="9">
+                                        <MudText>@campo.NomeCampoTela (@campo.Tipo)</MudText>
+                                    </MudItem>
+                                    <MudItem xs="3" Class="text-end">
+                                        <MudIconButton Icon="@Icons.Material.Filled.Delete"
+                                                       Color="Color.Error"
+                                                       Size="Size.Small"
+                                                       OnClick="@(() => RemoverCampo(campo))" />
+                                    </MudItem>
+                                </MudGrid>
+                            </MudListItem>
+                        }
+                    </MudList>
+                </MudPaper>
+            </MudItem>
+        </MudGrid>
+        <MudGrid Class="pt-4 mt-4" Spacing="0">
+            <MudItem xs="12">
+                <MudStack Justify="Justify.FlexEnd">
+                    <MudButton Class="px-8"
+                            StartIcon="@Icons.Material.Filled.SaveAlt"
+                            IconSize="Size.Large"
+                            Variant="Variant.Filled"
+                            Style="height: 60px;"
+                            Color="Color.Primary"
+                            Href=""
+                            OnClick="DoSalvarAsync" >
+                        <MudText Typo="Typo.h6">
+                            Criar
+                        </MudText>
+                    </MudButton>
+                </MudStack>
+            </MudItem>
+        </MudGrid>
+    </EditForm>
 </MudContainer>
 @code {
-    private bool _loading = false;
+
+    
 }

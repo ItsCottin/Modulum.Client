@@ -21,6 +21,7 @@
 @using modulum.Client.Infrastructure.Managers.Identity.RoleClaims
 @using modulum.Client.Infrastructure.Managers.Identity.Users
 @using modulum.Client.Infrastructure.Managers.Interceptors
+@using modulum.Client.Infrastructure.Managers.Dynamic
 
 @*Form Validators*@
 @using modulum.Client.Infrastructure.FormValidators
@@ -60,4 +61,5 @@
 @inject IUserManager _userManager
 @inject ILocalStorageService _localStorage;
 @inject IJSRuntime _jsRuntime;
-@inject IBrowserViewportService BrowserViewportService
+@inject IBrowserViewportService BrowserViewportService;
+@inject IDynamicManager _dynamicManager;
