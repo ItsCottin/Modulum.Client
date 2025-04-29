@@ -11,9 +11,9 @@ namespace Modulum.Client.Pages.Authentication.Register
             _breakpoint switch
             {
                 Breakpoint.Xs => "pt-3 pb-3",
-                Breakpoint.Sm => "pa-10",
+                Breakpoint.Sm => "pa-12",
                 Breakpoint.Md => "pa-15",
-                _ => "pa-20"
+                _ => "pa-18"
             };
 
         protected override async Task OnInitializedAsync()

@@ -117,9 +117,14 @@ namespace Modulum.Client.Pages.Dynamic
             };
             var response = await _dynamicManager.OperacaoRegistro(payload, Operation);
             _snackBar.Add(response.Messages.FirstOrDefault(), response.Succeeded ? Severity.Success : Severity.Error);
+            
             // Redirecionar de volta para grid depois de salvar
             _loadingService.Hide(); 
             _loading = false;
+            if (response.Succeeded)
+            {
+                _navigationManager.NavigateTo("/dynamic/" + TableId);
+            }
         }
     }
 }

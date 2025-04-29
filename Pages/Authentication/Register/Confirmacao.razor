@@ -8,15 +8,16 @@
             <MudAlert Severity="Severity.Success">Você já está logado como @authContext.User.Identity?.Name.</MudAlert>
         </Authorized>
         <NotAuthorized>
-            <MudOverlay @bind-Visible="@loading" DarkBackground="true" Absolute="false">
-                <modulum.Shared.Loading />
-            </MudOverlay>
             <EditForm Model="@_twoFactorModel" method="post" FormName="Cadastre-se" OnValidSubmit="DoConfirmaEmail">
-                <MudCard Outlined="true" Class="@($"{GetResponsivePadding()} mx-auto")" Style="max-width: 700px;">
-                    <MudCardContent Class="@GetResponsivePadding()">
-                        <MudText Typo="Typo.h4" Align="Align.Center" Class="mb-1">Confirme seu email</MudText>
-                        <MudText Typo="Typo.overline" Align="Align.Center" Class="mb-1">E-mail: "@_twoFactorModel.Email"</MudText>
-                        <MudText Typo="Typo.subtitle2" Align="Align.Center" Color="Color.Info" Class="mb-4">
+                <MudStack Class="@($"{GetResponsivePadding()} mx-auto")" Style="max-width: 500px;">
+                <!--<MudCard Outlined="true" Class="@($"{GetResponsivePadding()} mx-auto")" Style="max-width: 700px;">
+                    <MudCardContent Class="@GetResponsivePadding()">-->
+                        <MudText Typo="Typo.h4" Align="Align.Start" Class="mb-1">
+                            <MudIcon Icon="@Icons.Material.Filled.Insights" Class="mr-1 mb-n1" Size="Size.Large" />
+                            Confirme seu email
+                        </MudText>
+                        <MudText Typo="Typo.overline" Align="Align.Start" Class="mb-1">E-mail: "@_twoFactorModel.Email"</MudText>
+                        <MudText Typo="Typo.subtitle2" Align="Align.Start" Color="Color.Info" Class="mb-4">
                             Informe abaixo o código de confirmação que enviamos para o seu E-mail
                         </MudText>
                         <FluentValidationValidator @ref="_fluentValidationValidator" />
@@ -32,42 +33,48 @@
                                           Immediate="true"
                                           T="string"
                                           TextChanged="@(() => HandleInput())"
-                                          Style="width: 50px;" />
+                                          Style="width: 50px;" 
+                                          Disabled="@loading" />
 
                             <MudTextField @bind-Value="Code1"
                                           MaxLength="1"
                                           Immediate="true"
                                           T="string"
                                           TextChanged="@(() => HandleInput())"
-                                          Style="width: 50px;" />
+                                          Style="width: 50px;" 
+                                          Disabled="@loading" />
 
                             <MudTextField @bind-Value="Code2"
                                           MaxLength="1"
                                           Immediate="true"
                                           T="string"
                                           TextChanged="@(() => HandleInput())"
-                                          Style="width: 50px;" />
+                                          Style="width: 50px;" 
+                                          Disabled="@loading" />
 
                             <MudTextField @bind-Value="Code3"
                                           MaxLength="1"
                                           Immediate="true"
                                           T="string"
                                           TextChanged="@(() => HandleInput())"
-                                          Style="width: 50px;" />
+                                          Style="width: 50px;" 
+                                          Disabled="@loading" />
 
                             <MudTextField @bind-Value="Code4"
                                           MaxLength="1"
                                           Immediate="true"
                                           T="string"
                                           TextChanged="@(() => HandleInput())"
-                                          Style="width: 50px;" />
+                                          Style="width: 50px;"
+                                          Disabled="@loading" />
 
                             <MudTextField @bind-Value="Code5"
                                           MaxLength="1"
                                           Immediate="true"
                                           T="string"
                                           TextChanged="@(() => HandleInput())"
-                                          Style="width: 50px;" />
+                                          Style="width: 50px;"
+                                          Disabled="@loading" />
                         </MudStack>
 
                         <!--<MudTextField InputType="InputType.Text"
@@ -81,20 +88,31 @@
                                       Required="true"
                                       RequiredError="Informe!"
                                       For="@(() => _twoFactorModel.Code)" />-->
-                        <MudStack Spacing="1" Class="mt-10">
+                        <MudStack Spacing="1" Class="mt-3">
                             <MudButton Size="Size.Large"
                                        OnClick="@DoConfirmaEmail"
                                        Variant="Variant.Filled"
                                        Color="Color.Primary"
-                                       Class="pa-3">
-                                Validar
+                                       Class="pa-3"
+                                       Disabled="@loading">
+                                
+                                @if (loading)
+                                {
+                                    <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                                    <MudText Class="ms-2">Processando...</MudText>
+                                }
+                                else
+                                {
+                                    <MudText>Validar</MudText>
+                                }
                             </MudButton>
                         </MudStack>
-                        <MudStack Spacing="1" Class="mt-10" AlignItems="AlignItems.Start">
-                            <MudLink Color="Color.Info" Underline="Underline.None" OnClick="SetTwoFactorCode">Resgate o código Aqui</MudLink>
+                        <MudStack Spacing="1" Class="mt-3" AlignItems="AlignItems.Start">
+                            <MudLink Disabled="@loading" Color="Color.Info" Underline="Underline.None" OnClick="SetTwoFactorCode">Resgate o código Aqui</MudLink>
                         </MudStack>
-                    </MudCardContent>
-                </MudCard>
+                        <!--</MudCardContent>
+                        </MudCard>-->
+                </MudStack>
             </EditForm>
         </NotAuthorized>
     </AuthorizeView>

@@ -8,16 +8,17 @@
             <MudAlert Severity="Severity.Success">Você já está logado como @authContext.User.Identity?.Name.</MudAlert>
         </Authorized>
         <NotAuthorized>
-            <MudOverlay @bind-Visible="@loading" DarkBackground="true" Absolute="false">
-                <modulum.Shared.Loading />
-            </MudOverlay>
             <EditForm Model="@_finishRegisterModel" method="post" FormName="Cadastre-se" OnValidSubmit="DoFinalizaRegistroAsync">
-                <MudCard Outlined="true" Class="@($"{GetResponsivePadding()} mx-auto")" Style="max-width: 700px;">
-                    <!--<MudImage Src="logo_512x512.png" Alt="Syki" Elevation="25" Class="rounded-lg mx-20 mt-10 mb-5" />-->
-                    <MudCardContent Class="@GetResponsivePadding()">
-                        <MudText Typo="Typo.h4" Align="Align.Center" Class="mb-1">Criar uma conta</MudText>
-                        <MudText Typo="Typo.overline" Align="Align.Center" Class="mb-1">E-mail: "@_finishRegisterModel.Email"</MudText>
-                        <MudText Typo="Typo.subtitle2" Align="Align.Center" Color="Color.Secondary" Class="mb-4">
+                <MudStack Class="@($"{GetResponsivePadding()} mx-auto")" Style="max-width: 500px;">
+                <!--<MudCard Outlined="true" Class="@($"{GetResponsivePadding()} mx-auto")" Style="max-width: 700px;">
+                    <MudImage Src="logo_512x512.png" Alt="Syki" Elevation="25" Class="rounded-lg mx-20 mt-10 mb-5" />
+                    <MudCardContent Class="@GetResponsivePadding()">-->
+                        <MudText Typo="Typo.h4" Align="Align.Start" Class="mb-1">
+                        <MudIcon Icon="@Icons.Material.Filled.Insights" Class="mr-1 mb-n1" Size="Size.Large" />
+                            Criar uma conta
+                        </MudText>
+                        <MudText Typo="Typo.overline" Align="Align.Start" Class="mb-1">E-mail: "@_finishRegisterModel.Email"</MudText>
+                        <MudText Typo="Typo.subtitle2" Align="Align.Start" Color="Color.Secondary" Class="mb-1">
                             Informe uma senha valida para finalizar o cadastro
                         </MudText>
                         <FluentValidationValidator @ref="_fluentValidationValidator" />
@@ -33,6 +34,7 @@
                                       OnlyValidateIfDirty="true"
                                       Variant="Variant.Outlined"
                                       Required="true"
+                                        Disabled="@loading"
                                       RequiredError="Informe!"
                                       @bind-Value="@_finishRegisterModel.Password"
                                       For="@(() => _finishRegisterModel.Password)" />
@@ -48,19 +50,30 @@
                                       Variant="Variant.Outlined"
                                       Required="true"
                                       RequiredError="Informe!"
+                                    Disabled="@loading"
                                       @bind-Value="@_finishRegisterModel.ConfirmPassword"
                                       For="@(() => _finishRegisterModel.ConfirmPassword)" />
-                        <MudStack Spacing="1" Class="mt-10">
+                        <MudStack Spacing="1" Class="mt-3">
                             <MudButton Size="Size.Large"
                                        OnClick="@DoFinalizaRegistroAsync"
                                        Variant="Variant.Filled"
                                        Color="Color.Primary"
-                                       Class="pa-3">
-                                Concluir
+                                       Class="pa-3"
+                                        Disabled="@loading">
+                                        @if (loading)
+                                        {
+                                            <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                                            <MudText Class="ms-2">Finalizando...</MudText>
+                                        }
+                                        else
+                                        {
+                                            <MudText>Concluir</MudText>
+                                        }
                             </MudButton>
                         </MudStack>
-                    </MudCardContent>
-                </MudCard>
+                <!--</MudCardContent>
+                </MudCard>-->
+                </MudStack>
             </EditForm>
         </NotAuthorized>
     </AuthorizeView>
