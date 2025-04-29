@@ -22,11 +22,13 @@
 
     protected override async Task OnInitializedAsync()
     {
+        _loadingService.Show();
         if (await _authenticationManager.CheckAuthenticatedAsync())
         {
             await _authenticationManager.Logout();
         }
         loading = false;
+        _loadingService.Hide();
         _navigationManager.NavigateTo("/");
         await base.OnInitializedAsync();
     }

@@ -9,6 +9,7 @@
     <Authorized>
         <MudLayout>
             <MudAppBar Elevation="0" Dense="false" ToolBarClass="pt-8 pb-8 pl-3">
+                <MudImage Src="@(_isLoading ? "mascote.gif" : "mascote_static.png")" Alt="Mascote" Style="height:40px;" />
                 @if (_breakpoint != Breakpoint.Xs)
                 {
                     <MudIconButton OnClick="@ToggleLeftOpen" Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" />
@@ -35,6 +36,7 @@
         @if (IsAnonymous())
         {
             <MudAppBar Elevation="0" Dense="false" ToolBarClass="pt-8 pb-8 pl-3">
+                <MudImage Src="@(_isLoading ? "mascote.gif" : "mascote_static.png")" Alt="Mascote" Style="height:40px;" />
                 <VoltarButton />
                 <MudSpacer />
                 <ThemeIconButton @bind-IsDark="@_isDark" OnClick="@ToggleTheme" />
@@ -109,6 +111,7 @@
     private bool _leftOpen = true;
     private bool _rightOpen = false;
     private Breakpoint _breakpoint;
+    private bool _isLoading;
 
     private string SetRotaModulum()
     {
@@ -140,6 +143,11 @@
 
     protected override async Task OnInitializedAsync()
     {
+        _loadingService.OnLoadingStateChanged += () =>
+        {
+            _isLoading = _loadingService.IsLoading;
+            InvokeAsync(StateHasChanged);
+        };
         _breakpoint = await BrowserViewportService.GetCurrentBreakpointAsync();
     }
 

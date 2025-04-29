@@ -1,4 +1,4 @@
-﻿@using modulum.Client.Infrastructure.Managers
+﻿@using modulum.Client.Infrastructure.Services
 @inject NavigationHistoryService HistoryService
 
 <CascadingAuthenticationState>
@@ -37,14 +37,6 @@
 </CascadingAuthenticationState>-->
 
 @code {
-
-    protected override void OnInitialized()
-    {
-        //_navigationManager.LocationChanged += (s, e) =>
-        //{
-        //    HistoryService.AddPage(_navigationManager.Uri);
-        //};
-    }
 
     private void Voltar()
     {

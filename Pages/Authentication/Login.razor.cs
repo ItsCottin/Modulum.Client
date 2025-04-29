@@ -68,6 +68,7 @@ namespace Modulum.Client.Pages.Authentication
 
         public async Task DoLoginAsync()
         {
+            _loadingService.Show();
             loading = true;
             if (!Validated)
             {
@@ -82,6 +83,7 @@ namespace Modulum.Client.Pages.Authentication
                 _navigationManager.NavigateTo("/System"); // Redirecionar para pagina principal do sistema
             }
             loading = false;
+            _loadingService.Hide();
         }
 
         private Breakpoint _breakpoint = Breakpoint.Xs;
@@ -90,8 +92,8 @@ namespace Modulum.Client.Pages.Authentication
             {
                 Breakpoint.Xs => "pt-3 pb-3",
                 Breakpoint.Sm => "pa-10",
-                Breakpoint.Md => "pa-15",
-                _ => "pa-20"
+                Breakpoint.Md => "pa-13",
+                _ => "pa-18"
             };
     }
 }

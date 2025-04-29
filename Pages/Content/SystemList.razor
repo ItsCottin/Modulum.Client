@@ -37,7 +37,9 @@
 
     private void AdicionarNovoSistema()
     {
+        _loadingService.Show();
         _navigationManager.NavigateTo("/System/Create");
+        _loadingService.Hide();
     }
 
     public class SistemaModel

@@ -52,12 +52,14 @@ namespace Modulum.Client.Pages.Authentication.Register
 
         public async Task DoConfirmaEmail()
         {
+            _loadingService.Show();
             loading = true;
             var codigoCompleto = $"{Code0}{Code1}{Code2}{Code3}{Code4}{Code5}";
             _twoFactorModel.Code = codigoCompleto;
             if (!Validated)
             {
                 loading = false;
+                _loadingService.Hide();
                 return;
             }
             var response = await _userManager.ConfirmEmail(_twoFactorModel);
@@ -65,6 +67,7 @@ namespace Modulum.Client.Pages.Authentication.Register
             {
                 AddApiErrors(response);
                 loading = false;
+                _loadingService.Hide();
                 return;
             }
             else
@@ -72,6 +75,7 @@ namespace Modulum.Client.Pages.Authentication.Register
                 loading = false;
                 _navigationManager.NavigateTo("/register/senha");
             }
+            _loadingService.Hide();
         }
 
         private Breakpoint _breakpoint = Breakpoint.Xs;

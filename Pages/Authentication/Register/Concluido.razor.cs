@@ -18,8 +18,10 @@ namespace Modulum.Client.Pages.Authentication.Register
 
         protected override async Task OnInitializedAsync()
         {
+            _loadingService.Show();
             _breakpoint = await BrowserViewportService.GetCurrentBreakpointAsync();
             // Implementar logica para limpar do LocalStorage os itens "StorageConstants.Local.EmailCadastro" e "StorageConstants.Local.CodeTwoFactor"
+            _loadingService.Hide();
         }
     }
 }

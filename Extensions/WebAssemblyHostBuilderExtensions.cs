@@ -17,6 +17,7 @@ using Toolbelt.Blazor.Extensions.DependencyInjection;
 using Modulum.Client;
 using modulum.Shared.Constants.Application;
 using modulum.Application.Interfaces.Common;
+using modulum.Client.Infrastructure.Services;
 
 namespace modulum.Client.Extensions
 {
@@ -44,10 +45,11 @@ namespace modulum.Client.Extensions
                 .AddMudServices(configuration =>
                 {
                     configuration.SnackbarConfiguration.PositionClass = Defaults.Classes.Position.BottomRight;
-                    configuration.SnackbarConfiguration.HideTransitionDuration = 100;
-                    configuration.SnackbarConfiguration.ShowTransitionDuration = 100;
-                    configuration.SnackbarConfiguration.VisibleStateDuration = 3000;
-                    configuration.SnackbarConfiguration.ShowCloseIcon = false;
+                    configuration.SnackbarConfiguration.PreventDuplicates = false;
+                    configuration.SnackbarConfiguration.HideTransitionDuration = 500;
+                    configuration.SnackbarConfiguration.ShowTransitionDuration = 500;
+                    configuration.SnackbarConfiguration.VisibleStateDuration = 10000;
+                    configuration.SnackbarConfiguration.ShowCloseIcon = true;
                 })
                 //*/
                 //.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies())
@@ -93,6 +95,8 @@ namespace modulum.Client.Extensions
             }
 
             services.AddSingleton<NavigationHistoryService>();
+            services.AddSingleton<LoadingService>();
+            services.AddSingleton<MenuService>();
 
             return services;
         }

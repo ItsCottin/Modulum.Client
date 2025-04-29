@@ -1,4 +1,5 @@
 ﻿@page "/System/Create"
+@using modulum.Shared.Enum
 
 <MudContainer Class="my-4 px-4">
     <MudOverlay @bind-Visible="@_loading" DarkBackground="true" Absolute="true">
@@ -13,31 +14,59 @@
             <MudText>Aqui você pode criar seu sistema unico e personalizado diferente de tudo no mercado</MudText>
         </MudStack>
     </MudAlert>
-    <EditForm Model="@_model" method="post" FormName="Bem vindo ao Modulum =)" OnValidSubmit="DoSalvarAsync">
+    <EditForm Model="@_modelDynamic.tableRequest" method="post" FormName="Bem vindo ao Modulum =)" OnValidSubmit="@DoSalvarAsync">
         <MudGrid Class="pt-4">
-            <FluentValidationValidator @ref="_fluentValidationValidator" />
-            <FormValidator @ref="_criacaoFormValidator"></FormValidator>
+                <FluentValidationValidator @ref="_fluentValidationValidator"  />
+                <FormValidator @ref="_criacaoFormValidator"></FormValidator>
              <MudItem xs="12" md="12">
                 <MudPaper Class="pa-4" Elevation="0" Outlined="true">
-                    <MudTextField Label="Título do Sistema" @bind-Value="_model._modelTabela.NomeTela" Variant="Variant.Text" Class="mb-1 mud-width-full" />
+                    <MudTextField 
+                        Label="Título do Sistema" 
+                        For="@(() => _modelDynamic.tableRequest.NomeTela)" 
+                        @bind-Value="_modelDynamic.tableRequest.NomeTela" 
+                        Variant="Variant.Text" 
+                        Class="mb-1 mud-width-full"
+                        Required="true"/>
                 </MudPaper>
             </MudItem>
             <MudItem xs="12" md="4">
                 <MudPaper Class="pa-4" Elevation="0" Outlined="true">
                     <MudText Typo="Typo.h6">Adicionar Campo</MudText>
+                    <MudTextField InputType="InputType.Text"
+                                  Margin="Margin.Normal"
+                                  Label="Nome do Campo"
+                                  Class="mb-3"
+                                  @bind-Value="@_modelDynamic.fieldRequest.NomeCampoTela"
+                                  Variant="Variant.Text"
+                                  Required="true"
+                                  RequiredError="Informe!"
+                                  For="@(() => _modelDynamic.fieldRequest.NomeCampoTela)" />
 
-                    <MudTextField @bind-Value="_model._modelCampo.NomeCampoTela" Label="Nome do Campo" Variant="Variant.Text" Class="mb-3" />
-
-                    <MudSelect T="string" Label="Tipo do Campo" @bind-Value="_tipoChapeu" Variant="Variant.Text" Class="mb-3">
-                        @foreach (var tipo in _tipos)
+                   
+                    <MudSelect T="TypeColumnEnum?"
+                               Label="Tipo do Campo"
+                               @bind-Value="@_modelDynamic.fieldRequest.Tipo"
+                               Variant="Variant.Text"
+                               Class="mb-3"
+                               Required="true"
+                               For="@(() => _modelDynamic.fieldRequest.Tipo)"
+                               OnBlur="@OnTipoChanged">
+                        @foreach (TypeColumnEnum? value in Enum.GetValues(typeof(TypeColumnEnum)))
                         {
-                            <MudSelectItem Value="@tipo.Key">@tipo.Value</MudSelectItem>
+                            <MudSelectItem T="TypeColumnEnum?" Value="@value">@GetDisplayText(value)</MudSelectItem>
                         }
                     </MudSelect>
 
-                    <MudTextField @bind-Value="_model._modelCampo.Tamanho" Label="Nome do Campo" Variant="Variant.Text" InputType="InputType.Number" Class="mb-3" T="int?" />
-
-                    <MudButton Color="Color.Primary" OnClick="AdicionarCampo" Variant="Variant.Text">Adicionar</MudButton>
+                    <MudTextField 
+                        @bind-Value="_modelDynamic.fieldRequest.Tamanho" 
+                        For="@(() => _modelDynamic.fieldRequest.Tamanho)" 
+                        Label="Tamanho" 
+                        Variant="Variant.Text" 
+                        InputType="InputType.Number" 
+                        Class="mb-3" T="int?"
+                        Disabled="@(_modelDynamic.fieldRequest.Tipo != TypeColumnEnum.VARCHAR)" />
+                    <MudCheckBox T="bool" Label="Campo Obrigatório" Class="mb-3" @bind-Value="_modelDynamic.fieldRequest.IsObrigatorio" />
+                    <MudButton Color="Color.Primary" OnClick="@AdicionarCampo" Variant="Variant.Text">Adicionar</MudButton>
                 </MudPaper>
             </MudItem>
 
@@ -47,17 +76,18 @@
                     <MudText Typo="Typo.h6">Campos Adicionados</MudText>
 
                     <MudList Class="mt-2" T="string">
-                        @foreach (var campo in _modelCampos)
+                        @foreach (var campo in _modelDynamic.tableRequest.Campos)
                         {
                             <MudListItem>
                                 <MudGrid>
                                     <MudItem xs="9">
-                                        <MudText>@campo.NomeCampoTela (@campo.Tipo)</MudText>
+                                        <MudText>@campo.NomeCampoTela (@GetDisplayText(campo.Tipo)) @(campo.IsPrimaryKey ? "(Identificador)" : null) @(campo.IsObrigatorio ? "(Obrigatório)" : null)</MudText>
                                     </MudItem>
                                     <MudItem xs="3" Class="text-end">
                                         <MudIconButton Icon="@Icons.Material.Filled.Delete"
                                                        Color="Color.Error"
                                                        Size="Size.Small"
+                                                       Disabled="@campo.IsPrimaryKey"
                                                        OnClick="@(() => RemoverCampo(campo))" />
                                     </MudItem>
                                 </MudGrid>
@@ -77,7 +107,7 @@
                             Style="height: 60px;"
                             Color="Color.Primary"
                             Href=""
-                            OnClick="DoSalvarAsync" >
+                            OnClick="@DoSalvarAsync" >
                         <MudText Typo="Typo.h6">
                             Criar
                         </MudText>
@@ -87,7 +117,3 @@
         </MudGrid>
     </EditForm>
 </MudContainer>
-@code {
-
-    
-}

@@ -50,10 +50,12 @@ namespace Modulum.Client.Pages.Authentication.Register
 
         public async Task DoRegisterAsync()
         {
+            _loadingService.Show();
             loading = true;
             if (!Validated)
             {
                 loading = false;
+                _loadingService.Hide();
                 return;
             }
             var response = await _userManager.PreRegisterUserAsync(_registerUserModel);
@@ -61,17 +63,21 @@ namespace Modulum.Client.Pages.Authentication.Register
             if (response.Succeeded)
             {
                 loading = false;
+                _loadingService.Hide();
                 _navigationManager.NavigateTo("/register/confirmacao");
             }
             else
             {
                 loading = false;
+                _loadingService.Hide();
             }
         }
 
         protected override async Task OnInitializedAsync()
         {
-            _breakpoint = await BrowserViewportService.GetCurrentBreakpointAsync();
+            _loadingService.Show();
+            _breakpoint = await BrowserViewportService.GetCurrentBreakpointAsync(); 
+            _loadingService.Hide();
         }
 
         private Breakpoint _breakpoint = Breakpoint.Xs;

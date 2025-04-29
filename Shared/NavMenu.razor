@@ -4,38 +4,22 @@
     <Authorized>
         <MudNavMenu Dense="false" Margin="Margin.Normal" Class="pt-5" Rounded="true">
             <MudNavLink Class="pa-1" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Store" Href="System">Sistemas</MudNavLink>
+            @if (_loading)
+            {
+                @foreach (var menu in _menus)
+                {
+                    <MudNavLink Class="pa-1" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Store" Href=@($"/dynamic/{menu.Id}")>@menu.NomeTela</MudNavLink>
+                }
+            }
+            else
+            {
+                <MudAlert>Carregando...</MudAlert>
+            }
             <MudNavLink Class="pa-1" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.LibraryBooks" Href="Account/Manage">@context.User.Identity?.Name</MudNavLink>
             <MudNavLink Class="pa-1" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Logout" Href="logout">Sair</MudNavLink>
         </MudNavMenu>
     </Authorized>
 </AuthorizeView>
 @code {
-    private int margin = 10;
-    private bool collapseNavMenu = true;
-
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
-
-    private string? currentUrl;
-
-    protected override void OnInitialized()
-    {
-        currentUrl = _navigationManager.ToBaseRelativePath(_navigationManager.Uri);
-        _navigationManager.LocationChanged += OnLocationChanged;
-    }
-
-    private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
-    {
-        currentUrl = _navigationManager.ToBaseRelativePath(e.Location);
-        StateHasChanged();
-    }
-
-    public void Dispose()
-    {
-        _navigationManager.LocationChanged -= OnLocationChanged;
-    }
+    
 }

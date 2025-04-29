@@ -22,6 +22,7 @@
 @using modulum.Client.Infrastructure.Managers.Identity.Users
 @using modulum.Client.Infrastructure.Managers.Interceptors
 @using modulum.Client.Infrastructure.Managers.Dynamic
+@using modulum.Client.Infrastructure.Services;
 
 @*Form Validators*@
 @using modulum.Client.Infrastructure.FormValidators
@@ -63,3 +64,5 @@
 @inject IJSRuntime _jsRuntime;
 @inject IBrowserViewportService BrowserViewportService;
 @inject IDynamicManager _dynamicManager;
+@inject LoadingService _loadingService;
+@inject MenuService _menuService;

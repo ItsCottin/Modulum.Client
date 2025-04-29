@@ -44,10 +44,12 @@ namespace Modulum.Client.Pages.Authentication.Register
 
         public async Task DoFinalizaRegistroAsync()
         {
+            _loadingService.Show();
             loading = true;
             if (!Validated)
             {
                 loading = false;
+                _loadingService.Hide();
                 return;
             }
             var response = await _userManager.FimRegisterUserAsync(_finishRegisterModel);
@@ -55,11 +57,13 @@ namespace Modulum.Client.Pages.Authentication.Register
             {
                 AddApiErrors(response);
                 loading = false;
+                _loadingService.Hide();
                 return;
             }
             else
             {
                 loading = false;
+                _loadingService.Hide();
                 _navigationManager.NavigateTo("/register/concluido");
             }
         }
@@ -67,6 +71,7 @@ namespace Modulum.Client.Pages.Authentication.Register
 
         protected override async Task OnInitializedAsync()
         {
+            _loadingService.Show();
             _breakpoint = await BrowserViewportService.GetCurrentBreakpointAsync();
             string emailLocalSessao = await _userManager.GetItemLocalStorage(StorageConstants.Local.EmailCadastro);
             if (string.IsNullOrEmpty(emailLocalSessao))
@@ -74,6 +79,7 @@ namespace Modulum.Client.Pages.Authentication.Register
                 // Tratar erro
             }
             _finishRegisterModel.Email = emailLocalSessao;
+            _loadingService.Hide();
         }
 
         private Breakpoint _breakpoint = Breakpoint.Xs;
