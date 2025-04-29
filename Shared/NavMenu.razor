@@ -1,21 +1,21 @@
 ﻿@implements IDisposable
 
-<AuthorizeView>
+<AuthorizeView Context="context">
     <Authorized>
         <MudNavMenu Dense="false" Margin="Margin.Normal" Class="pt-5" Rounded="true">
-            <MudNavLink Class="pa-1" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Store" Href="System">Sistemas</MudNavLink>
+            <MudNavLink Class="pa-1" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.AddBox" Href="/system/create">Adicionar</MudNavLink>
             @if (_loading)
             {
                 @foreach (var menu in _menus)
                 {
-                    <MudNavLink Class="pa-1" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Store" Href=@($"/dynamic/{menu.Id}")>@menu.NomeTela</MudNavLink>
+                    <MudNavLink Class="pa-1" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.SpaceDashboard" Href=@($"/dynamic/{menu.Id}")>@menu.NomeTela</MudNavLink>
                 }
             }
             else
             {
                 <MudAlert>Carregando...</MudAlert>
             }
-            <MudNavLink Class="pa-1" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.LibraryBooks" Href="Account/Manage">@context.User.Identity?.Name</MudNavLink>
+            <MudNavLink Class="pa-1" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.AccountBox" Href="">@context.User.Identity?.Name</MudNavLink>
             <MudNavLink Class="pa-1" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Logout" Href="logout">Sair</MudNavLink>
         </MudNavMenu>
     </Authorized>

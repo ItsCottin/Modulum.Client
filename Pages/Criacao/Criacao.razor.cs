@@ -7,6 +7,7 @@ using modulum.Client.Infrastructure.Services;
 using modulum.Shared;
 using modulum.Shared.Enum;
 using modulum.Shared.Wrapper;
+using MudBlazor;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
@@ -74,6 +75,11 @@ namespace Modulum.Client.Pages.Criacao
             await Task.CompletedTask;
         }
 
+        private void ClearTela() 
+        {
+        
+        }
+
         private bool _tamanhoDisabled = true;
 
         private void AddApiErrors(IResult response)
@@ -114,20 +120,16 @@ namespace Modulum.Client.Pages.Criacao
                 _loadingService.Hide();
                 return;
             }
-
-            //Console.WriteLine("Deu bom mais nao era pra dar bom");
-            //_loading = false;
-            //return;
-
             var response = await _dynamicManager.CadastrarDynamic(_modelDynamic.tableRequest);
             if (response != null)
             {
+                _snackBar.Add(response.Messages.FirstOrDefault(), response.Succeeded ? Severity.Success : Severity.Error);
                 if (response.Succeeded)
                 {
                     _menuService.NotifyMenuChanged();
                     _loading = false;
                     _loadingService.Hide();
-                    _navigationManager.NavigateTo("/System/concluido");
+                    //_navigationManager.NavigateTo("/System/concluido");
                 }
                 else
                 {
@@ -142,6 +144,8 @@ namespace Modulum.Client.Pages.Criacao
                 _loading = false;
                 _loadingService.Hide();
             }
+            _modelCampos = new();
+            _modelDynamic = new DynamicForm();
         }
 
         public string GetDisplayText(Enum value)

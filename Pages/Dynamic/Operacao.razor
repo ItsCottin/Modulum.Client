@@ -3,9 +3,6 @@
 @using modulum.Client.Infrastructure.Converter
 
 <MudContainer Class="my-4 px-4">
-    <MudOverlay @bind-Visible="@_loading" DarkBackground="true" Absolute="true">
-        <modulum.Shared.Loading />
-    </MudOverlay>
     @if (_loadingDados)
     {
         <MudAlert Severity="Severity.Warning" ContentAlignment="HorizontalAlignment.Start" Dense="false" Class="p-3">Carregando...</MudAlert>
@@ -33,25 +30,33 @@
                     }
                     if (campo.Tipo == TypeColumnEnum.VARCHAR)
                     {
-                        <MudTextField T="string" @bind-Value="campo.Valor" Label="@campo.NomeCampoTela" Disabled="@(IsView | IsPrimaryKey)" Variant="Variant.Text" Class="mb-3" Required="@campo.IsObrigatorio" />
+                        <MudTextField T="string" @bind-Value="campo.Valor" Label="@campo.NomeCampoTela" Disabled="@(IsView | IsPrimaryKey | _loading)" Variant="Variant.Text" Class="mb-3" Required="@campo.IsObrigatorio" />
                     }
                     else if (campo.Tipo == TypeColumnEnum.INT)
                     {
-                        <MudNumericField T="string" @bind-Value="campo.Valor" Label="@campo.NomeCampoTela" Disabled="@(IsView | IsPrimaryKey)" Variant="Variant.Text" Class="mb-3" Required="@campo.IsObrigatorio" />
+                        <MudNumericField T="string" @bind-Value="campo.Valor" Label="@campo.NomeCampoTela" Disabled="@(IsView | IsPrimaryKey | _loading)" Variant="Variant.Text" Class="mb-3" Required="@campo.IsObrigatorio" />
                     }
                     else if (campo.Tipo == TypeColumnEnum.DATE)
                     {
-                        <MudTextField InputType="InputType.DateTimeLocal" @bind-Value="campo.Valor" Label="@campo.NomeCampoTela" Disabled="@(IsView | IsPrimaryKey)" Variant="Variant.Text" Class="mb-3" Required="@campo.IsObrigatorio" />
+                        <MudTextField InputType="InputType.DateTimeLocal" @bind-Value="campo.Valor" Label="@campo.NomeCampoTela" Disabled="@(IsView | IsPrimaryKey | _loading)" Variant="Variant.Text" Class="mb-3" Required="@campo.IsObrigatorio" />
                     }
                     else if (campo.Tipo == TypeColumnEnum.BIT)
                     {
-                        <MudCheckBox Converter="@(new CustomStringToBoolConverter())" @bind-Value="campo.Valor" Label="@campo.NomeCampoTela" Disabled="@(IsView | IsPrimaryKey)" Class="mb-3" Required="@campo.IsObrigatorio" />
+                        <MudCheckBox Converter="@(new CustomStringToBoolConverter())" @bind-Value="campo.Valor" Label="@campo.NomeCampoTela" Disabled="@(IsView | IsPrimaryKey | _loading)" Class="mb-3" Required="@campo.IsObrigatorio" />
                     }
                 }
-                <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="SalvarRegistro" Class="" Disabled="@IsView">
-                    Salvar
+                <MudButton StartIcon="@(_loading ? "" : Icons.Material.Filled.SaveAs)" Variant="Variant.Filled" Color="Color.Primary" OnClick="SalvarRegistro" Class="mr-3" Disabled="@(IsView || _loading)">
+                    @if (_loading)
+                    {
+                        <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                        <MudText Class="ms-2">Salvando...</MudText>
+                    }
+                    else
+                    {
+                        <MudText>Salvar</MudText>
+                    }
                 </MudButton>
-                <MudButton Variant="Variant.Text" Color="Color.Info" Href=@("/dynamic/" + TableId) Class="">
+                <MudButton Variant="Variant.Text" Color="Color.Info" Href=@("/dynamic/" + TableId) Class="" Disabled="@_loading">
                     Voltar
                 </MudButton>
             </MudPaper>

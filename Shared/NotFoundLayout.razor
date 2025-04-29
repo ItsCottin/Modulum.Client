@@ -1,13 +1,11 @@
-﻿@inherits LayoutComponentBase
+﻿@page "/not-found"
 
-<div class="d-flex justify-content-center align-items-center">
-	<div class="col-md-12 text-center">
-		<h1>404 =(</h1>
-		<h2>Pagina não Encontrada</h2>
-		<p>
-			Desculpe, a página que você está procurando
-			pois não existe.
-		</p>
-		<a href="/">Voltar</a>
-	</div>
-</div>
+<MudPaper Elevation="0" Class="d-flex flex-column align-center justify-center mx-auto my-12 pa-10" Style="max-width: 600px;">
+    <MudText Typo="Typo.h2" Align="Align.Center" Color="Color.Error">404 - Página não encontrada</MudText>
+    <MudText Typo="Typo.body1" Align="Align.Center" Class="mt-2 mb-6">
+        A página que você está procurando não existe ou foi movida.
+    </MudText>
+    <MudButton Variant="Variant.Filled" Color="Color.Primary" Href="/">
+        Voltar para o início
+    </MudButton>
+</MudPaper>

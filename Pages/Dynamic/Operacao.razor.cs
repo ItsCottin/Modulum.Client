@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using modulum.Application.Requests.Dynamic;
+using modulum.Shared;
 using modulum.Shared.Enum;
 using MudBlazor;
 using System.Globalization;
@@ -95,6 +96,7 @@ namespace Modulum.Client.Pages.Dynamic
 
         private async Task SalvarRegistro()
         {
+            _loading = true;
             _loadingService.Show();
             var payload = new DynamicTableRequest()
             {
@@ -116,7 +118,8 @@ namespace Modulum.Client.Pages.Dynamic
             var response = await _dynamicManager.OperacaoRegistro(payload, Operation);
             _snackBar.Add(response.Messages.FirstOrDefault(), response.Succeeded ? Severity.Success : Severity.Error);
             // Redirecionar de volta para grid depois de salvar
-            _loadingService.Hide();
+            _loadingService.Hide(); 
+            _loading = false;
         }
     }
 }

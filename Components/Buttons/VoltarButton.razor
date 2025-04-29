@@ -5,9 +5,14 @@
            Color="Color.Default"
            Class="btn-voltar"
            Style=""
+           Disabled="@IsDisabled"
            OnClick="Voltar">  Voltar</MudButton>
 
 @code{
+
+    [Parameter]
+    public bool IsDisabled { get; set; }
+
     private void Voltar()
     {
         var previous = HistoryService.GoBack();

@@ -5,7 +5,7 @@
 <MudThemeProvider IsDarkMode="@_isDark" />
 <MudDialogProvider CloseOnEscapeKey="true" CloseButton="true" />
 
-<AuthorizeView>
+<AuthorizeView Context="authContext">
     <Authorized>
         <MudLayout>
             <MudAppBar Elevation="0" Dense="false" ToolBarClass="pt-8 pb-8 pl-3">
@@ -16,7 +16,7 @@
                 }
                 <MudSpacer />
                 <ThemeIconButton @bind-IsDark="@_isDark" OnClick="@ToggleTheme" />
-                <HomeButton Rota="/System" />
+                <HomeButton Rota="/System" IsDisabled="@_isLoading" />
             </MudAppBar>
             <MudDrawer @bind-Open="@_leftOpen" ClipMode="DrawerClipMode.Docked" Elevation="0" Class="" Variant="DrawerVariant.Responsive">
                 <Modulum.Client.Shared.NavMenu />
@@ -37,10 +37,10 @@
         {
             <MudAppBar Elevation="0" Dense="false" ToolBarClass="pt-8 pb-8 pl-3">
                 <MudImage Src="@(_isLoading ? "mascote.gif" : "mascote_static.png")" Alt="Mascote" Style="height:40px;" />
-                <VoltarButton />
+                <VoltarButton IsDisabled="@_isLoading"/>
                 <MudSpacer />
                 <ThemeIconButton @bind-IsDark="@_isDark" OnClick="@ToggleTheme" />
-                <HomeButton Rota="/"/>
+                <HomeButton Rota="/" IsDisabled="@_isLoading" />
             </MudAppBar>
             <CascadingValue Name="IsDarkTheme" Value="@_isDark">
                 <MudStack AlignItems="AlignItems.Center" Justify="Justify.Center" Style="min-height: 100vh;" Class="pt-20">

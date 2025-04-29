@@ -6,11 +6,14 @@
     Color="Color.Inherit"
     Style="color: white; align-self: center;"
     Underline="Underline.None"
->
+    Disabled="@IsDisabled">
     <MudText Style="letter-spacing: 2.5px;"><b>MODULUM</b></MudText>
 </MudLink>
 
 @code {
     [Parameter]
     public string? Rota { get; set; }
+
+    [Parameter]
+    public bool IsDisabled { get; set; }
 }

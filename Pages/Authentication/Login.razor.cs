@@ -80,7 +80,7 @@ namespace Modulum.Client.Pages.Authentication
             AddApiErrors(result);
             if (result.Succeeded)
             {
-                _navigationManager.NavigateTo("/System"); // Redirecionar para pagina principal do sistema
+                _navigationManager.NavigateTo("/"); // Redirecionar para pagina principal do sistema
             }
             loading = false;
             _loadingService.Hide();
@@ -91,8 +91,8 @@ namespace Modulum.Client.Pages.Authentication
             _breakpoint switch
             {
                 Breakpoint.Xs => "pt-3 pb-3",
-                Breakpoint.Sm => "pa-10",
-                Breakpoint.Md => "pa-13",
+                Breakpoint.Sm => "pa-12",
+                Breakpoint.Md => "pa-15",
                 _ => "pa-18"
             };
     }
