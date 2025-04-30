@@ -28,66 +28,8 @@
                             </MudText>
                         </MudText>
                         <MudStack Row="true" Justify="Justify.Center" Spacing="2">
-                            <MudTextField @bind-Value="Code0"
-                                          MaxLength="1"
-                                          Immediate="true"
-                                          T="string"
-                                          TextChanged="@(() => HandleInput())"
-                                          Style="width: 50px;" 
-                                          Disabled="@loading" />
-
-                            <MudTextField @bind-Value="Code1"
-                                          MaxLength="1"
-                                          Immediate="true"
-                                          T="string"
-                                          TextChanged="@(() => HandleInput())"
-                                          Style="width: 50px;" 
-                                          Disabled="@loading" />
-
-                            <MudTextField @bind-Value="Code2"
-                                          MaxLength="1"
-                                          Immediate="true"
-                                          T="string"
-                                          TextChanged="@(() => HandleInput())"
-                                          Style="width: 50px;" 
-                                          Disabled="@loading" />
-
-                            <MudTextField @bind-Value="Code3"
-                                          MaxLength="1"
-                                          Immediate="true"
-                                          T="string"
-                                          TextChanged="@(() => HandleInput())"
-                                          Style="width: 50px;" 
-                                          Disabled="@loading" />
-
-                            <MudTextField @bind-Value="Code4"
-                                          MaxLength="1"
-                                          Immediate="true"
-                                          T="string"
-                                          TextChanged="@(() => HandleInput())"
-                                          Style="width: 50px;"
-                                          Disabled="@loading" />
-
-                            <MudTextField @bind-Value="Code5"
-                                          MaxLength="1"
-                                          Immediate="true"
-                                          T="string"
-                                          TextChanged="@(() => HandleInput())"
-                                          Style="width: 50px;"
-                                          Disabled="@loading" />
+                            <MudCodeInput T="string" Count="6" Spacing="3" Variant="Variant.Outlined" Disabled="@loading" @bind-Value="_twoFactorModel.Code" />
                         </MudStack>
-
-                        <!--<MudTextField InputType="InputType.Text"
-                                      Margin="Margin.Normal"
-                                      AutoFocus="true"
-                                      Label="Codigo de verificação"
-                                      Class="mt-0 pb-3"
-                                      OnlyValidateIfDirty="true"
-                                      @bind-Value="@_twoFactorModel.Code"
-                                      Variant="Variant.Text"
-                                      Required="true"
-                                      RequiredError="Informe!"
-                                      For="@(() => _twoFactorModel.Code)" />-->
                         <MudStack Spacing="1" Class="mt-3">
                             <MudButton Size="Size.Large"
                                        OnClick="@DoConfirmaEmail"

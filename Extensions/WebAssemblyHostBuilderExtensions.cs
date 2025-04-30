@@ -18,6 +18,7 @@ using Modulum.Client;
 using modulum.Shared.Constants.Application;
 using modulum.Application.Interfaces.Common;
 using modulum.Client.Infrastructure.Services;
+using MudExtensions.Services;
 
 namespace modulum.Client.Extensions
 {
@@ -51,6 +52,7 @@ namespace modulum.Client.Extensions
                     configuration.SnackbarConfiguration.VisibleStateDuration = 10000;
                     configuration.SnackbarConfiguration.ShowCloseIcon = true;
                 })
+                .AddMudExtensions()
                 //*/
                 //.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies())
                 .AddScoped<BlazorHeroStateProvider>()

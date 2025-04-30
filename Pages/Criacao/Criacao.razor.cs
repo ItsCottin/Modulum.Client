@@ -107,9 +107,9 @@ namespace Modulum.Client.Pages.Criacao
             }
             _criacaoFormValidator.ClearAllErrors();
             _modelDynamic.tableRequest.NomeTabela = _modelDynamic.tableRequest.NomeTela?.Replace(" ", "_");
-
+            
             var validationResult = await new CreateDynamicTableRequestValidator().ValidateAsync(_modelDynamic.tableRequest);
-
+            
             if (!validationResult.IsValid)
             {
                 foreach (var error in validationResult.Errors)
@@ -121,15 +121,22 @@ namespace Modulum.Client.Pages.Criacao
                 return;
             }
             var response = await _dynamicManager.CadastrarDynamic(_modelDynamic.tableRequest);
-            if (response != null)
+            if (response.Messages == null || response.Messages.Count == 0)
+            {
+                _snackBar.Add("Tela cadastrada com sucesso", Severity.Success);
+            }
+            else
             {
                 _snackBar.Add(response.Messages.FirstOrDefault(), response.Succeeded ? Severity.Success : Severity.Error);
+            }
+            if (response != null)
+            {
                 if (response.Succeeded)
                 {
                     _menuService.NotifyMenuChanged();
                     _loading = false;
                     _loadingService.Hide();
-                    //_navigationManager.NavigateTo("/System/concluido");
+                    _navigationManager.NavigateTo("/");
                 }
                 else
                 {
@@ -144,8 +151,6 @@ namespace Modulum.Client.Pages.Criacao
                 _loading = false;
                 _loadingService.Hide();
             }
-            _modelCampos = new();
-            _modelDynamic = new DynamicForm();
         }
 
         public string GetDisplayText(Enum value)

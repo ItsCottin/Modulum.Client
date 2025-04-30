@@ -281,6 +281,52 @@
           }
         }
       },
+      "BuildBundlerMinifier/3.2.449": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "CodeBeam.MudBlazor.Extensions/8.1.0": {
+        "type": "package",
+        "dependencies": {
+          "BuildBundlerMinifier": "3.2.449",
+          "CsvHelper": "33.0.1",
+          "Microsoft.AspNetCore.Components": "8.0.15",
+          "Microsoft.AspNetCore.Components.Web": "8.0.15",
+          "MudBlazor": "8.0.0",
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net8.0/CodeBeam.MudBlazor.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CodeBeam.MudBlazor.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CodeBeam.MudBlazor.Extensions.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/CodeBeam.MudBlazor.Extensions.props": {}
+        }
+      },
+      "CsvHelper/33.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "FluentValidation/11.11.0": {
         "type": "package",
         "compile": {
@@ -424,10 +470,10 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Authorization/8.0.14": {
+      "Microsoft.AspNetCore.Authorization/8.0.15": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Metadata": "8.0.14",
+          "Microsoft.AspNetCore.Metadata": "8.0.15",
           "Microsoft.Extensions.Logging.Abstractions": "8.0.3",
           "Microsoft.Extensions.Options": "8.0.2"
         },
@@ -442,11 +488,11 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components/8.0.14": {
+      "Microsoft.AspNetCore.Components/8.0.15": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Authorization": "8.0.14",
-          "Microsoft.AspNetCore.Components.Analyzers": "8.0.14"
+          "Microsoft.AspNetCore.Authorization": "8.0.15",
+          "Microsoft.AspNetCore.Components.Analyzers": "8.0.15"
         },
         "compile": {
           "lib/net8.0/Microsoft.AspNetCore.Components.dll": {
@@ -459,7 +505,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Analyzers/8.0.14": {
+      "Microsoft.AspNetCore.Components.Analyzers/8.0.15": {
         "type": "package",
         "build": {
           "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets": {}
@@ -482,10 +528,10 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Forms/8.0.14": {
+      "Microsoft.AspNetCore.Components.Forms/8.0.15": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "8.0.14"
+          "Microsoft.AspNetCore.Components": "8.0.15"
         },
         "compile": {
           "lib/net8.0/Microsoft.AspNetCore.Components.Forms.dll": {
@@ -498,14 +544,14 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Web/8.0.14": {
+      "Microsoft.AspNetCore.Components.Web/8.0.15": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "8.0.14",
-          "Microsoft.AspNetCore.Components.Forms": "8.0.14",
+          "Microsoft.AspNetCore.Components": "8.0.15",
+          "Microsoft.AspNetCore.Components.Forms": "8.0.15",
           "Microsoft.Extensions.DependencyInjection": "8.0.1",
           "Microsoft.Extensions.Primitives": "8.0.0",
-          "Microsoft.JSInterop": "8.0.14",
+          "Microsoft.JSInterop": "8.0.15",
           "System.IO.Pipelines": "8.0.0"
         },
         "compile": {
@@ -815,7 +861,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Metadata/8.0.14": {
+      "Microsoft.AspNetCore.Metadata/8.0.15": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.AspNetCore.Metadata.dll": {
@@ -1511,7 +1557,7 @@
           }
         }
       },
-      "Microsoft.JSInterop/8.0.14": {
+      "Microsoft.JSInterop/8.0.15": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.JSInterop.dll": {
@@ -1930,6 +1976,19 @@
             "related": ".xml"
           }
         }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
       }
     },
     "net8.0/browser-wasm": {
@@ -2212,6 +2271,52 @@
           }
         }
       },
+      "BuildBundlerMinifier/3.2.449": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "CodeBeam.MudBlazor.Extensions/8.1.0": {
+        "type": "package",
+        "dependencies": {
+          "BuildBundlerMinifier": "3.2.449",
+          "CsvHelper": "33.0.1",
+          "Microsoft.AspNetCore.Components": "8.0.15",
+          "Microsoft.AspNetCore.Components.Web": "8.0.15",
+          "MudBlazor": "8.0.0",
+          "ZXing.Net": "0.16.9"
+        },
+        "compile": {
+          "lib/net8.0/CodeBeam.MudBlazor.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CodeBeam.MudBlazor.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CodeBeam.MudBlazor.Extensions.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/CodeBeam.MudBlazor.Extensions.props": {}
+        }
+      },
+      "CsvHelper/33.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "FluentValidation/11.11.0": {
         "type": "package",
         "compile": {
@@ -2355,10 +2460,10 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Authorization/8.0.14": {
+      "Microsoft.AspNetCore.Authorization/8.0.15": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Metadata": "8.0.14",
+          "Microsoft.AspNetCore.Metadata": "8.0.15",
           "Microsoft.Extensions.Logging.Abstractions": "8.0.3",
           "Microsoft.Extensions.Options": "8.0.2"
         },
@@ -2373,11 +2478,11 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components/8.0.14": {
+      "Microsoft.AspNetCore.Components/8.0.15": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Authorization": "8.0.14",
-          "Microsoft.AspNetCore.Components.Analyzers": "8.0.14"
+          "Microsoft.AspNetCore.Authorization": "8.0.15",
+          "Microsoft.AspNetCore.Components.Analyzers": "8.0.15"
         },
         "compile": {
           "lib/net8.0/Microsoft.AspNetCore.Components.dll": {
@@ -2390,7 +2495,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Analyzers/8.0.14": {
+      "Microsoft.AspNetCore.Components.Analyzers/8.0.15": {
         "type": "package",
         "build": {
           "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets": {}
@@ -2413,10 +2518,10 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Forms/8.0.14": {
+      "Microsoft.AspNetCore.Components.Forms/8.0.15": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "8.0.14"
+          "Microsoft.AspNetCore.Components": "8.0.15"
         },
         "compile": {
           "lib/net8.0/Microsoft.AspNetCore.Components.Forms.dll": {
@@ -2429,14 +2534,14 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Web/8.0.14": {
+      "Microsoft.AspNetCore.Components.Web/8.0.15": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "8.0.14",
-          "Microsoft.AspNetCore.Components.Forms": "8.0.14",
+          "Microsoft.AspNetCore.Components": "8.0.15",
+          "Microsoft.AspNetCore.Components.Forms": "8.0.15",
           "Microsoft.Extensions.DependencyInjection": "8.0.1",
           "Microsoft.Extensions.Primitives": "8.0.0",
-          "Microsoft.JSInterop": "8.0.14",
+          "Microsoft.JSInterop": "8.0.15",
           "System.IO.Pipelines": "8.0.0"
         },
         "compile": {
@@ -2746,7 +2851,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Metadata/8.0.14": {
+      "Microsoft.AspNetCore.Metadata/8.0.15": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.AspNetCore.Metadata.dll": {
@@ -3442,7 +3547,7 @@
           }
         }
       },
-      "Microsoft.JSInterop/8.0.14": {
+      "Microsoft.JSInterop/8.0.15": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.JSInterop.dll": {
@@ -3823,6 +3928,19 @@
             "related": ".xml"
           }
         }
+      },
+      "ZXing.Net/0.16.9": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/zxing.dll": {
+            "related": ".XML"
+          }
+        }
       }
     }
   },
@@ -3987,6 +4105,88 @@
         "contentFiles/any/any/wwwroot/js/bootstrap.min.js.map"
       ]
     },
+    "BuildBundlerMinifier/3.2.449": {
+      "sha512": "uA9sYDy4VepL3xwzBTLcP2LyuVYMt0ZIT3gaSiXvGoX15Ob+rOP+hGydhevlSVd+rFo+Y+VQFEHDuWU8HBW+XA==",
+      "type": "package",
+      "path": "buildbundlerminifier/3.2.449",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/BuildBundlerMinifier.targets",
+        "buildbundlerminifier.3.2.449.nupkg.sha512",
+        "buildbundlerminifier.nuspec",
+        "tools/net46/BundlerMinifier.dll",
+        "tools/net46/NUglify.dll",
+        "tools/net46/Newtonsoft.Json.dll",
+        "tools/netcoreapp2.0/BundlerMinifier.dll",
+        "tools/netcoreapp2.0/NUglify.dll",
+        "tools/netcoreapp2.0/Newtonsoft.Json.dll",
+        "tools/netcoreapp3.0/BundlerMinifier.dll",
+        "tools/netcoreapp3.0/NUglify.dll",
+        "tools/netcoreapp3.0/Newtonsoft.Json.dll",
+        "tools/netcoreapp3.1/BundlerMinifier.dll",
+        "tools/netcoreapp3.1/NUglify.dll",
+        "tools/netcoreapp3.1/Newtonsoft.Json.dll",
+        "tools/netstandard1.3/BundlerMinifier.dll",
+        "tools/netstandard1.3/NUglify.dll",
+        "tools/netstandard1.3/Newtonsoft.Json.dll"
+      ]
+    },
+    "CodeBeam.MudBlazor.Extensions/8.1.0": {
+      "sha512": "6f6K8Qr+cjk419URr8+b9nkSr0y300n/DaB0tJdYVRtDsWwoVCvgPwf9kENdDg1HIiYPL524+Q5a9QraL6hAvw==",
+      "type": "package",
+      "path": "codebeam.mudblazor.extensions/8.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Mud_Secondary.png",
+        "build/CodeBeam.MudBlazor.Extensions.props",
+        "build/Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/CodeBeam.MudBlazor.Extensions.props",
+        "buildTransitive/CodeBeam.MudBlazor.Extensions.props",
+        "codebeam.mudblazor.extensions.8.1.0.nupkg.sha512",
+        "codebeam.mudblazor.extensions.nuspec",
+        "lib/net8.0/CodeBeam.MudBlazor.Extensions.dll",
+        "lib/net8.0/CodeBeam.MudBlazor.Extensions.xml",
+        "lib/net9.0/CodeBeam.MudBlazor.Extensions.dll",
+        "lib/net9.0/CodeBeam.MudBlazor.Extensions.xml",
+        "staticwebassets/MudExtensions.min.css",
+        "staticwebassets/MudExtensions.min.js",
+        "staticwebassets/Mud_Secondary.png",
+        "staticwebassets/eraser.cur",
+        "staticwebassets/pencil.cur"
+      ]
+    },
+    "CsvHelper/33.0.1": {
+      "sha512": "fev4lynklAU2A9GVMLtwarkwaanjSYB4wUqO2nOJX5hnzObORzUqVLe+bDYCUyIIRQM4o5Bsq3CcyJR89iMmEQ==",
+      "type": "package",
+      "path": "csvhelper/33.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "csvhelper.33.0.1.nupkg.sha512",
+        "csvhelper.nuspec",
+        "lib/net462/CsvHelper.dll",
+        "lib/net462/CsvHelper.xml",
+        "lib/net47/CsvHelper.dll",
+        "lib/net47/CsvHelper.xml",
+        "lib/net48/CsvHelper.dll",
+        "lib/net48/CsvHelper.xml",
+        "lib/net6.0/CsvHelper.dll",
+        "lib/net6.0/CsvHelper.xml",
+        "lib/net7.0/CsvHelper.dll",
+        "lib/net7.0/CsvHelper.xml",
+        "lib/net8.0/CsvHelper.dll",
+        "lib/net8.0/CsvHelper.xml",
+        "lib/netstandard2.0/CsvHelper.dll",
+        "lib/netstandard2.0/CsvHelper.xml",
+        "lib/netstandard2.1/CsvHelper.dll",
+        "lib/netstandard2.1/CsvHelper.xml"
+      ]
+    },
     "FluentValidation/11.11.0": {
       "sha512": "cyIVdQBwSipxWG8MA3Rqox7iNbUNUTK5bfJi9tIdm4CAfH71Oo5ABLP4/QyrUwuakqpUEPGtE43BDddvEehuYw==",
       "type": "package",
@@ -4121,10 +4321,10 @@
         "microsoft.aspnetcore.authentication.core.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Authorization/8.0.14": {
-      "sha512": "lcKWEvzaJz+ahDj5J0zz05NGyv4vqEa2vLalBuBf69vL0qrWqqB/rwI4/zdyloun+fLTq1bCnsAwiplbFgQtAA==",
+    "Microsoft.AspNetCore.Authorization/8.0.15": {
+      "sha512": "AIpppyCOYv0hJjmYqytMSVohAV8THV6sTk7VoM6rHo1Jq0D1fOfkRi9lnmEz20nfKt50wX2OlciEQop3JlMC6A==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authorization/8.0.14",
+      "path": "microsoft.aspnetcore.authorization/8.0.15",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4136,14 +4336,14 @@
         "lib/net8.0/Microsoft.AspNetCore.Authorization.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.xml",
-        "microsoft.aspnetcore.authorization.8.0.14.nupkg.sha512",
+        "microsoft.aspnetcore.authorization.8.0.15.nupkg.sha512",
         "microsoft.aspnetcore.authorization.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components/8.0.14": {
-      "sha512": "b/6dwE/ESturk5VHHzq/GP15qkcxb196T+qxFs4wzUkeZtCx2OuK+1rPIHSgsOjthnHNOAhCY7/9n5uLqyenKA==",
+    "Microsoft.AspNetCore.Components/8.0.15": {
+      "sha512": "eQIgPU1oTkqR8hWvDjyZFGBBtgPY4bYl4a/WN7g0txmoww+fbE1nZ4D+5MeSbZu1kfHWX/Ruog/pMF9zUX6D7g==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components/8.0.14",
+      "path": "microsoft.aspnetcore.components/8.0.15",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4151,14 +4351,14 @@
         "THIRD-PARTY-NOTICES.txt",
         "lib/net8.0/Microsoft.AspNetCore.Components.dll",
         "lib/net8.0/Microsoft.AspNetCore.Components.xml",
-        "microsoft.aspnetcore.components.8.0.14.nupkg.sha512",
+        "microsoft.aspnetcore.components.8.0.15.nupkg.sha512",
         "microsoft.aspnetcore.components.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.Analyzers/8.0.14": {
-      "sha512": "pHPb1bqV2ECTfOw2QcGQzO1/fdpo8mwekY8Jbycm2UZ6yvqLtZRRPd+RVzL74oXR/HTakvqSh2Un1W1rIFTnoQ==",
+    "Microsoft.AspNetCore.Components.Analyzers/8.0.15": {
+      "sha512": "Uqc/wecFqwfpC9bUK9DH3W3nrriRM6ZBL8OozV6GHNNgrqvzdnqsPKo3NcmjhokvMo2/XHTrreRC2yA2aTLS/A==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.analyzers/8.0.14",
+      "path": "microsoft.aspnetcore.components.analyzers/8.0.15",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4167,7 +4367,7 @@
         "analyzers/dotnet/cs/Microsoft.AspNetCore.Components.Analyzers.dll",
         "build/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
         "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
-        "microsoft.aspnetcore.components.analyzers.8.0.14.nupkg.sha512",
+        "microsoft.aspnetcore.components.analyzers.8.0.15.nupkg.sha512",
         "microsoft.aspnetcore.components.analyzers.nuspec"
       ]
     },
@@ -4186,10 +4386,10 @@
         "microsoft.aspnetcore.components.authorization.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.Forms/8.0.14": {
-      "sha512": "U83TX0obbdIh1DeIGCix62RILHRa4HC7h0fgEYrV9Gl8tz0wzv6AoYkU4PvnxXAqpYA2wPTMgNOuqt1X2XxCoQ==",
+    "Microsoft.AspNetCore.Components.Forms/8.0.15": {
+      "sha512": "579O5c3u0FXnOAjk6JNzcy+/+qazMbedAeOy1vT1B6CBYovG8iGJhyUukqCbHcNQq3/lqxBTyB9rFzlH5zOttA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.forms/8.0.14",
+      "path": "microsoft.aspnetcore.components.forms/8.0.15",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4197,14 +4397,14 @@
         "THIRD-PARTY-NOTICES.txt",
         "lib/net8.0/Microsoft.AspNetCore.Components.Forms.dll",
         "lib/net8.0/Microsoft.AspNetCore.Components.Forms.xml",
-        "microsoft.aspnetcore.components.forms.8.0.14.nupkg.sha512",
+        "microsoft.aspnetcore.components.forms.8.0.15.nupkg.sha512",
         "microsoft.aspnetcore.components.forms.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.Web/8.0.14": {
-      "sha512": "h/XSCAHmBywDF6San0FGPyXxK6PZh1g/xz4Ln9yeJNgSmKq5F1ehgVStDkJr4d6pWGr2RRkNxgGYMLRnULMnKw==",
+    "Microsoft.AspNetCore.Components.Web/8.0.15": {
+      "sha512": "ttRxlR+yM0sNi+Ecw0ze26l2IcBIF2L+YNQGs4v159v+Ge51yn8bwehnlzs9MY5y3Xamvek4l71uZfk1oouYSA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.web/8.0.14",
+      "path": "microsoft.aspnetcore.components.web/8.0.15",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4212,7 +4412,7 @@
         "THIRD-PARTY-NOTICES.txt",
         "lib/net8.0/Microsoft.AspNetCore.Components.Web.dll",
         "lib/net8.0/Microsoft.AspNetCore.Components.Web.xml",
-        "microsoft.aspnetcore.components.web.8.0.14.nupkg.sha512",
+        "microsoft.aspnetcore.components.web.8.0.15.nupkg.sha512",
         "microsoft.aspnetcore.components.web.nuspec"
       ]
     },
@@ -4642,10 +4842,10 @@
         "microsoft.aspnetcore.identity.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Metadata/8.0.14": {
-      "sha512": "4dkb/7GoyaFtEggCEHStc/t05nKgnEr1QUJIP8QaDvxdZTXk9SebVeMMPBSR4zbj6dK2tUwBAOdHLA215lmOWg==",
+    "Microsoft.AspNetCore.Metadata/8.0.15": {
+      "sha512": "eKlqQasjNZD0B3thB+nX7kkpG/RiZlXObmjX+JurWycnssGp1q9iZjKn2SqKA45Pouw+529aQUYYP2/QCE5xIQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.metadata/8.0.14",
+      "path": "microsoft.aspnetcore.metadata/8.0.15",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4657,7 +4857,7 @@
         "lib/net8.0/Microsoft.AspNetCore.Metadata.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.xml",
-        "microsoft.aspnetcore.metadata.8.0.14.nupkg.sha512",
+        "microsoft.aspnetcore.metadata.8.0.15.nupkg.sha512",
         "microsoft.aspnetcore.metadata.nuspec"
       ]
     },
@@ -5653,10 +5853,10 @@
         "microsoft.extensions.webencoders.nuspec"
       ]
     },
-    "Microsoft.JSInterop/8.0.14": {
-      "sha512": "eg5HYSshwlO1oOzOg4WdT2ZSPKOu3hv556zPkfNpKEi5qoLuQt49mE1tegsL4H7ENl1dL0vBLRv4+YAuLKt/nA==",
+    "Microsoft.JSInterop/8.0.15": {
+      "sha512": "JQjYabj1o3M5rUp/GM8uVlLpgc9tgxZea+89IkvGl8AcY7Tfwn0Q5qltVa9rfm3mzCsr2ecVCKzWMSMYiXS0Kg==",
       "type": "package",
-      "path": "microsoft.jsinterop/8.0.14",
+      "path": "microsoft.jsinterop/8.0.15",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5664,7 +5864,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net8.0/Microsoft.JSInterop.dll",
         "lib/net8.0/Microsoft.JSInterop.xml",
-        "microsoft.jsinterop.8.0.14.nupkg.sha512",
+        "microsoft.jsinterop.8.0.15.nupkg.sha512",
         "microsoft.jsinterop.nuspec"
       ]
     },
@@ -6412,12 +6612,96 @@
         "toolbelt.blazor.httpclientinterceptor.10.2.0.nupkg.sha512",
         "toolbelt.blazor.httpclientinterceptor.nuspec"
       ]
+    },
+    "ZXing.Net/0.16.9": {
+      "sha512": "7WaVMHklpT3Ye2ragqRIwlFRsb6kOk63BOGADV0fan3ulVfGLUYkDi5yNUsZS/7FVNkWbtHAlDLmu4WnHGfqvQ==",
+      "type": "package",
+      "path": "zxing.net/0.16.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/native/zxing.XML",
+        "lib/native/zxing.pri",
+        "lib/native/zxing.winmd",
+        "lib/net20-cf/zxing.ce2.0.dll",
+        "lib/net20-cf/zxing.ce2.0.xml",
+        "lib/net20/zxing.XML",
+        "lib/net20/zxing.dll",
+        "lib/net35-cf/zxing.ce3.5.dll",
+        "lib/net35-cf/zxing.ce3.5.xml",
+        "lib/net35/zxing.XML",
+        "lib/net35/zxing.dll",
+        "lib/net40/zxing.XML",
+        "lib/net40/zxing.dll",
+        "lib/net40/zxing.presentation.XML",
+        "lib/net40/zxing.presentation.dll",
+        "lib/net45/zxing.XML",
+        "lib/net45/zxing.dll",
+        "lib/net45/zxing.presentation.XML",
+        "lib/net45/zxing.presentation.dll",
+        "lib/net461/zxing.XML",
+        "lib/net461/zxing.dll",
+        "lib/net461/zxing.presentation.XML",
+        "lib/net461/zxing.presentation.dll",
+        "lib/net47/zxing.XML",
+        "lib/net47/zxing.dll",
+        "lib/net47/zxing.presentation.XML",
+        "lib/net47/zxing.presentation.dll",
+        "lib/net48/zxing.XML",
+        "lib/net48/zxing.dll",
+        "lib/net48/zxing.presentation.XML",
+        "lib/net48/zxing.presentation.dll",
+        "lib/net5.0/zxing.XML",
+        "lib/net5.0/zxing.dll",
+        "lib/net6.0/zxing.XML",
+        "lib/net6.0/zxing.dll",
+        "lib/net7.0/zxing.XML",
+        "lib/net7.0/zxing.dll",
+        "lib/netcoreapp3.0/zxing.dll",
+        "lib/netcoreapp3.0/zxing.xml",
+        "lib/netcoreapp3.1/zxing.dll",
+        "lib/netcoreapp3.1/zxing.xml",
+        "lib/netstandard1.0/zxing.dll",
+        "lib/netstandard1.0/zxing.xml",
+        "lib/netstandard1.1/zxing.dll",
+        "lib/netstandard1.1/zxing.xml",
+        "lib/netstandard1.3/zxing.dll",
+        "lib/netstandard1.3/zxing.xml",
+        "lib/netstandard2.0/zxing.dll",
+        "lib/netstandard2.0/zxing.xml",
+        "lib/netstandard2.1/zxing.dll",
+        "lib/netstandard2.1/zxing.xml",
+        "lib/portable-win+net40+sl4+sl5+wp7+wp71+wp8/zxing.portable.XML",
+        "lib/portable-win+net40+sl4+sl5+wp7+wp71+wp8/zxing.portable.dll",
+        "lib/sl3-wp/zxing.wp7.0.XML",
+        "lib/sl3-wp/zxing.wp7.0.dll",
+        "lib/sl4-wp71/zxing.wp7.1.XML",
+        "lib/sl4-wp71/zxing.wp7.1.dll",
+        "lib/sl4/zxing.sl4.XML",
+        "lib/sl4/zxing.sl4.dll",
+        "lib/sl5/zxing.sl5.XML",
+        "lib/sl5/zxing.sl5.dll",
+        "lib/uap10/zxing.dll",
+        "lib/uap10/zxing.pri",
+        "lib/uap10/zxing.xml",
+        "lib/windows8-managed/zxing.winrt.XML",
+        "lib/windows8-managed/zxing.winrt.dll",
+        "lib/windows8/zxing.XML",
+        "lib/windows8/zxing.pri",
+        "lib/windows8/zxing.winmd",
+        "lib/wp8/zxing.wp8.0.XML",
+        "lib/wp8/zxing.wp8.0.dll",
+        "logo.jpg",
+        "zxing.net.0.16.9.nupkg.sha512",
+        "zxing.net.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Blazored.FluentValidation >= 2.2.0",
       "Blazored.LocalStorage >= 4.5.0",
+      "CodeBeam.MudBlazor.Extensions >= 8.1.0",
       "Microsoft.AspNetCore.Components.Authorization >= 8.0.14",
       "Microsoft.AspNetCore.Components.WebAssembly >= 8.0.14",
       "Microsoft.AspNetCore.Components.WebAssembly.Authentication >= 8.0.14",
@@ -6494,6 +6778,10 @@
           "Blazored.LocalStorage": {
             "target": "Package",
             "version": "[4.5.0, )"
+          },
+          "CodeBeam.MudBlazor.Extensions": {
+            "target": "Package",
+            "version": "[8.1.0, )"
           },
           "Microsoft.AspNetCore.Components.Authorization": {
             "target": "Package",
