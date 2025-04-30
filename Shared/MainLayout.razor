@@ -16,7 +16,7 @@
                 }
                 <MudSpacer />
                 <ThemeIconButton @bind-IsDark="@_isDark" OnClick="@ToggleTheme" />
-                <HomeButton Rota="/System" IsDisabled="@_isLoading" />
+                <HomeButton Rota="/" IsDisabled="@_isLoading" />
             </MudAppBar>
             <MudDrawer @bind-Open="@_leftOpen" ClipMode="DrawerClipMode.Docked" Elevation="0" Class="" Variant="DrawerVariant.Responsive">
                 <Modulum.Client.Shared.NavMenu />

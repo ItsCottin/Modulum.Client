@@ -28,6 +28,79 @@
 </AuthorizeView>-->
 
 <AuthorizeView>
+    <Authorized>
+        <MudContainer MaxWidth="MaxWidth.Large" Class="mt-6">
+            <MudText Typo="Typo.h4" Class="mb-2">Bem-vindo(a) ao sistema!</MudText>
+            <MudText Typo="Typo.subtitle1" Class="mb-6">Escolha uma opção abaixo para começar.</MudText>
+
+            <MudGrid Gutter="Size.Medium">
+                <MudItem xs="12" sm="6" md="4">
+                    <MudCard Class="h-100">
+                        <MudCardContent>
+                            <MudText Typo="Typo.h6">Cadastrar De Menu</MudText>
+                            <MudText Typo="Typo.body2" Class="mt-1">
+                                Cadastre um novo menu com campos do jeitinho que você quiser
+                            </MudText>
+                        </MudCardContent>
+                        <MudCardActions Class="p-3">
+                            <MudButton Color="Color.Primary" Variant="Variant.Filled" Href="/system/create">
+                                Adicionar
+                            </MudButton>
+                        </MudCardActions>
+                    </MudCard>
+                </MudItem>
+
+                <MudItem xs="12" sm="6" md="4">
+                    <MudCard Class="h-100">
+                        <MudCardContent>
+                            <MudText Typo="Typo.h6">Consultar Dados</MudText>
+                            <MudText Typo="Typo.body2" Class="mt-1">
+                                Visualize os registros existentes no sistema.
+                            </MudText>
+                        </MudCardContent>
+                        <MudCardActions Class="p-3">
+                            <MudButton Color="Color.Secondary" Variant="Variant.Filled" Href="">
+                                Consultar
+                            </MudButton>
+                        </MudCardActions>
+                    </MudCard>
+                </MudItem>
+
+                <MudItem xs="12" sm="6" md="4">
+                    <MudCard Class="h-100">
+                        <MudCardContent>
+                            <MudText Typo="Typo.h6">Configurações</MudText>
+                            <MudText Typo="Typo.body2" Class="mt-1">
+                                Ajuste preferências e personalize seu ambiente de uso.
+                            </MudText>
+                        </MudCardContent>
+                        <MudCardActions Class="p-3">
+                            <MudButton Color="Color.Info" Variant="Variant.Filled" Href="">
+                                Configurar
+                            </MudButton>
+                        </MudCardActions>
+                    </MudCard>
+                </MudItem>
+            </MudGrid>
+
+            <MudDivider Class="my-6" />
+
+            <MudPaper Class="p-4" Elevation="1">
+                <MudText Typo="Typo.subtitle2" Class="mb-2">Dicas rápidas:</MudText>
+                <MudList T="string" Dense="true">
+                    <MudListItem Icon="@Icons.Material.Filled.TipsAndUpdates">
+                        Utilize o menu lateral para acessar todas as funcionalidades.
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Filled.AutoFixHigh">
+                        Clique em "Adicionar" para criar novos Menus.
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Filled.SettingsSuggest">
+                        Acesse "Configurações" para personalizar suas telas dinâmicas.
+                    </MudListItem>
+                </MudList>
+            </MudPaper>
+        </MudContainer>
+    </Authorized>
     <NotAuthorized>
         <IndexAnonymous />
     </NotAuthorized>

@@ -22,13 +22,15 @@
                         </MudText>
                         <FluentValidationValidator @ref="_fluentValidationValidator" />
                         <FormValidator @ref="_registerFormValidator"></FormValidator>
-                        <MudText Color="@Color.Error">
-                            <MudText Color="@Color.Error">
-                                <ValidationSummary />
-                            </MudText>
-                        </MudText>
                         <MudStack Row="true" Justify="Justify.Center" Spacing="2">
-                            <MudCodeInput T="string" Count="6" Spacing="3" Variant="Variant.Outlined" Disabled="@loading" @bind-Value="_twoFactorModel.Code" />
+                            <MudCodeInput 
+                                T="string" 
+                                Count="6" 
+                                Spacing="3" 
+                                Variant="Variant.Outlined" 
+                                Disabled="@loading" 
+                                @bind-Value="_twoFactorModel.Code"
+                                For="@(() => _twoFactorModel.Code)" />
                         </MudStack>
                         <MudStack Spacing="1" Class="mt-3">
                             <MudButton Size="Size.Large"

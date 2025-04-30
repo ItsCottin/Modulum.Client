@@ -1717,7 +1717,7 @@
           }
         }
       },
-      "RCF.Modulum.Application/0.0.3-beta.3": {
+      "RCF.Modulum.Application/0.0.3-beta.4": {
         "type": "package",
         "dependencies": {
           "AutoMapper": "14.0.0",
@@ -1739,7 +1739,7 @@
           "lib/net8.0/RCF.Modulum.Application.dll": {}
         }
       },
-      "RCF.Modulum.Client.Infrastructure/0.0.2-beta.4": {
+      "RCF.Modulum.Client.Infrastructure/0.0.2-beta.5": {
         "type": "package",
         "dependencies": {
           "AutoMapper": "14.0.0",
@@ -1748,7 +1748,7 @@
           "Microsoft.AspNetCore.Components.Authorization": "8.0.14",
           "Microsoft.AspNetCore.Components.WebAssembly": "8.0.14",
           "MudBlazor": "8.3.0",
-          "RCF.Modulum.Application": "0.0.3-beta.3",
+          "RCF.Modulum.Application": "0.0.3-beta.4",
           "RCF.Modulum.Shared": "0.0.3-beta.3",
           "Toolbelt.Blazor.HttpClientInterceptor": "10.2.0"
         },
@@ -3697,7 +3697,7 @@
           }
         }
       },
-      "RCF.Modulum.Application/0.0.3-beta.3": {
+      "RCF.Modulum.Application/0.0.3-beta.4": {
         "type": "package",
         "dependencies": {
           "AutoMapper": "14.0.0",
@@ -3719,7 +3719,7 @@
           "lib/net8.0/RCF.Modulum.Application.dll": {}
         }
       },
-      "RCF.Modulum.Client.Infrastructure/0.0.2-beta.4": {
+      "RCF.Modulum.Client.Infrastructure/0.0.2-beta.5": {
         "type": "package",
         "dependencies": {
           "AutoMapper": "14.0.0",
@@ -3728,7 +3728,7 @@
           "Microsoft.AspNetCore.Components.Authorization": "8.0.14",
           "Microsoft.AspNetCore.Components.WebAssembly": "8.0.14",
           "MudBlazor": "8.3.0",
-          "RCF.Modulum.Application": "0.0.3-beta.3",
+          "RCF.Modulum.Application": "0.0.3-beta.4",
           "RCF.Modulum.Shared": "0.0.3-beta.3",
           "Toolbelt.Blazor.HttpClientInterceptor": "10.2.0"
         },
@@ -6171,31 +6171,31 @@
         "polly.extensions.http.nuspec"
       ]
     },
-    "RCF.Modulum.Application/0.0.3-beta.3": {
-      "sha512": "AWu8Po6a4fhlG5V47N9eZHnm5YiEfriwyH+avERsShkDL8U3yVyNgYkhBTvv3VIj4s4Sin/IfIhiqlhlbEskEA==",
+    "RCF.Modulum.Application/0.0.3-beta.4": {
+      "sha512": "O6fAqOzKi6+F0TWqQiSDPinoZkgZYGAn9mtDesdxD6NXtRqF1hYOyQHubVBiuhcwUJC9m80vbvc75JaOzCwdmg==",
       "type": "package",
-      "path": "rcf.modulum.application/0.0.3-beta.3",
+      "path": "rcf.modulum.application/0.0.3-beta.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Licence.txt",
         "README.md",
         "lib/net8.0/RCF.Modulum.Application.dll",
-        "rcf.modulum.application.0.0.3-beta.3.nupkg.sha512",
+        "rcf.modulum.application.0.0.3-beta.4.nupkg.sha512",
         "rcf.modulum.application.nuspec"
       ]
     },
-    "RCF.Modulum.Client.Infrastructure/0.0.2-beta.4": {
-      "sha512": "oV1DWfznfl5fvqABD7AD7p76tu6bwyr1GpCvzCO0e0CpbRPG3kSDQJzG50sf0ntMCz1b0T7FUBIAu7stYWbGpA==",
+    "RCF.Modulum.Client.Infrastructure/0.0.2-beta.5": {
+      "sha512": "DDq8uookzSAkhCPslAQtSyT1dVZ3BuzqR+qMC71AbyNmOwYagKIb3mtRiyH3Dhp/1EJrJVksZbixtca2m2+JmA==",
       "type": "package",
-      "path": "rcf.modulum.client.infrastructure/0.0.2-beta.4",
+      "path": "rcf.modulum.client.infrastructure/0.0.2-beta.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Licence.txt",
         "README.md",
         "lib/net8.0/RCF.Modulum.Client.Infrastructure.dll",
-        "rcf.modulum.client.infrastructure.0.0.2-beta.4.nupkg.sha512",
+        "rcf.modulum.client.infrastructure.0.0.2-beta.5.nupkg.sha512",
         "rcf.modulum.client.infrastructure.nuspec"
       ]
     },
@@ -6715,7 +6715,7 @@
       "Microsoft.NET.ILLink.Tasks >= 8.0.5",
       "Microsoft.NET.Sdk.WebAssembly.Pack >= 8.0.5",
       "MudBlazor >= 8.5.1",
-      "RCF.Modulum.Client.Infrastructure >= 0.0.2-beta.4",
+      "RCF.Modulum.Client.Infrastructure >= 0.0.2-beta.5",
       "RCF.Modulum.Domain >= 0.0.2-beta.5",
       "System.Net.Http.Json >= 8.0.1",
       "bootstrap >= 5.3.3"
@@ -6842,7 +6842,7 @@
           },
           "RCF.Modulum.Client.Infrastructure": {
             "target": "Package",
-            "version": "[0.0.2-beta.4, )"
+            "version": "[0.0.2-beta.5, )"
           },
           "RCF.Modulum.Domain": {
             "target": "Package",

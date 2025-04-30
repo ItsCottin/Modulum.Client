@@ -21,6 +21,8 @@
         </MudAlert>
         <EditForm Model="_registro" OnValidSubmit="SalvarRegistro">
             <MudPaper Class="mt-4 p-4" Elevation="0" Outlined="true">
+                <FluentValidationValidator @ref="_fluentValidationValidator" />
+                <FormValidator @ref="_dynamicFormValidator"></FormValidator>
                 @foreach (var campo in _campos)
                 {
                     bool IsPrimaryKey = false;
@@ -30,22 +32,62 @@
                     }
                     if (campo.Tipo == TypeColumnEnum.VARCHAR)
                     {
-                        <MudTextField T="string" @bind-Value="campo.Valor" Label="@campo.NomeCampoTela" Disabled="@(IsView | IsPrimaryKey | _loading)" Variant="Variant.Text" Class="mb-3" Required="@campo.IsObrigatorio" />
+                        <MudTextField 
+                            T="string" 
+                            @bind-Value="campo.Valor" 
+                            Label="@campo.NomeCampoTela" 
+                            Disabled="@(IsView | IsPrimaryKey | _loading)" 
+                            Variant="Variant.Text" 
+                            Class="mb-3"
+                            Required="@campo.IsObrigatorio"
+                            Error="@HasError(campo)"
+                            ErrorText="@GetError(campo)" />
                     }
                     else if (campo.Tipo == TypeColumnEnum.INT)
                     {
-                        <MudNumericField T="string" @bind-Value="campo.Valor" Label="@campo.NomeCampoTela" Disabled="@(IsView | IsPrimaryKey | _loading)" Variant="Variant.Text" Class="mb-3" Required="@campo.IsObrigatorio" />
+                        <MudNumericField 
+                            T="string" 
+                            @bind-Value="campo.Valor" 
+                            Label="@campo.NomeCampoTela" 
+                            Disabled="@(IsView | IsPrimaryKey | _loading)" 
+                            Variant="Variant.Text" Class="mb-3"
+                            Required="@campo.IsObrigatorio"
+                            Error="@HasError(campo)"
+                            ErrorText="@GetError(campo)" />
                     }
                     else if (campo.Tipo == TypeColumnEnum.DATE)
                     {
-                        <MudTextField InputType="InputType.DateTimeLocal" @bind-Value="campo.Valor" Label="@campo.NomeCampoTela" Disabled="@(IsView | IsPrimaryKey | _loading)" Variant="Variant.Text" Class="mb-3" Required="@campo.IsObrigatorio" />
+                        <MudTextField 
+                            InputType="InputType.DateTimeLocal" 
+                            @bind-Value="campo.Valor" 
+                            Label="@campo.NomeCampoTela" 
+                            Disabled="@(IsView | IsPrimaryKey | _loading)" 
+                            Variant="Variant.Text" 
+                            Class="mb-3"
+                            Required="@campo.IsObrigatorio"
+                            Error="@HasError(campo)"
+                            ErrorText="@GetError(campo)" />
                     }
                     else if (campo.Tipo == TypeColumnEnum.BIT)
                     {
-                        <MudCheckBox Converter="@(new CustomStringToBoolConverter())" @bind-Value="campo.Valor" Label="@campo.NomeCampoTela" Disabled="@(IsView | IsPrimaryKey | _loading)" Class="mb-3" Required="@campo.IsObrigatorio" />
+                        <MudCheckBox 
+                            Converter="@(new CustomStringToBoolConverter())"
+                            @bind-Value="campo.Valor" 
+                            Label="@campo.NomeCampoTela" 
+                            Disabled="@(IsView | IsPrimaryKey | _loading)" 
+                            Class="mb-3" 
+                            Required="@campo.IsObrigatorio"
+                            Error="@HasError(campo)"
+                            ErrorText="@GetError(campo)" />
                     }
                 }
-                <MudButton StartIcon="@(_loading ? "" : Icons.Material.Filled.SaveAs)" Variant="Variant.Filled" Color="Color.Primary" OnClick="SalvarRegistro" Class="mr-3" Disabled="@(IsView || _loading)">
+                <MudButton 
+                    StartIcon="@(_loading ? "" : Icons.Material.Filled.SaveAs)" 
+                    Variant="Variant.Filled" 
+                    Color="Color.Primary" 
+                    OnClick="SalvarRegistro" 
+                    Class="mr-3" 
+                    Disabled="@(IsView || _loading)">
                     @if (_loading)
                     {
                         <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />

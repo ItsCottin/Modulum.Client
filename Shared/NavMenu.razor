@@ -2,21 +2,37 @@
 
 <AuthorizeView Context="context">
     <Authorized>
-        <MudNavMenu Dense="false" Margin="Margin.Normal" Class="pt-5" Rounded="true">
-            <MudNavLink Class="pa-1" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.AddBox" Href="/system/create">Adicionar</MudNavLink>
+        <MudNavMenu Dense="false" Margin="Margin.Normal" Class="" Rounded="true">
+            <MudStack Row="true" Class="d-flex align-center justify-space-between pa-2">
+                <MudButton Size="Size.Large" StartIcon="@Icons.Material.Filled.AddBox" Variant="Variant.Filled" Color="Color.Primary" FullWidth="true" Href="/system/create">Adicionar</MudButton>
+            </MudStack>
             @if (_loading)
             {
                 @foreach (var menu in _menus)
                 {
-                    <MudNavLink Class="pa-1" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.SpaceDashboard" Href=@($"/dynamic/{menu.Id}")>@menu.NomeTela</MudNavLink>
+                    <MudStack Row="true" Class="d-flex align-center justify-space-between pa-1">
+                        <MudNavLink  Match="NavLinkMatch.All" Class="m-1" Icon="@Icons.Material.Filled.SpaceDashboard" Href=@($"/dynamic/{menu.Id}")>
+                            @(menu.NomeTela?.Length > 11 ? $"{menu.NomeTela[..11]}..." : menu.NomeTela)
+                        </MudNavLink>
+
+                        <MudMenu Icon="@Icons.Material.Filled.MoreVert" Dense="false" OffsetY="true" Variant="Variant.Text" Color="Color.Secondary">
+                            <MudMenuItem Href=@($"/system/{menu.Id}/select") Icon="@Icons.Material.Filled.Visibility" >Consultar</MudMenuItem>
+                            <MudMenuItem Href=@($"/system/{menu.Id}/update") Icon="@Icons.Material.Filled.Edit">Alterar</MudMenuItem>
+                            <MudMenuItem Href=@($"/system/{menu.Id}/delete") Icon="@Icons.Material.Filled.Delete" Color="Color.Error">Excluir</MudMenuItem>
+                            <MudMenuItem Href=@($"/system/{menu.Id}/config") Icon="@Icons.Material.Filled.Settings">Configurar</MudMenuItem>
+                        </MudMenu>
+                    </MudStack>
                 }
             }
             else
             {
-                <MudAlert>Carregando...</MudAlert>
+                <MudStack Row="true" Class="d-flex align-center justify-content-center p-2">
+                    <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                    <MudText>Carregando...</MudText>
+                </MudStack>
             }
-            <MudNavLink Class="pa-1" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.AccountBox" Href="">@context.User.Identity?.Name</MudNavLink>
-            <MudNavLink Class="pa-1" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Logout" Href="logout">Sair</MudNavLink>
+            <MudNavLink Class="pa-2" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.AccountBox" Href="">@context.User.Identity?.Name</MudNavLink>
+            <MudNavLink Class="pa-2" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Logout" Href="logout">Sair</MudNavLink>
         </MudNavMenu>
     </Authorized>
 </AuthorizeView>

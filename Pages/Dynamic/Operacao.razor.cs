@@ -1,5 +1,9 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using Blazored.FluentValidation;
+using FluentValidation;
+using Microsoft.AspNetCore.Components;
 using modulum.Application.Requests.Dynamic;
+using modulum.Application.Validators.Requests.Dynamic;
+using modulum.Client.Infrastructure.FormValidators;
 using modulum.Shared;
 using modulum.Shared.Enum;
 using MudBlazor;
@@ -16,9 +20,14 @@ namespace Modulum.Client.Pages.Dynamic
         private bool _loading { get; set; } = false;
         private bool _loadingDados { get; set; } = false;
         public bool IsView { get; set; } = false;
+        private bool _submitFoiChamado = false;
 
         private DynamicTableRequest _registro = new();
         private List<DynamicFieldRequest> _campos = new();
+
+        private FluentValidationValidator _fluentValidationValidator;
+        private FormValidator _dynamicFormValidator = new();
+        //private bool Validated => _fluentValidationValidator.Validate(options => { options.IncludeAllRuleSets(); });
 
         protected override async Task OnInitializedAsync()
         {
@@ -67,12 +76,24 @@ namespace Modulum.Client.Pages.Dynamic
                     }
                     _campos.Add(campo);
                 }
+                _registro.Resultados = new List<DynamicDadoRequest> { registroExistente };
+                _registro.Resultados.First().Valores = _campos;
                 IsView = false;
             }
             else if (Operation == "select" && RecordId.HasValue)
             {
                 var registroExistente = response.Data.Resultados.FirstOrDefault(r => r.Id == RecordId);
-                _campos = registroExistente?.Valores ?? new List<DynamicFieldRequest>();
+                var _campos2 = registroExistente?.Valores ?? new List<DynamicFieldRequest>();
+                foreach (var campo in _campos2)
+                {
+                    if (campo.Tipo == TypeColumnEnum.DATE)
+                    {
+                        campo.Valor = AjustarFormatoDataParaInput(campo.Valor);
+                    }
+                    _campos.Add(campo);
+                }
+                _registro.Resultados = new List<DynamicDadoRequest> { registroExistente };
+                _registro.Resultados.First().Valores = _campos;
                 IsView = true;
             }
             _loadingDados = false;
@@ -94,10 +115,37 @@ namespace Modulum.Client.Pages.Dynamic
             }
         }
 
+        private bool HasError(DynamicFieldRequest campo)
+        {
+            if (!_submitFoiChamado) return false;
+            var context = new ValidationContext<DynamicTableRequest>(_registro);
+            var result = new DynamicTableRequestValidator().Validate(context);
+            var propertyName = $"Resultados[0].Valores[{_campos.IndexOf(campo)}].Valor";
+
+            return result.Errors.Any(e => e.PropertyName == propertyName);
+        }
+
+        private string GetError(DynamicFieldRequest campo)
+        {
+            if (!_submitFoiChamado) return string.Empty;
+            var context = new ValidationContext<DynamicTableRequest>(_registro);
+            var result = new DynamicTableRequestValidator().Validate(context);
+            var propertyName = $"Resultados[0].Valores[{_campos.IndexOf(campo)}].Valor";
+
+            return result.Errors.FirstOrDefault(e => e.PropertyName == propertyName)?.ErrorMessage ?? "";
+        }
+
         private async Task SalvarRegistro()
         {
+            _submitFoiChamado = true;
             _loading = true;
             _loadingService.Show();
+            if (!_fluentValidationValidator.Validate(options => options.IncludeAllRuleSets()))
+            {
+                _loadingService.Hide();
+                _loading = false;
+                return;
+            }
             var payload = new DynamicTableRequest()
             {
                 NomeTabela = _registro.NomeTabela,
@@ -116,7 +164,7 @@ namespace Modulum.Client.Pages.Dynamic
                 }
             };
             var response = await _dynamicManager.OperacaoRegistro(payload, Operation);
-            _snackBar.Add(response.Messages.FirstOrDefault(), response.Succeeded ? Severity.Success : Severity.Error);
+            _snackBar.Add(response.Messages.FirstOrDefault(), response.Succeeded ? MudBlazor.Severity.Success : MudBlazor.Severity.Error);
             
             // Redirecionar de volta para grid depois de salvar
             _loadingService.Hide(); 
