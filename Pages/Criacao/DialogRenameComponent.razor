@@ -1,6 +1,7 @@
-﻿<MudDialog>
+﻿<MudDialog Style="min-width: 600px;">
     <DialogContent>
         <MudText>@ContentText</MudText>
+        <MudTextField @bind-Value="_model.NovoNome" Label="Nome da sua Tela" Variant="Variant.Text"></MudTextField>
     </DialogContent>
     <DialogActions>
         <MudButton OnClick="Cancel">Cancelar</MudButton>
@@ -9,5 +10,5 @@
 </MudDialog>
 
 @code {
-    
+
 }

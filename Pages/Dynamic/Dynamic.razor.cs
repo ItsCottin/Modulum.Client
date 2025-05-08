@@ -50,18 +50,24 @@ namespace Modulum.Client.Pages.Dynamic
         }
 
 
-        private Task DeleteUserAsync(int idRegistro)
+        private async Task DeleteUserAsync(int idRegistro)
         {
             var parameters = new DialogParameters<DialogComponent>
             {
                 { x => x.ContentText, "Deseja realmente excluir este registro? Este processo não pode ser desfeito." },
                 { x => x.ButtonText, "Deletar" },
-                { x => x.Color, Color.Error }
+                { x => x.Color, Color.Error },
+                { x => x.Model, new DynamicForIdRequest { IdRegistro = idRegistro, IdTable = TableId } }
             };
 
             var options = new DialogOptions() { CloseButton = true, MaxWidth = MaxWidth.ExtraSmall };
 
-            return _dialogService.ShowAsync<DialogComponent>("Delete", parameters, options);
+            var dialog = await _dialogService.ShowAsync<DialogComponent>("Delete", parameters, options);
+            var result = await dialog.Result;
+            if (!result.Canceled)
+            {
+                await CarregarDados();
+            }
         }
 
         private async Task ExcluirRegistro(int idRegistro)

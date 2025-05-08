@@ -6,6 +6,7 @@
             <MudStack Row="true" Class="d-flex align-center justify-space-between pa-2">
                 <MudButton Size="Size.Large" StartIcon="@Icons.Material.Filled.AddBox" Variant="Variant.Filled" Color="Color.Primary" FullWidth="true" Href="/system/create">Adicionar</MudButton>
             </MudStack>
+            <MudNavLink Class="pa-2" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home" Href="">Inicio</MudNavLink>
             @if (_loading)
             {
                 @foreach (var menu in _menus)
@@ -16,10 +17,11 @@
                         </MudNavLink>
 
                         <MudMenu Icon="@Icons.Material.Filled.MoreVert" Dense="false" OffsetY="true" Variant="Variant.Text" Color="Color.Secondary">
-                            <MudMenuItem Href=@($"/system/{menu.Id}/select") Icon="@Icons.Material.Filled.Visibility" >Consultar</MudMenuItem>
-                            <MudMenuItem Href=@($"/system/{menu.Id}/update") Icon="@Icons.Material.Filled.Edit">Alterar</MudMenuItem>
-                            <MudMenuItem Href=@($"/system/{menu.Id}/delete") Icon="@Icons.Material.Filled.Delete" Color="Color.Error">Excluir</MudMenuItem>
-                            <MudMenuItem Href=@($"/system/{menu.Id}/config") Icon="@Icons.Material.Filled.Settings">Configurar</MudMenuItem>
+                            <MudMenuItem OnClick="() => RenameTelaAsync(menu.Id)" Icon="@Icons.Material.Filled.EditAttributes">Renomear</MudMenuItem>
+                            <MudMenuItem Href=@($"/system/select/{menu.Id}") Icon="@Icons.Material.Filled.Visibility">Consultar</MudMenuItem>
+                            <MudMenuItem Href=@($"/system/update/{menu.Id}") Icon="@Icons.Material.Filled.Edit">Alterar</MudMenuItem>
+                            <MudMenuItem OnClick="() => DeleteMapTableAsync(menu.Id)" Icon="@Icons.Material.Filled.Delete" Color="Color.Error">Excluir</MudMenuItem>
+                            <MudMenuItem Href=@($"/system/relacionamento/{menu.Id}") Icon="@Icons.Material.Filled.Settings">Configurar</MudMenuItem>
                         </MudMenu>
                     </MudStack>
                 }

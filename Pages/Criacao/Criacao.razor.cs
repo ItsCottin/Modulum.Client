@@ -1,6 +1,8 @@
 ﻿using Blazored.FluentValidation;
+using Microsoft.AspNetCore.Components;
 using modulum.Application.Models;
 using modulum.Application.Requests.Dynamic.Create;
+using modulum.Application.Requests.Dynamic.Update;
 using modulum.Application.Validators.Requests.Dynamic;
 using modulum.Client.Infrastructure.FormValidators;
 using modulum.Client.Infrastructure.Services;
@@ -18,12 +20,16 @@ namespace Modulum.Client.Pages.Criacao
         private FluentValidationValidator _fluentValidationValidator;
         private FormValidator _criacaoFormValidator = new();
         private bool Validated => _fluentValidationValidator.Validate(options => { options.IncludeAllRuleSets(); });
-        private string isvisivel = "invisible my-2";
 
-        private List<CreateDynamicFieldRequest> _modelCampos = new();
+        //private List<CreateDynamicFieldRequest> _modelCampos = new();
         private DynamicForm _modelDynamic = new DynamicForm();
 
         private bool _loading = false;
+        private bool IsView { get; set; } = false;
+        private bool _loadingDados { get; set; }
+
+        [Parameter] public int TableId { get; set; }
+        [Parameter] public string Operation { get; set; }
 
         private async Task AdicionarCampo()
         {
@@ -44,15 +50,25 @@ namespace Modulum.Client.Pages.Criacao
 
             if (!string.IsNullOrWhiteSpace(_modelDynamic.fieldRequest.NomeCampoTela))
             {
-                _modelDynamic.tableRequest.Campos.Add(new CreateDynamicFieldRequest
+                var index = _modelDynamic.tableRequest.Campos.FindIndex(campo => campo.Id == _modelDynamic.fieldRequest.Id &&
+                            (campo.Id != null || campo.TempId == _modelDynamic.fieldRequest.TempId));
+                if (index != -1)
                 {
-                    NomeCampoTela = _modelDynamic.fieldRequest.NomeCampoTela,
-                    NomeCampoBase = _modelDynamic.fieldRequest.NomeCampoTela.Replace(" ", "_"),
-                    Tipo = _modelDynamic.fieldRequest.Tipo,
-                    Tamanho = _modelDynamic.fieldRequest.Tamanho,
-                    IsPrimaryKey = false,
-                    IsObrigatorio = _modelDynamic.fieldRequest.IsObrigatorio
-                });
+                    _modelDynamic.tableRequest.Campos[index] = _modelDynamic.fieldRequest;
+                }
+                else
+                {
+                    _modelDynamic.tableRequest.Campos.Add(new CreateDynamicFieldRequest
+                    {
+                        NomeCampoTela = _modelDynamic.fieldRequest.NomeCampoTela,
+                        NomeCampoBase = _modelDynamic.fieldRequest.NomeCampoTela.Replace(" ", "_"),
+                        Tipo = _modelDynamic.fieldRequest.Tipo,
+                        Tamanho = _modelDynamic.fieldRequest.Tamanho,
+                        IsPrimaryKey = false,
+                        IsObrigatorio = _modelDynamic.fieldRequest.IsObrigatorio,
+                        TempId = Guid.NewGuid()
+                    });
+                }
                 _modelDynamic.fieldRequest = new CreateDynamicFieldRequest(); // limpa
             }
             _loadingService.Hide();
@@ -60,17 +76,50 @@ namespace Modulum.Client.Pages.Criacao
 
         protected override async Task OnInitializedAsync()
         {
+            await CarregarDados();
+        }
+
+        protected override async Task OnParametersSetAsync()
+        {
+            await CarregarDados();
+        }
+
+        private async Task CarregarDados()
+        {
+            _loadingDados = true;
             _loadingService.Show();
-            _modelDynamic.tableRequest.CampoPK = "Id";
-            _modelDynamic.tableRequest.Campos.Add(new CreateDynamicFieldRequest
+            _modelDynamic = new DynamicForm();
+            IsView = false;
+            if (Operation.Equals("create"))
             {
-                NomeCampoTela = "Id",
-                NomeCampoBase = "Id",
-                IsObrigatorio = true,
-                IsPrimaryKey = true,
-                Tamanho = null,
-                Tipo = (TypeColumnEnum?)TypeColumnEnum.INT
-            });
+                _modelDynamic.tableRequest.CampoPK = "Id";
+                _modelDynamic.tableRequest.Campos.Add(new CreateDynamicFieldRequest
+                {
+                    NomeCampoTela = "Id",
+                    NomeCampoBase = "Id",
+                    IsObrigatorio = true,
+                    IsPrimaryKey = true,
+                    Tamanho = null,
+                    Tipo = (TypeColumnEnum?)TypeColumnEnum.INT,
+                    TempId = Guid.NewGuid()
+                });
+            }
+            else
+            {
+                var response = await _dynamicManager.GetMapTable(TableId);
+                if (response != null)
+                {
+                    if (response.Succeeded)
+                    {
+                        _modelDynamic.tableRequest = response.Data;
+                    }
+                }
+                if (Operation.Equals("select"))
+                {
+                    IsView = true;
+                }
+            }
+            _loadingDados = false;
             _loadingService.Hide();
             await Task.CompletedTask;
         }
@@ -92,6 +141,17 @@ namespace Modulum.Client.Pages.Criacao
         {
             _loadingService.Show();
             _modelDynamic.tableRequest.Campos.Remove(campo);
+            _loadingService.Hide();
+        }
+
+        private void EditarCampo(CreateDynamicFieldRequest campo)
+        {
+            _loadingService.Show();
+            if (campo.TempId == null)
+            {
+                campo.TempId = Guid.NewGuid();
+            }
+            _modelDynamic.fieldRequest = campo;
             _loadingService.Hide();
         }
 
@@ -120,7 +180,7 @@ namespace Modulum.Client.Pages.Criacao
                 _loadingService.Hide();
                 return;
             }
-            var response = await _dynamicManager.CadastrarDynamic(_modelDynamic.tableRequest);
+            var response = await _dynamicManager.OperacaoMapTable(_modelDynamic.tableRequest, Operation);
             if (response.Messages == null || response.Messages.Count == 0)
             {
                 _snackBar.Add("Tela cadastrada com sucesso", Severity.Success);

@@ -23,8 +23,8 @@
     <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.14" />
     <PackageReference Include="Microsoft.Extensions.Localization" Version="8.0.14" />
     <PackageReference Include="MudBlazor" Version="8.5.1" />
-    <PackageReference Include="RCF.Modulum.Client.Infrastructure" Version="0.0.2-beta.5" />
-    <PackageReference Include="RCF.Modulum.Domain" Version="0.0.2-beta.5" />
+    <PackageReference Include="RCF.Modulum.Client.Infrastructure" Version="0.0.2-beta.6" />
+    <PackageReference Include="RCF.Modulum.Domain" Version="0.0.2-beta.6" />
     <PackageReference Include="System.Net.Http.Json" Version="8.0.1" />
 
     <!-- Pacotes proprios do projeto
@@ -35,6 +35,10 @@
   <ItemGroup>
     <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
     <None Include=".github\workflows\azure-static-web-apps-salmon-wave-08a7a950f.yml" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Pages\Relacionamento\" />
   </ItemGroup>
 
 </Project>

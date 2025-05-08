@@ -16,7 +16,7 @@
         </MudText>
         <MudAlert Class="mt-4" Severity="Severity.Normal" NoIcon="true" Variant="Variant.Text" Elevation="0">
             <MudStack Row="true" Justify="Justify.SpaceAround">
-                <MudText>Cadastre altere ou visualize seu registro</MudText>
+                <MudText>@(Operation.Equals("insert") ? "Cadastre" : (Operation.Equals("update") ? "Altere" : "Consulte")) seu registro</MudText>
             </MudStack>
         </MudAlert>
         <EditForm Model="_registro" OnValidSubmit="SalvarRegistro">

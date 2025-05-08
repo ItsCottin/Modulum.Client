@@ -1603,13 +1603,13 @@
           }
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.5": {
+      "Microsoft.NET.ILLink.Tasks/8.0.15": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NET.Sdk.WebAssembly.Pack/8.0.5": {
+      "Microsoft.NET.Sdk.WebAssembly.Pack/9.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.props": {},
@@ -1717,7 +1717,7 @@
           }
         }
       },
-      "RCF.Modulum.Application/0.0.3-beta.4": {
+      "RCF.Modulum.Application/0.0.3-beta.5": {
         "type": "package",
         "dependencies": {
           "AutoMapper": "14.0.0",
@@ -1728,8 +1728,8 @@
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.EntityFrameworkCore": "8.0.14",
           "Newtonsoft.Json": "13.0.3",
-          "RCF.Modulum.Domain": "0.0.2-beta.5",
-          "RCF.Modulum.Shared": "0.0.3-beta.3",
+          "RCF.Modulum.Domain": "0.0.2-beta.6",
+          "RCF.Modulum.Shared": "0.0.3-beta.4",
           "System.Linq.Dynamic.Core": "1.6.0.2"
         },
         "compile": {
@@ -1739,7 +1739,7 @@
           "lib/net8.0/RCF.Modulum.Application.dll": {}
         }
       },
-      "RCF.Modulum.Client.Infrastructure/0.0.2-beta.5": {
+      "RCF.Modulum.Client.Infrastructure/0.0.2-beta.6": {
         "type": "package",
         "dependencies": {
           "AutoMapper": "14.0.0",
@@ -1748,8 +1748,8 @@
           "Microsoft.AspNetCore.Components.Authorization": "8.0.14",
           "Microsoft.AspNetCore.Components.WebAssembly": "8.0.14",
           "MudBlazor": "8.3.0",
-          "RCF.Modulum.Application": "0.0.3-beta.4",
-          "RCF.Modulum.Shared": "0.0.3-beta.3",
+          "RCF.Modulum.Application": "0.0.3-beta.5",
+          "RCF.Modulum.Shared": "0.0.3-beta.4",
           "Toolbelt.Blazor.HttpClientInterceptor": "10.2.0"
         },
         "compile": {
@@ -1759,10 +1759,10 @@
           "lib/net8.0/RCF.Modulum.Client.Infrastructure.dll": {}
         }
       },
-      "RCF.Modulum.Domain/0.0.2-beta.5": {
+      "RCF.Modulum.Domain/0.0.2-beta.6": {
         "type": "package",
         "dependencies": {
-          "RCF.Modulum.Shared": "0.0.3-beta.3"
+          "RCF.Modulum.Shared": "0.0.3-beta.4"
         },
         "compile": {
           "lib/net8.0/RCF.Modulum.Domain.dll": {}
@@ -1771,7 +1771,7 @@
           "lib/net8.0/RCF.Modulum.Domain.dll": {}
         }
       },
-      "RCF.Modulum.Shared/0.0.3-beta.3": {
+      "RCF.Modulum.Shared/0.0.3-beta.4": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Identity.Stores": "8.0.14",
@@ -3593,13 +3593,13 @@
           }
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.5": {
+      "Microsoft.NET.ILLink.Tasks/8.0.15": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NET.Sdk.WebAssembly.Pack/8.0.5": {
+      "Microsoft.NET.Sdk.WebAssembly.Pack/9.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.props": {},
@@ -3697,7 +3697,7 @@
           }
         }
       },
-      "RCF.Modulum.Application/0.0.3-beta.4": {
+      "RCF.Modulum.Application/0.0.3-beta.5": {
         "type": "package",
         "dependencies": {
           "AutoMapper": "14.0.0",
@@ -3708,8 +3708,8 @@
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.EntityFrameworkCore": "8.0.14",
           "Newtonsoft.Json": "13.0.3",
-          "RCF.Modulum.Domain": "0.0.2-beta.5",
-          "RCF.Modulum.Shared": "0.0.3-beta.3",
+          "RCF.Modulum.Domain": "0.0.2-beta.6",
+          "RCF.Modulum.Shared": "0.0.3-beta.4",
           "System.Linq.Dynamic.Core": "1.6.0.2"
         },
         "compile": {
@@ -3719,7 +3719,7 @@
           "lib/net8.0/RCF.Modulum.Application.dll": {}
         }
       },
-      "RCF.Modulum.Client.Infrastructure/0.0.2-beta.5": {
+      "RCF.Modulum.Client.Infrastructure/0.0.2-beta.6": {
         "type": "package",
         "dependencies": {
           "AutoMapper": "14.0.0",
@@ -3728,8 +3728,8 @@
           "Microsoft.AspNetCore.Components.Authorization": "8.0.14",
           "Microsoft.AspNetCore.Components.WebAssembly": "8.0.14",
           "MudBlazor": "8.3.0",
-          "RCF.Modulum.Application": "0.0.3-beta.4",
-          "RCF.Modulum.Shared": "0.0.3-beta.3",
+          "RCF.Modulum.Application": "0.0.3-beta.5",
+          "RCF.Modulum.Shared": "0.0.3-beta.4",
           "Toolbelt.Blazor.HttpClientInterceptor": "10.2.0"
         },
         "compile": {
@@ -3739,10 +3739,10 @@
           "lib/net8.0/RCF.Modulum.Client.Infrastructure.dll": {}
         }
       },
-      "RCF.Modulum.Domain/0.0.2-beta.5": {
+      "RCF.Modulum.Domain/0.0.2-beta.6": {
         "type": "package",
         "dependencies": {
-          "RCF.Modulum.Shared": "0.0.3-beta.3"
+          "RCF.Modulum.Shared": "0.0.3-beta.4"
         },
         "compile": {
           "lib/net8.0/RCF.Modulum.Domain.dll": {}
@@ -3751,7 +3751,7 @@
           "lib/net8.0/RCF.Modulum.Domain.dll": {}
         }
       },
-      "RCF.Modulum.Shared/0.0.3-beta.3": {
+      "RCF.Modulum.Shared/0.0.3-beta.4": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Identity.Stores": "8.0.14",
@@ -5896,10 +5896,10 @@
         "microsoft.net.http.headers.nuspec"
       ]
     },
-    "Microsoft.NET.ILLink.Tasks/8.0.5": {
-      "sha512": "4ISW1Ndgz86FkIbu5rVlMqhhtojdy5rUlxC/N+9kPh9qbYcvHiCvYbHKzAPVIx9OPYIjT9trXt7JI42Y5Ukq6A==",
+    "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "sha512": "s4eXlcRGyHeCgFUGQnhq0e/SCHBPp0jOHgMqZg3fQ2OCHJSm1aOUhI6RFWuVIcEb9ig2WgI2kWukk8wu72EbUQ==",
       "type": "package",
-      "path": "microsoft.net.illink.tasks/8.0.5",
+      "path": "microsoft.net.illink.tasks/8.0.15",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -5913,7 +5913,7 @@
         "build/Microsoft.NET.ILLink.Analyzers.props",
         "build/Microsoft.NET.ILLink.Tasks.props",
         "build/Microsoft.NET.ILLink.targets",
-        "microsoft.net.illink.tasks.8.0.5.nupkg.sha512",
+        "microsoft.net.illink.tasks.8.0.15.nupkg.sha512",
         "microsoft.net.illink.tasks.nuspec",
         "tools/net472/ILLink.Tasks.dll",
         "tools/net472/ILLink.Tasks.dll.config",
@@ -5947,10 +5947,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.NET.Sdk.WebAssembly.Pack/8.0.5": {
-      "sha512": "CABBOqZZEDgiVSjkwUr+pJEGEtQbrT+6dltzJnBDap7mOSvfn53+zwb112hRGB7ynm9ikAocGZTUp+GizbH7XQ==",
+    "Microsoft.NET.Sdk.WebAssembly.Pack/9.0.4": {
+      "sha512": "SbawDIBdWK+7UTkiIXquadlWAUPxV88+jytBdVsIFzvJXkxGGQKrufO4KPyYdS4shFtXLZyCuCckNt0YN5hZKw==",
       "type": "package",
-      "path": "microsoft.net.sdk.webassembly.pack/8.0.5",
+      "path": "microsoft.net.sdk.webassembly.pack/9.0.4",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -5961,6 +5961,7 @@
         "WasmAppHost/BrowserDebugHost.deps.json",
         "WasmAppHost/BrowserDebugHost.dll",
         "WasmAppHost/BrowserDebugHost.runtimeconfig.json",
+        "WasmAppHost/BrowserDebugHost.staticwebassets.endpoints.json",
         "WasmAppHost/BrowserDebugProxy.dll",
         "WasmAppHost/Microsoft.CodeAnalysis.CSharp.Scripting.dll",
         "WasmAppHost/Microsoft.CodeAnalysis.CSharp.dll",
@@ -5973,48 +5974,19 @@
         "WasmAppHost/WasmAppHost.deps.json",
         "WasmAppHost/WasmAppHost.dll",
         "WasmAppHost/WasmAppHost.runtimeconfig.json",
+        "WasmAppHost/WasmAppHost.staticwebassets.endpoints.json",
         "build/Microsoft.NET.Sdk.WebAssembly.Browser.props",
         "build/Microsoft.NET.Sdk.WebAssembly.Browser.targets",
         "build/Microsoft.NET.Sdk.WebAssembly.Pack.props",
         "build/Microsoft.NET.Sdk.WebAssembly.Pack.targets",
         "build/Wasm.web.config",
-        "microsoft.net.sdk.webassembly.pack.8.0.5.nupkg.sha512",
+        "build/browser.runtimeconfig.template.json",
+        "microsoft.net.sdk.webassembly.pack.9.0.4.nupkg.sha512",
         "microsoft.net.sdk.webassembly.pack.nuspec",
-        "tools/net472/Microsoft.Bcl.AsyncInterfaces.dll",
-        "tools/net472/Microsoft.Build.dll",
-        "tools/net472/Microsoft.IO.Redist.dll",
         "tools/net472/Microsoft.NET.Sdk.WebAssembly.Pack.Tasks.dll",
-        "tools/net472/Microsoft.NET.StringTools.dll",
         "tools/net472/Microsoft.NET.WebAssembly.Webcil.dll",
-        "tools/net472/Microsoft.VisualStudio.Setup.Configuration.Interop.dll",
-        "tools/net472/System.Buffers.dll",
-        "tools/net472/System.Collections.Immutable.dll",
-        "tools/net472/System.Configuration.ConfigurationManager.dll",
-        "tools/net472/System.Memory.dll",
-        "tools/net472/System.Numerics.Vectors.dll",
-        "tools/net472/System.Reflection.Metadata.dll",
-        "tools/net472/System.Reflection.MetadataLoadContext.dll",
-        "tools/net472/System.Runtime.CompilerServices.Unsafe.dll",
-        "tools/net472/System.Security.AccessControl.dll",
-        "tools/net472/System.Security.Permissions.dll",
-        "tools/net472/System.Security.Principal.Windows.dll",
-        "tools/net472/System.Text.Encodings.Web.dll",
-        "tools/net472/System.Text.Json.dll",
-        "tools/net472/System.Threading.Tasks.Dataflow.dll",
-        "tools/net472/System.Threading.Tasks.Extensions.dll",
-        "tools/net472/System.ValueTuple.dll",
-        "tools/net8.0/Microsoft.Build.dll",
-        "tools/net8.0/Microsoft.NET.Sdk.WebAssembly.Pack.Tasks.dll",
-        "tools/net8.0/Microsoft.NET.StringTools.dll",
-        "tools/net8.0/Microsoft.NET.WebAssembly.Webcil.dll",
-        "tools/net8.0/Microsoft.Win32.SystemEvents.dll",
-        "tools/net8.0/System.Configuration.ConfigurationManager.dll",
-        "tools/net8.0/System.Diagnostics.EventLog.dll",
-        "tools/net8.0/System.Drawing.Common.dll",
-        "tools/net8.0/System.Reflection.MetadataLoadContext.dll",
-        "tools/net8.0/System.Security.Cryptography.ProtectedData.dll",
-        "tools/net8.0/System.Security.Permissions.dll",
-        "tools/net8.0/System.Windows.Extensions.dll"
+        "tools/net9.0/Microsoft.NET.Sdk.WebAssembly.Pack.Tasks.dll",
+        "tools/net9.0/Microsoft.NET.WebAssembly.Webcil.dll"
       ]
     },
     "Microsoft.NETCore.Platforms/2.0.0": {
@@ -6171,59 +6143,59 @@
         "polly.extensions.http.nuspec"
       ]
     },
-    "RCF.Modulum.Application/0.0.3-beta.4": {
-      "sha512": "O6fAqOzKi6+F0TWqQiSDPinoZkgZYGAn9mtDesdxD6NXtRqF1hYOyQHubVBiuhcwUJC9m80vbvc75JaOzCwdmg==",
+    "RCF.Modulum.Application/0.0.3-beta.5": {
+      "sha512": "JXgEXhZCcf9Rzg/NU2051yIwXAi434SWWtOA/bRvVRCjRgEpP2RShWMSOHN6avSucjeH38lEJ9zFnF7Sl/mPNA==",
       "type": "package",
-      "path": "rcf.modulum.application/0.0.3-beta.4",
+      "path": "rcf.modulum.application/0.0.3-beta.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Licence.txt",
         "README.md",
         "lib/net8.0/RCF.Modulum.Application.dll",
-        "rcf.modulum.application.0.0.3-beta.4.nupkg.sha512",
+        "rcf.modulum.application.0.0.3-beta.5.nupkg.sha512",
         "rcf.modulum.application.nuspec"
       ]
     },
-    "RCF.Modulum.Client.Infrastructure/0.0.2-beta.5": {
-      "sha512": "DDq8uookzSAkhCPslAQtSyT1dVZ3BuzqR+qMC71AbyNmOwYagKIb3mtRiyH3Dhp/1EJrJVksZbixtca2m2+JmA==",
+    "RCF.Modulum.Client.Infrastructure/0.0.2-beta.6": {
+      "sha512": "uhUM+Za//JpTEVR+tTKQ6Ju6DdXAgr5AKwHrMclQS/OW1IHsPSjs78WwIU6n2kPUyaYN3TESk7Cv9erOHhaefw==",
       "type": "package",
-      "path": "rcf.modulum.client.infrastructure/0.0.2-beta.5",
+      "path": "rcf.modulum.client.infrastructure/0.0.2-beta.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Licence.txt",
         "README.md",
         "lib/net8.0/RCF.Modulum.Client.Infrastructure.dll",
-        "rcf.modulum.client.infrastructure.0.0.2-beta.5.nupkg.sha512",
+        "rcf.modulum.client.infrastructure.0.0.2-beta.6.nupkg.sha512",
         "rcf.modulum.client.infrastructure.nuspec"
       ]
     },
-    "RCF.Modulum.Domain/0.0.2-beta.5": {
-      "sha512": "PeQ/nvteKzx9aaYNU6xwXGSUu4UG6YL9SIBPYywiDdWhnozF7Mx/2/MAKOEY0VEBO4r8V6fcpSNpqQD7qPc+fA==",
+    "RCF.Modulum.Domain/0.0.2-beta.6": {
+      "sha512": "QUMZrqYHrfyIaWgh0cBi7neTTHzDLJqKSGWVBypndkHa1Nr7B/XBwhcObT0+R/7s6VEX3ZnTYtQgXamLmCLqDg==",
       "type": "package",
-      "path": "rcf.modulum.domain/0.0.2-beta.5",
+      "path": "rcf.modulum.domain/0.0.2-beta.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Licence.txt",
         "README.md",
         "lib/net8.0/RCF.Modulum.Domain.dll",
-        "rcf.modulum.domain.0.0.2-beta.5.nupkg.sha512",
+        "rcf.modulum.domain.0.0.2-beta.6.nupkg.sha512",
         "rcf.modulum.domain.nuspec"
       ]
     },
-    "RCF.Modulum.Shared/0.0.3-beta.3": {
-      "sha512": "H1PG9hpBvLlaiO0kf1D/+ZcK8blmZHn+s4sO4hvWjzC/E/FxqPfjQrH5GybUGBIYYebtCPcreNUCNvTfs3w18w==",
+    "RCF.Modulum.Shared/0.0.3-beta.4": {
+      "sha512": "kaoeytF6TN5fn71AG2u9K+g3PKA4qz6JBLxC2t+HyRZ2Iwo/Dcu/aizFmZVGdJTDpdmwB609+UK0t3WdALowtg==",
       "type": "package",
-      "path": "rcf.modulum.shared/0.0.3-beta.3",
+      "path": "rcf.modulum.shared/0.0.3-beta.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Licence.txt",
         "README.md",
         "lib/net8.0/RCF.Modulum.Shared.dll",
-        "rcf.modulum.shared.0.0.3-beta.3.nupkg.sha512",
+        "rcf.modulum.shared.0.0.3-beta.4.nupkg.sha512",
         "rcf.modulum.shared.nuspec"
       ]
     },
@@ -6712,11 +6684,11 @@
       "Microsoft.Extensions.Http.Polly >= 8.0.14",
       "Microsoft.Extensions.Identity.Core >= 8.0.14",
       "Microsoft.Extensions.Localization >= 8.0.14",
-      "Microsoft.NET.ILLink.Tasks >= 8.0.5",
-      "Microsoft.NET.Sdk.WebAssembly.Pack >= 8.0.5",
+      "Microsoft.NET.ILLink.Tasks >= 8.0.15",
+      "Microsoft.NET.Sdk.WebAssembly.Pack >= 9.0.4",
       "MudBlazor >= 8.5.1",
-      "RCF.Modulum.Client.Infrastructure >= 0.0.2-beta.5",
-      "RCF.Modulum.Domain >= 0.0.2-beta.5",
+      "RCF.Modulum.Client.Infrastructure >= 0.0.2-beta.6",
+      "RCF.Modulum.Domain >= 0.0.2-beta.6",
       "System.Net.Http.Json >= 8.0.1",
       "bootstrap >= 5.3.3"
     ]
@@ -6747,7 +6719,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6765,7 +6736,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -6827,13 +6799,13 @@
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[8.0.5, )",
+            "version": "[8.0.15, )",
             "autoReferenced": true
           },
           "Microsoft.NET.Sdk.WebAssembly.Pack": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[8.0.5, )",
+            "version": "[9.0.4, )",
             "autoReferenced": true
           },
           "MudBlazor": {
@@ -6842,11 +6814,11 @@
           },
           "RCF.Modulum.Client.Infrastructure": {
             "target": "Package",
-            "version": "[0.0.2-beta.5, )"
+            "version": "[0.0.2-beta.6, )"
           },
           "RCF.Modulum.Domain": {
             "target": "Package",
-            "version": "[0.0.2-beta.5, )"
+            "version": "[0.0.2-beta.6, )"
           },
           "System.Net.Http.Json": {
             "target": "Package",
@@ -6871,7 +6843,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-            "version": "[8.0.5, 8.0.5]"
+            "version": "[8.0.15, 8.0.15]"
           }
         ],
         "frameworkReferences": {
@@ -6879,7 +6851,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

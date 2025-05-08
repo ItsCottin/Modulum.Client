@@ -1,0 +1,65 @@
+﻿@page "/system/relacionamento/{TableId:int}"
+@inject ISnackbar _snackBar
+
+<MudContainer Class="my-4 px-4">
+    @if (false)
+    {
+        <MudAlert Severity="Severity.Warning" ContentAlignment="HorizontalAlignment.Start" Dense="false" Class="p-3">Carregando...</MudAlert>
+        <MudProgressLinear Color="Color.Primary" Indeterminate="true" Class="my-7" />
+    }
+    else
+    {
+        <MudText Typo="Typo.h4" Style="font-weight: bold" Class="ml-4">
+            <MudIcon Icon="@Icons.Material.Filled.Insights" Class="mr-1 mb-n1" Size="Size.Large" />
+            Nome da tela aqui
+        </MudText>
+        <MudAlert Class="mt-4" Severity="Severity.Normal" NoIcon="true" Variant="Variant.Text" Elevation="0">
+            <MudStack Row="true" Justify="Justify.SpaceAround">
+                <MudText>Relacione as suas telas</MudText>
+            </MudStack>
+        </MudAlert>
+        <!--<EditForm Model="_registro" OnValidSubmit="SalvarRegistro">-->
+            <MudPaper Class="mt-4 p-4" Elevation="0" Outlined="true">
+            <!--<FluentValidationValidator @ref="_fluentValidationValidator" />
+           <FormValidator @ref="_dynamicFormValidator"></FormValidator>-->
+               <MudStack Row="true" Class="pt-4">
+                    <MudSelect T="string" Label="Selecione a tela">
+                        <MudSelectItem Value="@("Professor")" />
+                        <MudSelectItem Value="@("Aluno")" />
+                        <MudSelectItem Value="@("Curso")" />
+                    </MudSelect>
+                    <MudSelect T="string" Label="Relacionamento">
+                        <MudSelectItem Value="@("Tem um")" />
+                        <MudSelectItem Value="@("Tem Muitos")" />
+                    </MudSelect>
+                    <MudSelect T="string" Label="Selecione a tela">
+                        <MudSelectItem Value="@("Professor")" />
+                        <MudSelectItem Value="@("Aluno")" />
+                        <MudSelectItem Value="@("Curso")" />
+                    </MudSelect>
+               </MudStack>
+               <MudStack Class="mt-4" Style="max-width: 100px;">
+                    <MudButton StartIcon="@Icons.Material.Filled.SaveAs"
+                               Variant="Variant.Filled"
+                               Color="Color.Primary"
+                               Class="mr-3"
+                               Disabled="false">
+                        @if (false)
+                        {
+                            <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                            <MudText Class="ms-2">Salvando...</MudText>
+                        }
+                        else
+                        {
+                            <MudText>Salvar</MudText>
+                        }
+                    </MudButton>
+                </MudStack>
+            </MudPaper>
+        <!--</EditForm> -->
+    }
+</MudContainer>
+
+@code {
+
+}

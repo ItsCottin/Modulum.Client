@@ -33,6 +33,8 @@ namespace Modulum.Client.Pages.Dynamic
         {
             _loadingService.Show();
             _loadingDados = true;
+            // Refazer toda a estrutura de chamadas pois agora a API tem metodos especificos para trazer um unico registro ou trazer o formulario limpo
+            // Porem como esta funcionando não vou mexer agora
             var response = await _dynamicManager.GetAllRegistroTabela(TableId);
             if (response.Succeeded)
             {
@@ -105,7 +107,7 @@ namespace Modulum.Client.Pages.Dynamic
             try
             {
                 // A data está no formato "MM/dd/yyyy HH:mm:ss"
-                var date = DateTime.ParseExact(data, "MM/dd/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                var date = DateTime.ParseExact(data, "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
                 data = date.ToString("yyyy-MM-ddTHH:mm"); // Formato aceito por input[datetime-local]
                 return data;
             }
@@ -151,8 +153,6 @@ namespace Modulum.Client.Pages.Dynamic
                 NomeTabela = _registro.NomeTabela,
                 NomeTela = _registro.NomeTela,
                 CampoPK = _registro.CampoPK,
-                JsonObject = _registro.JsonObject,
-                TelaObject = _registro.TelaObject,
                 Id = TableId,
                 Resultados = new List<DynamicDadoRequest>
                 {
