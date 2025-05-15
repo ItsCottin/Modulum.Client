@@ -26,14 +26,14 @@
                         <MudItem xs="12" sm="4" md="4" lg="4" Class="d-flex justify-end">
                             @if (!Operation.Equals("select"))
                             {
-                                <MudButton StartIcon="@Icons.Material.Filled.Add"
-                                IconSize="Size.Large"
-                                Variant="Variant.Filled"
-                                Size="Size.Medium"
-                                Color="Color.Primary"
-                                @onclick="@DoSalvarAsync"
-                                Class="mr-2"
-                                Disabled="@(_loading || IsView)">
+                                <MudButton StartIcon="@(_loading ? "" : Icons.Material.Filled.Add)"
+                                    IconSize="Size.Large"
+                                    Variant="Variant.Filled"
+                                    Size="Size.Medium"
+                                    Color="Color.Primary"
+                                    @onclick="@DoSalvarAsync"
+                                    Class="mr-2"
+                                    Disabled="@(_loading || IsView)">
                                     @if (_loading)
                                     {
                                         <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
@@ -93,40 +93,40 @@
                             <MudStack Class="pa-4" >
                                 <MudText Typo="Typo.h6">Adicionar Campo</MudText>
                                 <MudTextField InputType="InputType.Text"
-                                Margin="Margin.Normal"
-                                Label="Nome do Campo"
-                                Class="mb-3"
-                                @bind-Value="@_modelDynamic.fieldRequest.NomeCampoTela"
-                                Variant="Variant.Text"
-                                Required="true"
-                                RequiredError="Informe!"
-                                For="@(() => _modelDynamic.fieldRequest.NomeCampoTela)"
-                                Disabled="@IsView" />
+                                    Margin="Margin.Normal"
+                                    Label="Nome do Campo"
+                                    Class="mb-3"
+                                    @bind-Value="@_modelDynamic.fieldRequest.NomeCampoTela"
+                                    Variant="Variant.Text"
+                                    Required="true"
+                                    RequiredError="Informe!"
+                                    For="@(() => _modelDynamic.fieldRequest.NomeCampoTela)"
+                                    Disabled="@IsView" />
 
 
                                 <MudSelect T="TypeColumnEnum?"
-                                Label="Tipo do Campo"
-                                @bind-Value="@_modelDynamic.fieldRequest.Tipo"
-                                Variant="Variant.Text"
-                                Class="mb-3"
-                                Required="true"
-                                For="@(() => _modelDynamic.fieldRequest.Tipo)"
-                                OnBlur="@OnTipoChanged"
-                                Disabled="@(_loading || IsView || _modelDynamic.fieldRequest.Id is not null)">
-                                    @foreach (TypeColumnEnum? value in Enum.GetValues(typeof(TypeColumnEnum)))
-                                    {
-                                        <MudSelectItem T="TypeColumnEnum?" Value="@value">@GetDisplayText(value)</MudSelectItem>
-                                    }
+                                    Label="Tipo do Campo"
+                                    @bind-Value="@_modelDynamic.fieldRequest.Tipo"
+                                    Variant="Variant.Text"
+                                    Class="mb-3"
+                                    Required="true"
+                                    For="@(() => _modelDynamic.fieldRequest.Tipo)"
+                                    OnBlur="@OnTipoChanged"
+                                    Disabled="@(_loading || IsView || _modelDynamic.fieldRequest.Id is not null)">
+                                        @foreach (TypeColumnEnum? value in Enum.GetValues(typeof(TypeColumnEnum)))
+                                        {
+                                            <MudSelectItem T="TypeColumnEnum?" Value="@value">@GetDisplayText(value)</MudSelectItem>
+                                        }
                                 </MudSelect>
 
                                 <MudTextField 
-                                @bind-Value="_modelDynamic.fieldRequest.Tamanho" 
-                                For="@(() => _modelDynamic.fieldRequest.Tamanho)" 
-                                Label="Tamanho" 
-                                Variant="Variant.Text" 
-                                InputType="InputType.Number" 
-                                Class="mb-3" T="int?"
-                                Disabled="@((_modelDynamic.fieldRequest.Tipo != TypeColumnEnum.VARCHAR) | _loading | IsView || _modelDynamic.fieldRequest.Id is not null)" />
+                                    @bind-Value="_modelDynamic.fieldRequest.Tamanho" 
+                                    For="@(() => _modelDynamic.fieldRequest.Tamanho)" 
+                                    Label="Tamanho" 
+                                    Variant="Variant.Text" 
+                                    InputType="InputType.Number" 
+                                    Class="mb-3" T="int?"
+                                    Disabled="@((_modelDynamic.fieldRequest.Tipo != TypeColumnEnum.VARCHAR) | _loading | IsView || _modelDynamic.fieldRequest.Id is not null)" />
                                 <MudCheckBox T="bool" Label="Campo Obrigatório" Class="mb-3" @bind-Value="_modelDynamic.fieldRequest.IsObrigatorio" Disabled="@(IsView || _modelDynamic.fieldRequest.Id is not null)" />
                                 <MudButton StartIcon="@Icons.Material.Filled.Add" Color="Color.Secondary" OnClick="@AdicionarCampo" Variant="Variant.Filled" Disabled="@(_loading || IsView)">@(_modelDynamic.fieldRequest.TempId is not null ? "Alterar" : "Adicionar")</MudButton>
                             </MudStack>
@@ -143,7 +143,7 @@
                                     <MudListItem>
                                         <MudGrid>
                                             <MudItem xs="8">
-                                                <MudText>@campo.NomeCampoTela (@GetDisplayText(campo.Tipo)) @(campo.IsPrimaryKey ? "(Identificador)" : null) @(campo.IsObrigatorio ? "(Obrigatório)" : null)</MudText>
+                                                <MudText>@campo.NomeCampoTela (@GetDisplayText(campo.Tipo)) @(campo.IsPrimaryKey ? "(Identificador)" : null) @(campo.IsObrigatorio ? "(Obrigatório)" : null) @(campo.IsForeigeKey ? "(Vinculo)" : null)</MudText>
                                             </MudItem>
                                             @if (!Operation.Equals("select"))
                                             {
@@ -151,14 +151,14 @@
                                                     <MudIconButton Icon="@Icons.Material.Filled.Edit"
                                                            Color="Color.Warning"
                                                            Size="Size.Small"
-                                                           Disabled="@(campo.IsPrimaryKey | _loading | IsView)"
+                                                           Disabled="@(campo.IsPrimaryKey | _loading | IsView | campo.IsForeigeKey)"
                                                            OnClick="@(() => EditarCampo(campo))" />
                                                 </MudItem>
                                                 <MudItem xs="2" Class="text-end">
                                                     <MudIconButton Icon="@Icons.Material.Filled.Delete"
                                                            Color="Color.Error"
                                                            Size="Size.Small"
-                                                           Disabled="@(campo.IsPrimaryKey | _loading | IsView)"
+                                                            Disabled="@(campo.IsPrimaryKey | _loading | IsView | campo.IsForeigeKey)"
                                                            OnClick="@(() => RemoverCampo(campo))" />
                                                 </MudItem>
                                             }
@@ -169,32 +169,6 @@
                     </MudStack>
                 </MudItem>
             </MudGrid>
-            <!--<MudGrid Class="pt-4 mt-4" Spacing="0">
-                <MudItem xs="12">
-                    <MudStack Justify="Justify.FlexEnd">
-                        <MudButton 
-                                Class="px-8"
-                                StartIcon="@(_loading ? "" : Icons.Material.Filled.SaveAlt)"
-                                IconSize="Size.Large"
-                                Variant="Variant.Filled"
-                                Style="height: 60px;"
-                                Color="Color.Primary"
-                                Href=""
-                                OnClick="@DoSalvarAsync"
-                                Disabled="@(_loading || IsView)">-->
-                                @*@if (_loading)
-                                {
-                                    <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
-                                    <MudText Class="ms-2">Criando...</MudText>
-                                }
-                                else
-                                {
-                                    <MudText>Criar</MudText>
-                                }*@
-                <!--</MudButton>
-                    </MudStack>
-                </MudItem>
-                </MudGrid>-->
         </MudPaper>
     </EditForm>
     }

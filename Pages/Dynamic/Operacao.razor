@@ -33,27 +33,47 @@
                     if (campo.Tipo == TypeColumnEnum.VARCHAR)
                     {
                         <MudTextField 
-                            T="string" 
-                            @bind-Value="campo.Valor" 
-                            Label="@campo.NomeCampoTela" 
-                            Disabled="@(IsView | IsPrimaryKey | _loading)" 
-                            Variant="Variant.Text" 
-                            Class="mb-3"
-                            Required="@campo.IsObrigatorio"
-                            Error="@HasError(campo)"
-                            ErrorText="@GetError(campo)" />
+                        T="string" 
+                        @bind-Value="campo.Valor" 
+                        Label="@campo.NomeCampoTela" 
+                        Disabled="@(IsView | IsPrimaryKey | _loading)" 
+                        Variant="Variant.Text" 
+                        Class="mb-3"
+                        Required="@campo.IsObrigatorio"
+                        Error="@HasError(campo)"
+                        ErrorText="@GetError(campo)" />
                     }
                     else if (campo.Tipo == TypeColumnEnum.INT)
                     {
-                        <MudNumericField 
-                            T="string" 
-                            @bind-Value="campo.Valor" 
-                            Label="@campo.NomeCampoTela" 
-                            Disabled="@(IsView | IsPrimaryKey | _loading)" 
-                            Variant="Variant.Text" Class="mb-3"
-                            Required="@campo.IsObrigatorio"
-                            Error="@HasError(campo)"
-                            ErrorText="@GetError(campo)" />
+                        if (campo.IsForeigeKey)
+                        {
+                            <MudSelect T="string"
+                                       @bind-Value="campo.Valor"
+                                       Label="@campo.NomeCampoTela"
+                                       Disabled="@(IsView | IsPrimaryKey | _loading)"
+                                       Variant="Variant.Text" Class="mb-3"
+                                       Required="@campo.IsObrigatorio"
+                                       Error="@HasError(campo)"
+                                       ErrorText="@GetError(campo)">
+                                    @foreach (var opcao in campo.Opcoes)
+                                    {
+                                        <MudSelectItem T="string" Value="@(opcao.IdRegistro.ToString())">@opcao.ValorExibicao</MudSelectItem>
+                                    }
+                            </MudSelect>
+
+                        }
+                        else
+                        {
+                            <MudNumericField T="string"
+                                             @bind-Value="campo.Valor"
+                                             Label="@campo.NomeCampoTela"
+                                             Disabled="@(IsView | IsPrimaryKey | _loading)"
+                                             Variant="Variant.Text" Class="mb-3"
+                                             Required="@campo.IsObrigatorio"
+                                             Error="@HasError(campo)"
+                                             ErrorText="@GetError(campo)" />
+                        }
+                        
                     }
                     else if (campo.Tipo == TypeColumnEnum.DATE)
                     {

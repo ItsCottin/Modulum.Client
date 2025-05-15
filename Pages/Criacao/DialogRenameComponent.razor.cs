@@ -20,12 +20,16 @@ namespace Modulum.Client.Pages.Criacao
 
         [Parameter]
         public RenameNomeTabelaTelaRequest _model { get; set; } = new();
+
+        public bool _loading { get; set; } = false;
         private async Task Submit()
         {
             _loadingService.Show();
+            _loading = true;
             if (_model.IdTabela == null)
             {
                 _loadingService.Hide();
+                _loading = false;
                 MudDialog.Cancel();
                 return;
             }
@@ -33,6 +37,7 @@ namespace Modulum.Client.Pages.Criacao
             if (response == null)
             {
                 _loadingService.Hide();
+                _loading = false;
                 MudDialog.Cancel();
                 return;
             }
@@ -41,6 +46,7 @@ namespace Modulum.Client.Pages.Criacao
                 _snackBar.Add(response.Messages.FirstOrDefault(), response.Succeeded ? MudBlazor.Severity.Success : MudBlazor.Severity.Error);
             }
             _loadingService.Hide();
+            _loading = false;
             MudDialog.Close(DialogResult.Ok(true));
         }
         private void Cancel() => MudDialog.Cancel();

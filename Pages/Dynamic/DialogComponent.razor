@@ -3,8 +3,18 @@
         <MudText>@ContentText</MudText>
     </DialogContent>
     <DialogActions>
-        <MudButton OnClick="Cancel">Cancelar</MudButton>
-        <MudButton Color="@Color" Variant="Variant.Filled" OnClick="Submit">@ButtonText</MudButton>
+        <MudButton OnClick="Cancel" Disabled="@_loading">Cancelar</MudButton>
+        <MudButton StartIcon="@(_loading ? "" : Icons.Material.Filled.Delete)" Color="@Color" Variant="Variant.Filled" OnClick="Submit" Disabled="@_loading">
+            @if (_loading)
+            {
+                <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                <MudText Class="ms-2">Deletando...</MudText>
+            }
+            else
+            {
+                <MudText>@ButtonText</MudText>
+            }
+        </MudButton>
     </DialogActions>
 </MudDialog>
 

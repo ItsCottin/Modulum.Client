@@ -20,13 +20,16 @@ namespace Modulum.Client.Pages.Criacao
 
         [Parameter]
         public int IdTable { get; set; }
+        public bool _loading { get; set; } = false;
 
         private async Task Submit()
         {
             _loadingService.Show();
+            _loading = true;
             if (IdTable == null)
             {
                 _loadingService.Hide();
+                _loading = false;
                 MudDialog.Cancel();
                 return;
             }
@@ -34,6 +37,7 @@ namespace Modulum.Client.Pages.Criacao
             if (response == null)
             {
                 _loadingService.Hide();
+                _loading = false;
                 MudDialog.Cancel();
                 return;
             }
@@ -42,6 +46,7 @@ namespace Modulum.Client.Pages.Criacao
                 _snackBar.Add(response.Messages.FirstOrDefault(), response.Succeeded ? MudBlazor.Severity.Success : MudBlazor.Severity.Error);
             }
             _loadingService.Hide();
+            _loading = false;
             MudDialog.Close(DialogResult.Ok(true));
         }
 

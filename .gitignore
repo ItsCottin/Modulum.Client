@@ -24,4 +24,5 @@ bld/
 [Ll]ogs/
 /obj/Debug/net8.0/Modulum.Api.AssemblyInfo.cs
 /obj/Debug/net8.0/Modulum.Api.AssemblyInfoInputs.cache
+/obj/Debug/net8.0/tmp-webcil
 

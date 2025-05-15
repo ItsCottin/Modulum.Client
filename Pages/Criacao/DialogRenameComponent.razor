@@ -4,8 +4,18 @@
         <MudTextField @bind-Value="_model.NovoNome" Label="Nome da sua Tela" Variant="Variant.Text"></MudTextField>
     </DialogContent>
     <DialogActions>
-        <MudButton OnClick="Cancel">Cancelar</MudButton>
-        <MudButton Color="@Color" Variant="Variant.Filled" OnClick="Submit">@ButtonText</MudButton>
+        <MudButton OnClick="Cancel" Disabled="@_loading">Cancelar</MudButton>
+        <MudButton StartIcon="@(_loading ? "" : Icons.Material.Filled.SaveAs)" Color="@Color" Variant="Variant.Filled" OnClick="Submit" Disabled="@_loading">
+            @if (_loading)
+            {
+                <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                <MudText Class="ms-2">Renomeando...</MudText>
+            }
+            else
+            {
+                <MudText>@ButtonText</MudText>
+            }
+        </MudButton>
     </DialogActions>
 </MudDialog>
 

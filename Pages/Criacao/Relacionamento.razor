@@ -1,65 +1,139 @@
 ﻿@page "/system/relacionamento/{TableId:int}"
 @inject ISnackbar _snackBar
+@using modulum.Application.Requests.Dynamic;
+@using modulum.Application.Requests.Dynamic.Create;
+@using modulum.Shared.Enum;
 
 <MudContainer Class="my-4 px-4">
-    @if (false)
+    @if (_loadingDados)
     {
-        <MudAlert Severity="Severity.Warning" ContentAlignment="HorizontalAlignment.Start" Dense="false" Class="p-3">Carregando...</MudAlert>
+        <MudAlert Severity="Severity.Warning" Dense="false" Class="p-3">Carregando...</MudAlert>
         <MudProgressLinear Color="Color.Primary" Indeterminate="true" Class="my-7" />
     }
     else
     {
         <MudText Typo="Typo.h4" Style="font-weight: bold" Class="ml-4">
             <MudIcon Icon="@Icons.Material.Filled.Insights" Class="mr-1 mb-n1" Size="Size.Large" />
-            Nome da tela aqui
+            @_mapTelaOrigem.NomeTela
         </MudText>
+
         <MudAlert Class="mt-4" Severity="Severity.Normal" NoIcon="true" Variant="Variant.Text" Elevation="0">
-            <MudStack Row="true" Justify="Justify.SpaceAround">
-                <MudText>Relacione as suas telas</MudText>
+            <MudStack Row="true" Justify="Justify.FlexStart">
+                <MudText>Configure os relacionamentos desta tela antes de salvar:</MudText>
             </MudStack>
         </MudAlert>
-        <!--<EditForm Model="_registro" OnValidSubmit="SalvarRegistro">-->
-            <MudPaper Class="mt-4 p-4" Elevation="0" Outlined="true">
-            <!--<FluentValidationValidator @ref="_fluentValidationValidator" />
-           <FormValidator @ref="_dynamicFormValidator"></FormValidator>-->
-               <MudStack Row="true" Class="pt-4">
-                    <MudSelect T="string" Label="Selecione a tela">
-                        <MudSelectItem Value="@("Professor")" />
-                        <MudSelectItem Value="@("Aluno")" />
-                        <MudSelectItem Value="@("Curso")" />
-                    </MudSelect>
-                    <MudSelect T="string" Label="Relacionamento">
-                        <MudSelectItem Value="@("Tem um")" />
-                        <MudSelectItem Value="@("Tem Muitos")" />
-                    </MudSelect>
-                    <MudSelect T="string" Label="Selecione a tela">
-                        <MudSelectItem Value="@("Professor")" />
-                        <MudSelectItem Value="@("Aluno")" />
-                        <MudSelectItem Value="@("Curso")" />
-                    </MudSelect>
-               </MudStack>
-               <MudStack Class="mt-4" Style="max-width: 100px;">
-                    <MudButton StartIcon="@Icons.Material.Filled.SaveAs"
-                               Variant="Variant.Filled"
-                               Color="Color.Primary"
-                               Class="mr-3"
-                               Disabled="false">
-                        @if (false)
+
+
+        <MudPaper Class="mt-4 p-4" Elevation="0" Outlined="true">
+            <MudGrid Gutter="Size.Medium">
+
+                <MudItem xs="12" sm="12" md="12">
+
+                    <MudStack Justify="Justify.FlexEnd" AlignItems="AlignItems.End">
+
+                        <MudButton Color="Color.Secondary" StartIcon="@Icons.Material.Filled.Add" OnClick="AdicionarRelacionamento" Disabled="@(!PodeAdicionar())" Variant="Variant.Filled">
+                            Adicionar
+                        </MudButton>
+
+                    </MudStack>
+
+                </MudItem>
+
+                <MudItem xs="12" sm="6" md="2">
+                    <MudSelect T="MenuRequest" Label="Selecione a tela" @bind-Value="_telaSelecionada" SelectedValuesChanged="@SetTelaSelecionada">
+                        <MudSelectItem T="MenuRequest" Value="@(new MenuRequest { Id = 0, NomeTela = "Selecione um valor" })" Disabled="true">
+                            Selecione um valor
+                        </MudSelectItem>
+                        @foreach (var tela in _telasDisponiveis)
                         {
-                            <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
-                            <MudText Class="ms-2">Salvando...</MudText>
+                            <MudSelectItem T="MenuRequest" Value="@tela">@tela.NomeTela</MudSelectItem>
                         }
-                        else
-                        {
-                            <MudText>Salvar</MudText>
-                        }
-                    </MudButton>
-                </MudStack>
-            </MudPaper>
-        <!--</EditForm> -->
+                    </MudSelect>
+                </MudItem>
+
+                <MudItem xs="12" sm="6" md="2">
+                    <MudSelect T="string" Label="Relacionamento" @bind-Value="_tipoRelacionamento" SelectedValuesChanged="@SetTipoRelacionamento">
+                        <!--<MudSelectItem T="string" Value="@*@("tem_um")*@">Tem um</MudSelectItem>-->
+                        <MudSelectItem T="string" Value="@("tem_muitos")">Tem muitos</MudSelectItem>
+                    </MudSelect>
+                </MudItem>
+
+                <MudItem xs="12" sm="6" md="2">
+                    <MudTextField @bind-Value="@_mapTelaOrigem.NomeTela"
+                    Label="Nome da tela"
+                    Variant="Variant.Text"
+                    InputType="InputType.Text"
+                    Class="mb-3" T="string"
+                    Disabled="true" />
+                </MudItem>
+
+                <MudItem xs="12" sm="6" md="3">
+                    @if (_loadingComboBoxCampo)
+                    {
+                        <MudSkeleton />
+                        <MudSkeleton />
+                    }
+                    else
+                    {
+                        <MudSelect T="CreateDynamicFieldRequest" Label="Selecione um Campo" @bind-Value="_campoSelecionado" SelectedValuesChanged="@SetCampoSelecionada">
+                            <MudSelectItem T="CreateDynamicFieldRequest" Value="@(new CreateDynamicFieldRequest { Id = 0, NomeCampoTela = "Selecione um valor" })" Disabled="true">
+                                Selecione um valor
+                            </MudSelectItem>
+                            @foreach (var campo in _campos)
+                            {
+                                <MudSelectItem T="CreateDynamicFieldRequest" Value="@campo">@campo.NomeCampoTela</MudSelectItem>
+                            }
+                        </MudSelect>
+                    }
+                </MudItem>
+
+                <MudItem xs="12" sm="6" md="3">
+                    <MudCheckBox T="bool" Label="Vinculo obrigatório" Class="mb-3" @bind-Value="_novoRelacionamento.IsObrigatorio" />
+                </MudItem>
+
+            </MudGrid>
+
+            <MudStack Class="pa-4">
+                <MudText Typo="Typo.h6">Relacionamentos:</MudText>
+
+                <MudList Class="mt-2" T="string">
+                    @foreach (var relacionamento in _relacionamentos)
+                    {
+                        <MudListItem>
+                            <MudGrid Justify="Justify.SpaceBetween">
+                                <MudItem xs="8">
+                                    <MudText>Um '@relacionamento.NomeTelaDestino' @(relacionamento.Tipo == TypeRelationshipEnum.OneToMany ? "Tem muitos" : "Tem um") '@_mapTelaOrigem.NomeTela'</MudText>
+                                </MudItem>
+                                <MudItem xs="2" Class="justify-content-center align-items-center">
+                                    <MudIconButton Icon="@Icons.Material.Filled.Delete"
+                                        Color="Color.Error"
+                                        Size="Size.Small"
+                                        OnClick="@(() => RemoverRelacionamento(relacionamento))" />
+                                </MudItem>
+                            </MudGrid>
+                        </MudListItem>
+                    }
+                </MudList>
+            </MudStack>
+
+            <MudStack Class="mt-4" Justify="Justify.FlexStart" AlignItems="AlignItems.Start">
+                <MudButton StartIcon="@(_loading ? string.Empty : Icons.Material.Filled.SaveAs)"
+                           Variant="Variant.Filled"
+                           Color="Color.Primary"
+                           Class="mr-3"
+                           Disabled="_loading"
+                           OnClick="@SalvarRelacionamentos">
+                    @if (_loading)
+                    {
+                        <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                        <MudText Class="ms-2">Salvando...</MudText>
+                    }
+                    else
+                    {
+                        <MudText>Salvar</MudText>
+                    }
+                </MudButton>
+            </MudStack>
+        </MudPaper>
     }
 </MudContainer>
-
-@code {
-
-}

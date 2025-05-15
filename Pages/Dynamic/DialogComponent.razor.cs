@@ -21,13 +21,16 @@ namespace Modulum.Client.Pages.Dynamic
 
         [Parameter]
         public DynamicForIdRequest Model { get; set; }
+        public bool _loading { get; set; } = false;
 
         private async Task Submit()
         {
             _loadingService.Show();
+            _loading = true;
             if (Model == null)
             {
                 _loadingService.Hide();
+                _loading = false;
                 MudDialog.Cancel();
                 return;
             }
@@ -35,6 +38,7 @@ namespace Modulum.Client.Pages.Dynamic
             if (response == null)
             {
                 _loadingService.Hide();
+                _loading = false;
                 MudDialog.Cancel();
                 return;
             }
@@ -43,6 +47,7 @@ namespace Modulum.Client.Pages.Dynamic
                 _snackBar.Add(response.Messages.FirstOrDefault(), response.Succeeded ? MudBlazor.Severity.Success : MudBlazor.Severity.Error);
             }
             _loadingService.Hide();
+            _loading = false;
             MudDialog.Close(DialogResult.Ok(true));
         }
 
