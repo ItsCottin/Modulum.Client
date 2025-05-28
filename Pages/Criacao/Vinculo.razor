@@ -1,0 +1,62 @@
+﻿@page "/vinculo"
+
+<MudContainer Class="my-4 px-4">
+    @if (_loadingDados)
+    {
+        <MudAlert Severity="Severity.Warning" ContentAlignment="HorizontalAlignment.Start" Dense="false" Class="p-3">Carregando...</MudAlert>
+        <MudProgressLinear Color="Color.Primary" Indeterminate="true" Class="my-7" />
+    }
+    else
+    {
+
+        <MudCard Elevation="0" Class="">
+            <MudCardContent>
+                <MudGrid>
+
+                    <MudItem xs="6" sm="8" md="8" lg="8">
+                        <MudStack Row="true" AlignItems="AlignItems.Center">
+                            <MudIcon Icon="@Icons.Material.Filled.Insights" Class="mr-1 mb-n1" Size="Size.Large" />
+                            <MudText Typo="Typo.h5" Style="font-weight: bold">Vinculos</MudText>
+                        </MudStack>
+                    </MudItem>
+
+                    <MudItem xs="6" sm="4" md="4" lg="4" Class="d-flex justify-end">
+                        <MudButton StartIcon="@Icons.Material.Filled.ArrowBack"
+                                   IconSize="Size.Large"
+                                   Variant="Variant.Text"
+                                   Size="Size.Medium"
+                                   Color="Color.Warning" Href="/estrutura" Class="mr-2">
+                            Voltar
+                        </MudButton>
+                    </MudItem>
+
+                </MudGrid>
+            </MudCardContent>
+        </MudCard>
+
+        <MudAlert Class="mt-4" Severity="Severity.Normal" NoIcon="true" Variant="Variant.Text" Elevation="0">
+            <MudStack Row="true" Justify="Justify.SpaceAround">
+                <MudText>Aqui você configura os vinculos das suas telas</MudText>
+            </MudStack>
+        </MudAlert>
+
+        <MudPaper Class="mt-4 p-4" Elevation="0" Outlined="true">
+
+            <MudChipSet @bind-SelectedValues="_selected" SelectionMode="SelectionMode.MultiSelection"  CheckMark="_checkMark" Variant="Variant.Text" Color="Color.Info">
+                <MudChip Value="@("Milk")" />
+                <MudChip Value="@("Eggs")" />
+                <MudChip Value="@("Soap")" />
+                <MudChip Value="@("Corn flakes")" />
+                <MudChip Value="@("Salad")" />
+                <MudChip Value="@("Apples")" />
+                <MudChip Value="@("Red wine")" />
+            </MudChipSet>
+
+        </MudPaper>
+    }
+</MudContainer>
+
+@code {
+    private bool _checkMark = true;
+    private IReadOnlyCollection<string> _selected;
+}

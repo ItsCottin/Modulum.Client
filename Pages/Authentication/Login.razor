@@ -62,7 +62,7 @@
                                 For="@(() => _tokenModel.Password)"
                                 Typo="Typo.h5"
                                 Disabled="@loading" />
-                        <MudStack Spacing="1" Class="mt-3">
+                        <MudStack Spacing="1" Class="mt-2">
                             <MudButton Size="Size.Large"
                                    OnClick="@DoLoginAsync"
                                    Variant="Variant.Filled"
@@ -80,8 +80,16 @@
                                     }
                             </MudButton>
                         </MudStack>
-                        <MudStack Spacing="1" Class="mt-3" AlignItems="AlignItems.Center">
-                        <MudLink Disabled="@loading" Color="Color.Info" Underline="Underline.None" Href="/reset-password-token">Esqueci minha senha</MudLink>
+                        <MudStack Spacing="1" Class="mt-1" AlignItems="AlignItems.Center">
+                        <MudLink Disabled="@loading" Color="Color.Info" Underline="Underline.None" Href="/login/recuperacao/email">Esqueci minha senha</MudLink>
+                        </MudStack>
+                        <MudStack Spacing="1" AlignItems="AlignItems.Start">
+                            <MudLink Disabled="@loading" Color="Color.Info" Underline="Underline.None" OnClick="OnPreencherLogin">
+                                <MudText Typo="Typo.body2">Preencher</MudText>
+                            </MudLink>
+
+                            <MudText Typo="Typo.body2">Login: admin@admin.com</MudText>
+                            <MudText Typo="Typo.body2">Senha: @("@Aa123456")</MudText>
                         </MudStack>
                     <!--</MudCardContent>
                 </MudCard>-->

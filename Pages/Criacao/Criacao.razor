@@ -17,13 +17,13 @@
             <MudCard Elevation="0" Class="">
                 <MudCardContent>
                     <MudGrid>
-                        <MudItem xs="12" sm="8" md="8" lg="8">
+                        <MudItem xs="6" sm="8" md="8" lg="8">
                             <MudStack Row="true" AlignItems="AlignItems.Center">
                                 <MudIcon Icon="@Icons.Material.Filled.Insights" Class="mb-1" Size="Size.Large" />
                                 <MudText Typo="Typo.h5" Style="font-weight: bold">Criação</MudText>
                             </MudStack>
                         </MudItem>
-                        <MudItem xs="12" sm="4" md="4" lg="4" Class="d-flex justify-end">
+                        <MudItem xs="6" sm="4" md="4" lg="4" Class="d-flex justify-end">
                             @if (!Operation.Equals("select"))
                             {
                                 <MudButton StartIcon="@(_loading ? "" : Icons.Material.Filled.Add)"
@@ -112,7 +112,7 @@
                                     Required="true"
                                     For="@(() => _modelDynamic.fieldRequest.Tipo)"
                                     OnBlur="@OnTipoChanged"
-                                    Disabled="@(_loading || IsView || _modelDynamic.fieldRequest.Id is not null)">
+                                           Disabled="@(_loading || IsView || _modelDynamic.fieldRequest.Id is not null || _modelDynamic.fieldRequest.IsForeigeKey)">
                                         @foreach (TypeColumnEnum? value in Enum.GetValues(typeof(TypeColumnEnum)))
                                         {
                                             <MudSelectItem T="TypeColumnEnum?" Value="@value">@GetDisplayText(value)</MudSelectItem>
@@ -151,7 +151,7 @@
                                                     <MudIconButton Icon="@Icons.Material.Filled.Edit"
                                                            Color="Color.Warning"
                                                            Size="Size.Small"
-                                                           Disabled="@(campo.IsPrimaryKey | _loading | IsView | campo.IsForeigeKey)"
+                                                           Disabled="@(campo.IsPrimaryKey | _loading | IsView)"
                                                            OnClick="@(() => EditarCampo(campo))" />
                                                 </MudItem>
                                                 <MudItem xs="2" Class="text-end">

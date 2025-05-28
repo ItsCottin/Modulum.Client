@@ -1,0 +1,39 @@
+﻿@page "/login/recuperacao/concluido"
+
+@attribute [AllowAnonymous]
+
+<MudContainer Class="" MaxWidth="MaxWidth.ExtraExtraLarge">
+    <AuthorizeView Context="authContext">
+        <Authorized>
+            <MudAlert Severity="Severity.Success">Você já está logado como @authContext.User.Identity?.Name.</MudAlert>
+        </Authorized>
+        <NotAuthorized>
+            <MudStack Class="@($"{GetResponsivePadding()} mx-auto")" Style="max-width: 500px;">
+                <!--<MudCard Outlined="true" Class="@($"{GetResponsivePadding()} mx-auto")" Style="max-width: 700px;">
+                    <MudCardContent Class="@GetResponsivePadding()">-->
+                <MudStack AlignItems="AlignItems.Center" Justify="Justify.Center" Spacing="2">
+                    <MudIcon Icon="@Icons.Material.Filled.CheckCircle"
+                             Color="Color.Success"
+                             Size="Size.Large"
+                             Class="mt-3" />
+                </MudStack>
+                <MudText Typo="Typo.h4" Align="Align.Center" Class="mt-6">Senha alterada com sucesso!</MudText>
+                <MudText Typo="Typo.subtitle2" Align="Align.Center" Color="Color.Info" Class="mt-3">
+                    Sua conta foi recuperada com sucesso, acesse sua conta com a senha cadastrada
+                </MudText>
+                <MudStack Spacing="1" Class="mt-3">
+                    <MudButton Href="/login"
+                               Color="Color.Primary"
+                               Variant="Variant.Filled"
+                               Size="Size.Large"
+                               Class="mt-1 pa-3">
+                        Acessar
+                    </MudButton>
+                </MudStack>
+
+                <!--</MudCardContent>
+                </MudCard>-->
+            </MudStack>
+        </NotAuthorized>
+    </AuthorizeView>
+</MudContainer>

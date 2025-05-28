@@ -33,15 +33,15 @@
                     if (campo.Tipo == TypeColumnEnum.VARCHAR)
                     {
                         <MudTextField 
-                        T="string" 
-                        @bind-Value="campo.Valor" 
-                        Label="@campo.NomeCampoTela" 
-                        Disabled="@(IsView | IsPrimaryKey | _loading)" 
-                        Variant="Variant.Text" 
-                        Class="mb-3"
-                        Required="@campo.IsObrigatorio"
-                        Error="@HasError(campo)"
-                        ErrorText="@GetError(campo)" />
+                            T="string" 
+                            @bind-Value="campo.Valor" 
+                            Label="@campo.NomeCampoTela" 
+                            Disabled="@(IsView | IsPrimaryKey | _loading)" 
+                            Variant="Variant.Text" 
+                            Class="mb-3"
+                            Required="@campo.IsObrigatorio"
+                            Error="@HasError(campo)"
+                            ErrorText="@GetError(campo)" />
                     }
                     else if (campo.Tipo == TypeColumnEnum.INT)
                     {

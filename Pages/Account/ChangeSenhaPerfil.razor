@@ -1,0 +1,68 @@
+﻿@page "/account/manage/change-password"
+
+
+@if (_loadingDados)
+{
+    <MudAlert Severity="Severity.Warning" ContentAlignment="HorizontalAlignment.Start" Dense="false" Class="p-3">Carregando...</MudAlert>
+    <MudProgressLinear Color="Color.Primary" Indeterminate="true" Class="my-7" />
+}
+else
+{
+    <MudText Typo="Typo.h4" Style="font-weight: bold" Class="ml-4">
+        Alterar Senha
+    </MudText>
+
+    <!--<EditForm Model="senhaAtual">-->
+        <MudPaper Class="mt-5 p-4" Elevation="0" Outlined="true">
+            <MudStack Row="true" Wrap="Wrap.Wrap" Spacing="4" AlignItems="AlignItems.Start" Class="mb-3 mt-3">
+            <!--<FluentValidationValidator @ref="_fluentValidationValidator" />-->
+                <MudStack Style="width: 380px;">
+                    <MudTextField 
+                        T="string"
+                        @bind-Value="senhaAtual"
+                        Label="Senha Atual"
+                        Variant="Variant.Text"
+                        InputType="InputType.Password"
+                        Class="mb-3"/>
+                </MudStack>
+                <MudStack Style="width: 380px;">
+                    <MudTextField 
+                        T="string"
+                        @bind-Value="senhaAtual"
+                        Label="Nova Senha"
+                        Variant="Variant.Text"
+                        InputType="InputType.Password"
+                        Class="mb-3"/>
+                </MudStack>
+                <MudStack Style="width: 380px;">
+                    <MudTextField 
+                        T="string"
+                                  @bind-Value="senhaAtual"
+                        Label="Confirmar Senha"
+                        Variant="Variant.Text"
+                        InputType="InputType.Password"
+                        Class="mb-3"/>
+                </MudStack>
+            </MudStack>
+
+            <MudStack Justify="Justify.FlexStart" Class="mt-5" Style="width: 200px;">
+                <MudButton StartIcon="@(_loading ? "" : Icons.Material.Filled.SaveAs)"
+                           Variant="Variant.Filled"
+                           Color="Color.Primary"
+                           Class="mr-3"
+                           OnClick="SalvarSenha">
+
+                    @if (_loading)
+                    {
+                        <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                        <MudText Class="ms-2">Salvando...</MudText>
+                    }
+                    else
+                    {
+                        <MudText>Salvar</MudText>
+                    }
+                </MudButton>
+            </MudStack>
+        </MudPaper>
+        <!--</EditForm>-->
+}

@@ -1,0 +1,46 @@
+﻿@inherits LayoutComponentBase
+@layout Modulum.Client.Shared.MainLayout
+
+<MudContainer Class="my-4 px-4">
+    <MudCard Elevation="0" Class="">
+        <MudCardContent>
+            <MudGrid>
+                <MudItem xs="12" sm="8" md="8" lg="8">
+                    <MudStack Row="true" AlignItems="AlignItems.Center">
+                        <MudIcon Icon="@Icons.Material.Filled.Insights" Class="mb-1" Size="Size.Large" />
+                        <MudText Typo="Typo.h5" Style="font-weight: bold">Alterar as configurações da sua conta</MudText>
+                    </MudStack>
+                </MudItem>
+            </MudGrid>
+        </MudCardContent>
+    </MudCard>
+
+    <MudAlert Class="mt-4" Severity="Severity.Normal" NoIcon="true" Variant="Variant.Text" Elevation="0">
+        <MudStack Row="true" Justify="Justify.SpaceAround">
+            <MudText>Aqui você pode ver e alterar suas informações de usuario</MudText>
+        </MudStack>
+    </MudAlert>
+
+    <MudGrid Class="mt-4" Justify="Justify.SpaceAround">
+        <MudItem xs="12" sm="12" md="5" lg="3">
+            <MudPaper MinWidth="270px" Class="py-3" Elevation="0">
+                <MudNavMenu Dense="false" Margin="Margin.Normal" Rounded="true" Class="px-3">
+                    <MudNavLink Match="NavLinkMatch.All" Href="/account/manage">Perfil</MudNavLink>
+                    <MudNavLink Match="NavLinkMatch.Prefix" Href="/account/manage/endereco">Endereços</MudNavLink>
+                    <MudNavLink Match="NavLinkMatch.Prefix" Href="/account/manage/contato">Contatos</MudNavLink>
+                    <MudNavLink Match="NavLinkMatch.All" Href="/account/manage/change-password">Alterar Senha</MudNavLink>
+                    <MudNavLink Match="NavLinkMatch.All" Href="/account/manage/seguranca">Segurança</MudNavLink>
+                </MudNavMenu>
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="12" md="7" lg="8" Class="justify-content-end">
+            <MudStack Class="pb-8 pt-8">
+                @Body
+            </MudStack>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+
+@code {
+
+}

@@ -15,13 +15,13 @@
         <MudCard Elevation="0" Class="">
             <MudCardContent >
                 <MudGrid>
-                    <MudItem xs="12" sm="8" md="8" lg="8">
+                    <MudItem xs="6" sm="8" md="8" lg="8">
                         <MudStack Row="true" AlignItems="AlignItems.Center">
                             <MudIcon Icon="@Icons.Material.Filled.Insights" Class="mb-1" Size="Size.Large" />
-                            <MudText Typo="Typo.h5" Style="font-weight: bold">@_dados.NomeTela</MudText>
+                            <MudText Typo="Typo.h5" Style="font-weight: bold">@(_dados.NomeTela?.Length > 15 ? $"{_dados.NomeTela[..11]}..." : _dados.NomeTela)</MudText>
                         </MudStack>
                     </MudItem>
-                    <MudItem xs="12" sm="4" md="4" lg="4" Class="d-flex justify-end">
+                    <MudItem xs="6" sm="4" md="4" lg="4" Class="d-flex justify-end">
                         <MudButton
                         StartIcon="@Icons.Material.Filled.Add"
                         IconSize="Size.Large"
@@ -30,7 +30,7 @@
                         Color="Color.Primary"
                         @onclick="@AdicionarRegistro"
                         Class="mr-2">
-                            Adicionar Registro
+                            Adicionar
                         </MudButton>
                     </MudItem>
 
@@ -43,7 +43,7 @@
                 <MudText>Aqui está listado todos os registros referente a sua tela cadastrada '@_dados.NomeTela'</MudText>
             </MudStack>
         </MudAlert>
-        <MudTable Items="_dados.Resultados" Dense="false" Hover="true" Class="mt-4" Loading="@_loadingDados" LoadingProgressColor="Color.Info">
+        <MudTable Items="_dados.Resultados" Dense="false" Hover="true" Class="mt-4" Loading="@_loadingDados" LoadingProgressColor="Color.Info" Elevation="0">
             <HeaderContent>
                 @if (_dados.Resultados?.FirstOrDefault()?.Valores != null)
                 {
@@ -51,7 +51,7 @@
                     {
                         <MudTh>@campo.NomeCampoTela</MudTh>
                     }
-                    <MudTh>Ações</MudTh>
+                    <MudTh Style="text-align:right; padding-right: 30px;">Ações</MudTh>
                 }
             </HeaderContent>
 
@@ -60,23 +60,23 @@
                 {
                     if (campo.Tipo == TypeColumnEnum.BIT)
                     {
-                        <MudTd>@(campo.Valor.Equals("1") ? "Sim" : "Não")</MudTd>
+                        <MudTd DataLabel="@campo.NomeCampoTela">@(campo.Valor.Equals("1") ? "Sim" : "Não")</MudTd>
                     }
                     else if (campo.IsForeigeKey)
                     {
-                        <MudTd>@(string.IsNullOrWhiteSpace(campo?.Valor) ? string.Empty : campo.Opcoes.FirstOrDefault(x => x.IdRegistro.ToString().Equals(campo?.Valor)).ValorExibicao)</MudTd>
+                        <MudTd DataLabel="@campo.NomeCampoTela">@(string.IsNullOrWhiteSpace(campo?.Valor) ? string.Empty : campo.Opcoes.FirstOrDefault(x => x.IdRegistro.ToString().Equals(campo?.Valor)).ValorExibicao)</MudTd>
                     }
                     else
                     {
-                        <MudTd>@campo.Valor</MudTd>
+                        <MudTd DataLabel="@campo.NomeCampoTela">@campo.Valor</MudTd>
                     }
                 }
-            <MudTd>
-                <MudIconButton Icon="@Icons.Material.Filled.Visibility" Color="Color.Info" OnClick="() => VisualizarRegistro(context.Id)" />
-                <MudIconButton Icon="@Icons.Material.Filled.Edit" Color="Color.Warning" OnClick="() => EditarRegistro(context.Id)" />
-                <MudIconButton Icon="@Icons.Material.Filled.Delete" Color="Color.Error" OnClick="() => DeleteUserAsync(context.Id)" />
-            </MudTd>
-        </RowTemplate>
+                <MudTd DataLabel="Ações" Style="text-align:right">
+                    <MudIconButton Icon="@Icons.Material.Filled.Visibility" Color="Color.Info" OnClick="() => VisualizarRegistro(context.Id)" />
+                    <MudIconButton Icon="@Icons.Material.Filled.Edit" Color="Color.Warning" OnClick="() => EditarRegistro(context.Id)" />
+                    <MudIconButton Icon="@Icons.Material.Filled.Delete" Color="Color.Error" OnClick="() => DeleteUserAsync(context.Id)" />
+                </MudTd>
+            </RowTemplate>
     </MudTable>
     }
 </MudContainer>

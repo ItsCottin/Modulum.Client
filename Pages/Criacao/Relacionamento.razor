@@ -25,22 +25,36 @@
 
 
         <MudPaper Class="mt-4 p-4" Elevation="0" Outlined="true">
-            <MudGrid Gutter="Size.Medium">
+            <EditForm Model="@_novoRelacionamento" OnValidSubmit="@AdicionarRelacionamento">
+                <MudGrid Gutter="Size.Medium">
 
-                <MudItem xs="12" sm="12" md="12">
 
-                    <MudStack Justify="Justify.FlexEnd" AlignItems="AlignItems.End">
+                    <MudItem xs="12" sm="12" md="12">
 
-                        <MudButton Color="Color.Secondary" StartIcon="@Icons.Material.Filled.Add" OnClick="AdicionarRelacionamento" Disabled="@(!PodeAdicionar())" Variant="Variant.Filled">
-                            Adicionar
-                        </MudButton>
+                        <MudStack Justify="Justify.FlexEnd" AlignItems="AlignItems.End" Row="true">
 
-                    </MudStack>
+                            @if (_relacionamentos.Any(x => x.TempId == _novoRelacionamento.TempId))
+                            {
+                                <MudButton Color="Color.Info" OnClick="@CancelarEdicao" Variant="Variant.Text">
+                                    Cancelar
+                                </MudButton>
+                            }
+                            <MudButton Color="Color.Secondary" StartIcon="@Icons.Material.Filled.Add" OnClick="@AdicionarRelacionamento" Disabled="@(!PodeAdicionar())" Variant="Variant.Filled">
+                                @(_relacionamentos.Any(x => x.TempId == _novoRelacionamento.TempId) ? "Editar" : "Adicionar")
+                            </MudButton>
+                            
+                        </MudStack>
 
                 </MudItem>
 
                 <MudItem xs="12" sm="6" md="2">
-                    <MudSelect T="MenuRequest" Label="Selecione a tela" @bind-Value="_telaSelecionada" SelectedValuesChanged="@SetTelaSelecionada">
+                    <MudSelect 
+                        T="MenuRequest" 
+                        Label="Selecione a tela" 
+                        @bind-Value="_telaSelecionada" 
+                        SelectedValuesChanged="@SetTelaSelecionada"
+                        Disabled="@(_novoRelacionamento.Id != 0)">
+
                         <MudSelectItem T="MenuRequest" Value="@(new MenuRequest { Id = 0, NomeTela = "Selecione um valor" })" Disabled="true">
                             Selecione um valor
                         </MudSelectItem>
@@ -52,8 +66,13 @@
                 </MudItem>
 
                 <MudItem xs="12" sm="6" md="2">
-                    <MudSelect T="string" Label="Relacionamento" @bind-Value="_tipoRelacionamento" SelectedValuesChanged="@SetTipoRelacionamento">
-                        <!--<MudSelectItem T="string" Value="@*@("tem_um")*@">Tem um</MudSelectItem>-->
+                    <MudSelect 
+                        T="string" 
+                        Label="Relacionamento" 
+                        @bind-Value="_tipoRelacionamento" 
+                        SelectedValuesChanged="@SetTipoRelacionamento"
+                        Disabled="@(_novoRelacionamento.Id != 0)">
+
                         <MudSelectItem T="string" Value="@("tem_muitos")">Tem muitos</MudSelectItem>
                     </MudSelect>
                 </MudItem>
@@ -75,7 +94,12 @@
                     }
                     else
                     {
-                        <MudSelect T="CreateDynamicFieldRequest" Label="Selecione um Campo" @bind-Value="_campoSelecionado" SelectedValuesChanged="@SetCampoSelecionada">
+                        <MudSelect 
+                            T="CreateDynamicFieldRequest" 
+                            Label="Selecione um Campo" 
+                            @bind-Value="_campoSelecionado" 
+                            SelectedValuesChanged="@SetCampoSelecionada">
+
                             <MudSelectItem T="CreateDynamicFieldRequest" Value="@(new CreateDynamicFieldRequest { Id = 0, NomeCampoTela = "Selecione um valor" })" Disabled="true">
                                 Selecione um valor
                             </MudSelectItem>
@@ -88,10 +112,16 @@
                 </MudItem>
 
                 <MudItem xs="12" sm="6" md="3">
-                    <MudCheckBox T="bool" Label="Vinculo obrigatório" Class="mb-3" @bind-Value="_novoRelacionamento.IsObrigatorio" />
+                    <MudCheckBox 
+                        T="bool" 
+                        Label="Vinculo obrigatório" 
+                        Class="mb-3" 
+                        @bind-Value="_novoRelacionamento.IsObrigatorio"
+                        Disabled="@(_novoRelacionamento.Id != 0)"/>
                 </MudItem>
 
-            </MudGrid>
+                </MudGrid>
+            </EditForm>
 
             <MudStack Class="pa-4">
                 <MudText Typo="Typo.h6">Relacionamentos:</MudText>
@@ -102,13 +132,20 @@
                         <MudListItem>
                             <MudGrid Justify="Justify.SpaceBetween">
                                 <MudItem xs="8">
-                                    <MudText>Um '@relacionamento.NomeTelaDestino' @(relacionamento.Tipo == TypeRelationshipEnum.OneToMany ? "Tem muitos" : "Tem um") '@_mapTelaOrigem.NomeTela'</MudText>
+                                    <MudText>Um '@relacionamento.NomeTelaOrigem' @(relacionamento.Tipo == TypeRelationshipEnum.OneToMany ? "Tem muitos" : "Tem um") '@relacionamento.NomeTelaDestino'</MudText>
+                                </MudItem>
+                                <MudItem xs="2" Class="justify-content-center align-items-center">
+                                    <MudIconButton Icon="@Icons.Material.Filled.Edit"
+                                                   Color="Color.Warning"
+                                                   Size="Size.Small"
+                                                   Disabled="@(relacionamento.Tipo == TypeRelationshipEnum.ManyToOne)"
+                                                   OnClick="@(() => EditarRelacionamentoAsync(relacionamento))" />
                                 </MudItem>
                                 <MudItem xs="2" Class="justify-content-center align-items-center">
                                     <MudIconButton Icon="@Icons.Material.Filled.Delete"
                                         Color="Color.Error"
                                         Size="Size.Small"
-                                        OnClick="@(() => RemoverRelacionamento(relacionamento))" />
+                                        OnClick="@(() => RemoverRelacionamentoAsync(relacionamento))" />
                                 </MudItem>
                             </MudGrid>
                         </MudListItem>

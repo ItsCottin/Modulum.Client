@@ -66,6 +66,12 @@ namespace Modulum.Client.Pages.Authentication
             //}
         }
 
+        public void OnPreencherLogin() 
+        {
+            _tokenModel.Email = "admin@admin.com";
+            _tokenModel.Password = "@Aa123456";
+        }
+
         public async Task DoLoginAsync()
         {
             _loadingService.Show();

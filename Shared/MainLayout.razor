@@ -44,12 +44,7 @@
             </MudAppBar>
             <CascadingValue Name="IsDarkTheme" Value="@_isDark">
                 <MudStack AlignItems="AlignItems.Center" Justify="Justify.Center" Style="@(_breakpoint != Breakpoint.Xs ? "min-height: calc(100vh - 40px);" : "")" Class="pt-20">
-                    <!-- MudBlazor não sabe lidar com height: 100vh;-->
-                <!--<MudContainer Class="d-flex justify-center align-center" Style="height: 100vh;">
-                   <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="min-vh-100 d-flex flex-column justify-content-center align-items-center overflow-auto">-->
                     @Body
-                    <!-- </MudContainer>
-                </MudContainer>-->
                 </MudStack>
             </CascadingValue>
         }

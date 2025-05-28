@@ -111,9 +111,21 @@ namespace Modulum.Client.Pages.Dynamic
                 data = date.ToString("yyyy-MM-ddTHH:mm"); // Formato aceito por input[datetime-local]
                 return data;
             }
-            catch (FormatException)
+            catch (FormatException ex)
             {
-                return data;
+                // Chapeu pois quando a API esta hospedada no IIS Azure, retorna 'MM/dd/yyyy HH:mm:ss', ja localmente retorna 'dd/MM/yyyy HH:mm:ss'
+                // Avaliar correção posteriormente na API setando o campo 'valor' como 'object'
+                try
+                {
+                    // A data está no formato "MM/dd/yyyy HH:mm:ss"
+                    var date = DateTime.ParseExact(data, "MM/dd/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                    data = date.ToString("yyyy-MM-ddTHH:mm"); // Formato aceito por input[datetime-local]
+                    return data;
+                }
+                catch (FormatException ex2)
+                {
+                    return data;
+                }
             }
         }
 

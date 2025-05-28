@@ -1,0 +1,59 @@
+﻿@page "/account/manage/seguranca"
+
+@if (_loadingDados)
+{
+    <MudAlert Severity="Severity.Warning" ContentAlignment="HorizontalAlignment.Start" Dense="false" Class="p-3">Carregando...</MudAlert>
+    <MudProgressLinear Color="Color.Primary" Indeterminate="true" Class="my-7" />
+}
+else
+{
+    <MudText Typo="Typo.h4" Style="font-weight: bold" Class="ml-4">
+        Segurança
+    </MudText>
+
+    <!--<EditForm Model="senhaAtual">-->
+    <MudPaper Class="mt-5 p-4" Elevation="0" Outlined="true">
+        <MudStack Row="true" Wrap="Wrap.Wrap" Spacing="4" AlignItems="AlignItems.Start" Class="mb-3 mt-3">
+            <!--<FluentValidationValidator @ref="_fluentValidationValidator" />-->
+            <MudStack Style="width: 380px;" Row="true" AlignItems="AlignItems.Center" >
+                <MudSwitch T="bool" Value="@_twoFactor" Color="Color.Success" UncheckedColor="Color.Error" ValueChanged="@((bool val) => ChangeTwoFactor(val))" />
+                <MudText Typo="Typo.body2">@(_twoFactor ? "Ativado" : "Desativado")</MudText>
+            </MudStack>
+
+        </MudStack>
+            @if (_onChangeTwoFactor)
+            {
+                <MudStack Row="false" Wrap="Wrap.Wrap" Spacing="4" AlignItems="AlignItems.Start" Class="mb-3 mt-3">
+                    <MudAlert Severity="Severity.Warning">Verifique no seu e-mail o código enviado</MudAlert>
+                    <MudStack Style="width: 80px;">
+                        <MudCodeInput T="string"
+                            Count="6"
+                            Spacing="3"
+                            Variant="Variant.Outlined"
+                            @bind-Value="_twoFactorCode" />
+                    </MudStack>
+                </MudStack>
+
+                <MudStack Justify="Justify.FlexStart" Class="mt-5" Style="width: 200px;">
+                    <MudButton 
+                        StartIcon="@(_loading ? "" : Icons.Material.Filled.SaveAs)"
+                        Variant="Variant.Filled"
+                        Color="Color.Primary"
+                        Class="mr-3"
+                        OnClick="SalvarSeguranca">
+
+                        @if (_loading)
+                        {
+                            <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                            <MudText Class="ms-2">Salvando...</MudText>
+                        }
+                        else
+                        {
+                            <MudText>Salvar</MudText>
+                        }
+                    </MudButton>
+                </MudStack>
+            }
+    </MudPaper>
+    <!--</EditForm>-->
+}

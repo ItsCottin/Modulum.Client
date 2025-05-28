@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Components;
 using modulum.Application.Requests.Dynamic;
 using modulum.Application.Requests.Dynamic.Create;
 using modulum.Application.Requests.Dynamic.Relationship;
+using modulum.Shared;
 using modulum.Shared.Enum;
+using Modulum.Client.Pages.Dynamic;
 using MudBlazor;
 using System.Threading.Tasks;
 
@@ -21,8 +23,10 @@ namespace Modulum.Client.Pages.Criacao
         private CreateDynamicTableRequest _mapTelaOrigem = new();
         private string _tipoRelacionamento = string.Empty;
         private List<MenuRequest> _telasDisponiveis = new();
+        private List<MenuRequest> _todasTelas = new();
         private List<CreateDynamicRelationshipRequest> _relacionamentos = new();
         private CreateDynamicRelationshipRequest _novoRelacionamento = new();
+        private CreateDynamicRelationshipRequest _backupRelacionamentoEdit = new();
         private bool _loading = false;
         private List<CreateDynamicFieldRequest> _campos = new();
         private CreateDynamicFieldRequest _campoSelecionado;
@@ -41,7 +45,7 @@ namespace Modulum.Client.Pages.Criacao
         private async Task CarregarDados()
         {
             _relacionamentos = new();
-            _novoRelacionamento = new();
+            _novoRelacionamento = new() { TempId = Guid.NewGuid() };
             _telaSelecionada = null;
             _campoSelecionado = null;
             _tipoRelacionamento = string.Empty;
@@ -65,7 +69,8 @@ namespace Modulum.Client.Pages.Criacao
             var response = await _dynamicManager.GetMenu();
             if (response != null && response.Succeeded)
             {
-                _telasDisponiveis = response.Data.Where(x => x.Id != TableId && !_relacionamentos.Any(r => r.TabelaOrigemId == x.Id || r.TabelaDestinoId == x.Id)).ToList();
+                _todasTelas = response.Data;
+                _telasDisponiveis = _todasTelas.Where(x => x.Id != TableId && !_relacionamentos.Any(r => r.TabelaOrigemId == x.Id || r.TabelaDestinoId == x.Id)).ToList();
             }
             else
             {
@@ -75,14 +80,27 @@ namespace Modulum.Client.Pages.Criacao
             _loadingService.Hide();
         }
 
+
         private void AdicionarRelacionamento()
         {
-            _novoRelacionamento.NomeTelaOrigem = _mapTelaOrigem?.NomeTela;
-            _relacionamentos.Add(_novoRelacionamento);
-
-            _novoRelacionamento = new();
-
-            _telasDisponiveis = _telasDisponiveis.Where(x => x.Id != TableId && !_relacionamentos.Any(r => r.TabelaOrigemId == x.Id || r.TabelaDestinoId == x.Id)).ToList();
+            var index = _relacionamentos.FindIndex(r => r.Id == _novoRelacionamento.Id &&
+                            (r.Id != 0 || r.TempId == _novoRelacionamento.TempId));
+            if (index != -1)
+            {
+                _relacionamentos[index] = _novoRelacionamento;
+            }
+            else 
+            {
+                _novoRelacionamento.NomeTelaDestino = _mapTelaOrigem?.NomeTela;
+                _relacionamentos.Add(_novoRelacionamento);
+            }
+            _campos = new();
+            _novoRelacionamento = new() { TempId = Guid.NewGuid() };
+            _backupRelacionamentoEdit = new();
+            _telaSelecionada = null; 
+            _campoSelecionado = null;
+            _tipoRelacionamento = string.Empty;
+            _telasDisponiveis = _todasTelas.Where(x => x.Id != TableId && !_relacionamentos.Any(r => r.TabelaOrigemId == x.Id || r.TabelaDestinoId == x.Id)).ToList();
         }
 
         public async Task SetTelaSelecionada()
@@ -95,9 +113,9 @@ namespace Modulum.Client.Pages.Criacao
             {
                 _novoRelacionamento.TabelaDestinoId = TableId;
                 _novoRelacionamento.TabelaOrigemId = _telaSelecionada.Id; 
-                _novoRelacionamento.NomeTelaDestino = _telaSelecionada.NomeTela;
-                _novoRelacionamento.CampoDestino = _mapTelaOrigem.CampoPK;
-                _campos = response.Data.Campos;
+                _novoRelacionamento.NomeTelaOrigem = _telaSelecionada.NomeTela;
+                //_novoRelacionamento.CampoDestino = _mapTelaOrigem.CampoPK;
+                _campos = response.Data.Campos.Where(x => !x.IsForeigeKey).ToList();
             }
             _loadingComboBoxCampo = false;
         }
@@ -110,23 +128,87 @@ namespace Modulum.Client.Pages.Criacao
 
         public void SetTipoRelacionamento()
         {
-            _novoRelacionamento.Tipo = _tipoRelacionamento.Equals("tem_um") ? TypeRelationshipEnum.OneToOne : TypeRelationshipEnum.OneToMany;
+            _novoRelacionamento.Tipo = _tipoRelacionamento.Equals("tem_um") ? TypeRelationshipEnum.ManyToOne : TypeRelationshipEnum.OneToMany;
         }
 
-        private void RemoverRelacionamento(CreateDynamicRelationshipRequest item)
+        private void CancelarEdicao()
         {
-            _relacionamentos.Remove(item);
+            _campos = new();
+            _novoRelacionamento = _backupRelacionamentoEdit;
+            AdicionarRelacionamento();
+            _novoRelacionamento = new() { TempId = Guid.NewGuid() };
+            _telaSelecionada = null;
+            _campoSelecionado = null;
+            _tipoRelacionamento = string.Empty;
+        }
+
+        private async Task EditarRelacionamentoAsync(CreateDynamicRelationshipRequest item)
+        {
+            _telaSelecionada = null;
+            _backupRelacionamentoEdit = new CreateDynamicRelationshipRequest 
+            {
+                Id = item.Id,
+                CampoParaExibicaoRelacionamento = item.CampoParaExibicaoRelacionamento,
+                CampoTelaParaExibicaoRelacionamento = item.CampoTelaParaExibicaoRelacionamento,
+                NomeTelaOrigem = item.NomeTelaOrigem,
+                NomeTelaDestino = item.NomeTelaDestino,
+                TabelaDestinoId = item.TabelaDestinoId,
+                TabelaOrigemId = item.TabelaOrigemId,
+                Tipo = item.Tipo,
+                CampoDestino = item.CampoDestino,
+                CampoOrigem = item.CampoOrigem,
+                TempId = item.TempId,
+                IsObrigatorio = item.IsObrigatorio,
+            };
+            _novoRelacionamento = item;
+            _telasDisponiveis = _todasTelas.Where(x => x.NomeTela.Equals(item.NomeTelaOrigem)).ToList();
+            _telaSelecionada = _telasDisponiveis.FirstOrDefault(x => x.NomeTela.Equals(item.NomeTelaOrigem));
+            _tipoRelacionamento = item.Tipo == TypeRelationshipEnum.ManyToOne ? "tem_um" : "tem_muitos";
+            await SetTelaSelecionada();
+            _campoSelecionado = _campos.FirstOrDefault(x => x.NomeCampoBase == item.CampoParaExibicaoRelacionamento);
+        }
+
+        private async Task RemoverRelacionamentoAsync(CreateDynamicRelationshipRequest item)
+        {
+            _loadingService.Show();
+            if (item.Id > 0)
+            {
+                var parameters = new DialogParameters<DialogDeleteRelacionamentoComponent>
+                {
+                    { x => x.ContentText, "Deseja realmente excluir este registro? Este processo não pode ser desfeito." },
+                    { x => x.ButtonText, "Deletar" },
+                    { x => x.Color, Color.Error },
+                    { x => x.Model, new DynamicForIdRequest { IdTable = TableId, IdRegistro = item.Id } }
+                };
+
+                var options = new DialogOptions() { CloseButton = true, MaxWidth = MaxWidth.ExtraSmall };
+
+                var dialog = await _dialogService.ShowAsync<DialogDeleteRelacionamentoComponent>("Delete", parameters, options);
+                var result = await dialog.Result;
+                if (!result.Canceled)
+                {
+                    _relacionamentos.Remove(item);
+                }
+            }
+            else
+            {
+                _relacionamentos.Remove(item);
+            }
+            _telasDisponiveis = _todasTelas.Where(x => x.Id != TableId && !_relacionamentos.Any(r => r.TabelaOrigemId == x.Id || r.TabelaDestinoId == x.Id)).ToList();
+            _loadingService.Hide();
         }
 
         private async Task SalvarRelacionamentos()
         {
             _loadingService.Show();
+            _loading = true;
             var response = await _dynamicManager.AlterarRelacionamento(_relacionamentos);
             _snackBar.Add(response.Messages.FirstOrDefault(), response.Succeeded ? MudBlazor.Severity.Success : MudBlazor.Severity.Error);
             if(response.Succeeded)
             {
                 _navigationManager.NavigateTo("/");
             }
+            _loading = false;
             _loadingService.Hide();
         }
 

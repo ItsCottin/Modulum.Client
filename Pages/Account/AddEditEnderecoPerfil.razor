@@ -1,0 +1,134 @@
+﻿@page "/account/manage/endereco/{Operation}/{IdEndereco:int?}"
+@using modulum.Shared.Enum
+
+@if (_loadingDados)
+{
+    <MudAlert Severity="Severity.Warning" ContentAlignment="HorizontalAlignment.Start" Dense="false" Class="p-3">Carregando...</MudAlert>
+    <MudProgressLinear Color="Color.Primary" Indeterminate="true" Class="my-7" />
+}
+else
+{
+    <MudStack Row="true" Justify="Justify.SpaceBetween">
+        <MudText Typo="Typo.h4" Style="font-weight: bold" Class="ml-4">
+            Cadastro
+        </MudText>
+
+        <MudButton 
+            StartIcon="@Icons.Material.Filled.ArrowBack"
+            IconSize="Size.Large"
+            Variant="Variant.Text"
+            Size="Size.Medium"
+            Color="Color.Warning"
+            Href="/account/manage/endereco"
+            Class="mr-2">
+                Voltar
+        </MudButton>
+    </MudStack>
+
+    <MudPaper Class="mt-5 p-5" Elevation="0" Outlined="true">
+        <MudStack Class="width: 100px;" Row="true" Justify="Justify.FlexStart">
+            <MudStack>
+                <MudTextField 
+                    T="string" 
+                    Label="CEP" 
+                    Variant="Variant.Outlined" 
+                    InputType="InputType.Text"
+                    Mask="@(new PatternMask("00000-000"))"
+                    @bind-Value="cep">
+                </MudTextField>
+            </MudStack>
+            <MudStack AlignItems="AlignItems.End" Justify="Justify.Center">
+                <MudIconButton Variant="Variant.Outlined" Color="Color.Primary" Icon="@Icons.Material.Filled.Search" OnClick="PesquisarCEP" />
+            </MudStack>
+        </MudStack>
+        @if (_loadingCEP)
+        {
+            <MudStack Row="true" Wrap="Wrap.Wrap" Spacing="4" AlignItems="AlignItems.Start" Class="mt-5 mb-3">
+
+                <MudStack Style="width: 180px;">
+                    <MudSelect T="TypeEnderecoEnum?"
+                               Label="Tipo do Endereço"
+                               Variant="Variant.Text"
+                               Required="true">
+                        @foreach (TypeEnderecoEnum? value in Enum.GetValues(typeof(TypeEnderecoEnum)))
+                        {
+                            <MudSelectItem T="TypeEnderecoEnum?" Value="@value">@GetDisplayText(value)</MudSelectItem>
+                        }
+                    </MudSelect>
+                </MudStack>
+                <MudTextField 
+                    T="string" 
+                    Label="Pais" 
+                    Variant="Variant.Text" 
+                    InputType="InputType.Text" 
+                    Required="true" 
+                    @bind-Value="cep">
+                </MudTextField>
+                <MudTextField 
+                    T="string"
+                    Label="Estado"
+                    Variant="Variant.Text"
+                    InputType="InputType.Text"
+                    Required="true"
+                    @bind-Value="cep">
+                </MudTextField>
+                <MudTextField 
+                    T="string"
+                    Label="Cidade"
+                    Variant="Variant.Text"
+                    InputType="InputType.Text"
+                    Required="true"
+                    @bind-Value="cep">
+                </MudTextField>
+                <MudStack Style="width: 380px;">
+                    <MudTextField 
+                        FullWidth="true"
+                        T="string"
+                        Label="Endereço"
+                        Variant="Variant.Text"
+                        InputType="InputType.Text"
+                        Required="true"
+                        @bind-Value="cep">
+                    </MudTextField>
+                </MudStack>
+                <MudStack Style="width: 80px;">
+                    <MudTextField 
+                        FullWidth="true"
+                        T="string"
+                        Label="Numero"
+                        Variant="Variant.Text"
+                        InputType="InputType.Text"
+                        Required="true"
+                        @bind-Value="cep">
+                    </MudTextField>
+                </MudStack>
+        </MudStack>
+
+        <MudStack Justify="Justify.FlexStart" Class="mt-5" Style="width: 200px;">
+            <MudButton 
+                StartIcon="@(_loading ? "" : Icons.Material.Filled.SaveAs)"
+                Variant="Variant.Filled"
+                Color="Color.Primary"
+                Class="mr-3"
+                OnClick="SalvarEndereco">
+
+                @if (_loading)
+                {
+                    <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                    <MudText Class="ms-2">Salvando...</MudText>
+                }
+                else
+                {
+                    <MudText>Salvar</MudText>
+                }
+            </MudButton>
+        </MudStack>
+        }
+    </MudPaper>
+}
+
+@code {
+
+    private PatternMask _cepMask = new PatternMask("00000-000");
+    private string cep;
+}

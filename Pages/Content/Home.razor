@@ -35,7 +35,7 @@
 
             <MudGrid Gutter="Size.Medium">
                 <MudItem xs="12" sm="6" md="4">
-                    <MudCard Class="h-100">
+                    <MudCard Class="h-100" Elevation="0" Outlined="true">
                         <MudCardContent>
                             <MudText Typo="Typo.h6">Cadastrar De Menu</MudText>
                             <MudText Typo="Typo.body2" Class="mt-1">
@@ -51,7 +51,7 @@
                 </MudItem>
 
                 <MudItem xs="12" sm="6" md="4">
-                    <MudCard Class="h-100">
+                    <MudCard Class="h-100" Elevation="0" Outlined="true">
                         <MudCardContent>
                             <MudText Typo="Typo.h6">Consultar Estrutura</MudText>
                             <MudText Typo="Typo.body2" Class="mt-1">
@@ -59,7 +59,7 @@
                             </MudText>
                         </MudCardContent>
                         <MudCardActions Class="p-3">
-                            <MudButton Color="Color.Secondary" Variant="Variant.Filled" Href="">
+                            <MudButton Color="Color.Secondary" Variant="Variant.Filled" Href="/estrutura">
                                 Consultar
                             </MudButton>
                         </MudCardActions>
@@ -67,15 +67,15 @@
                 </MudItem>
 
                 <MudItem xs="12" sm="6" md="4">
-                    <MudCard Class="h-100">
+                    <MudCard Class="h-100" Elevation="0" Outlined="true">
                         <MudCardContent>
                             <MudText Typo="Typo.h6">Configurações</MudText>
                             <MudText Typo="Typo.body2" Class="mt-1">
-                                Ajuste as estruturas das suas telas
+                                Configure seu perfil
                             </MudText>
                         </MudCardContent>
                         <MudCardActions Class="p-3">
-                            <MudButton Color="Color.Info" Variant="Variant.Filled" Href="">
+                            <MudButton Color="Color.Info" Variant="Variant.Filled" Href="/account/manage">
                                 Configurar
                             </MudButton>
                         </MudCardActions>
@@ -85,7 +85,7 @@
 
             <MudDivider Class="my-6" />
 
-            <MudPaper Class="p-4" Elevation="1">
+            <MudPaper Class="p-4" Elevation="0" Outlined="true">
                 <MudText Typo="Typo.subtitle2" Class="mb-2">Dicas rápidas:</MudText>
                 <MudList T="string" Dense="true">
                     <MudListItem Icon="@Icons.Material.Filled.TipsAndUpdates">

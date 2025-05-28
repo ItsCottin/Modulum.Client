@@ -1,0 +1,65 @@
+﻿@page "/login/recuperacao/email"
+
+@attribute [AllowAnonymous]
+<MudContainer Class="" MaxWidth="MaxWidth.ExtraExtraLarge">
+    <AuthorizeView Context="authContext">
+        <Authorized>
+            <MudAlert Severity="Severity.Success">Você já está logado como @authContext.User.Identity?.Name.</MudAlert>
+        </Authorized>
+        <NotAuthorized>
+            <!--<EditForm Model="@_registerUserModel" method="post" FormName="Cadastre-se" OnValidSubmit="DoRegisterAsync">-->
+                <MudStack Class="@($"{GetResponsivePadding()} mx-auto")" Style="max-width: 500px;">
+                    <!--<MudCard Outlined="true" Class="@($"{GetResponsivePadding()} mx-auto")" Style="max-width: 700px;">
+                            <MudImage Src="logo_512x512.png" Alt="Syki" Elevation="25" Class="rounded-lg mx-20 mt-10 mb-5" />
+                            <MudCardContent Class="@GetResponsivePadding()">-->
+                    <MudText Typo="Typo.h4" Align="Align.Start" Class="mb-1">
+                        <MudIcon Icon="@Icons.Material.Filled.Insights" Class="mr-1 mb-n1" Size="Size.Large" />
+                        Recuperar Senha
+                    </MudText>
+                    <MudText Typo="Typo.subtitle2" Align="Align.Start" Color="Color.Secondary" Class="mb-4">
+                        Informe seu e-mail abaixo para redefinir sua senha
+                    </MudText>
+                <!--<FluentValidationValidator @ref="_fluentValidationValidator" />
+                    <FormValidator @ref="_registerFormValidator"></FormValidator>-->
+                    <MudTextField
+                        T="string"
+                        InputType="InputType.Email"
+                        Margin="Margin.Normal"
+                        AutoFocus="true"
+                        Label="Email"
+                        Class="mt-0 pb-3"
+                        OnlyValidateIfDirty="true"
+                        Variant="Variant.Text"
+                        Required="true"
+                        RequiredError="Informe!"
+                        Disabled="@loading" />
+
+                    <MudStack Spacing="1" Class="mt-3">
+                        <MudButton 
+                            Size="Size.Large"
+                            Variant="Variant.Filled"
+                            Color="Color.Primary"
+                            Class="pa-3"
+                            Disabled="@loading">
+
+                            @if (loading)
+                            {
+                                <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                                <MudText Class="ms-2">Processando...</MudText>
+                            }
+                            else
+                            {
+                                <MudText>Avançar</MudText>
+                            }
+                        </MudButton>
+                    </MudStack>
+                    <MudStack Spacing="1" Class="mt-3" AlignItems="AlignItems.Start">
+                        <MudLink Color="Color.Info" Underline="Underline.None" Disabled="@loading" Href="/login">Já tem conta?</MudLink>
+                    </MudStack>
+                    <!--</MudCardContent>
+                    </MudCard>-->
+                </MudStack>
+            <!--</EditForm>-->
+        </NotAuthorized>
+    </AuthorizeView>
+</MudContainer>

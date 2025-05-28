@@ -33,7 +33,8 @@
                     <MudText>Carregando...</MudText>
                 </MudStack>
             }
-            <MudNavLink Class="pa-2" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.AccountBox" Href="">@context.User.Identity?.Name</MudNavLink>
+            <MudNavLink Class="pa-2" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Search" Href="/estrutura">Estrutura</MudNavLink>
+            <MudNavLink Class="pa-2" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.AccountBox" Href="/account/manage">@context.User.Identity?.Name</MudNavLink>
             <MudNavLink Class="pa-2" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Logout" Href="logout">Sair</MudNavLink>
         </MudNavMenu>
     </Authorized>

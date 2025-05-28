@@ -92,6 +92,7 @@ namespace Modulum.Client.Shared
 
             var dialog = await _dialogService.ShowAsync<DialogDeleteComponent>("Delete", parameters, options);
             var result = await dialog.Result;
+
             if (!result.Canceled)
             {
                 _loadingService.Show();
@@ -100,6 +101,12 @@ namespace Modulum.Client.Shared
                 if (response.Succeeded)
                 {
                     _menus = response.Data;
+                }
+
+                // Correção para o cenario onde o usuario deletou a tela em que estava aberto
+                if (_navigationManager.Uri.Contains($"/dynamic/{idRegistro}")) 
+                {
+                    _navigationManager.NavigateTo("/");
                 }
                 _loadingService.Hide();
             }

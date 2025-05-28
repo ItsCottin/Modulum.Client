@@ -1,0 +1,91 @@
+﻿@page "/account/manage"
+@using modulum.Shared.Enum
+
+@if (_loadingDados)
+{
+    <MudAlert Severity="Severity.Warning" ContentAlignment="HorizontalAlignment.Start" Dense="false" Class="p-3">Carregando...</MudAlert>
+    <MudProgressLinear Color="Color.Primary" Indeterminate="true" Class="my-7" />
+}
+else
+{
+    <MudText Typo="Typo.h4" Style="font-weight: bold" Class="ml-4">
+        Perfil
+    </MudText>
+    <EditForm Model="nomeCompleto">
+        <MudPaper Class="mt-5 p-4" Elevation="0" Outlined="true">
+            <MudStack Row="true" Wrap="Wrap.Wrap" Spacing="4" AlignItems="AlignItems.Start" Class="mb-3">
+                
+                <FluentValidationValidator @ref="_fluentValidationValidator" />
+                <!--<FormValidator @ref="_dynamicFormValidator"></FormValidator>-->
+                <MudStack Style="width: 380px;">
+                    <MudTextField 
+                        T="string"
+                        @bind-Value="nomeCompleto"
+                        Label="Nome Completo"
+                        Variant="Variant.Text"
+                        Class="mb-3"/>
+                </MudStack>
+
+                <MudStack Style="width: 320px;">
+                    <MudTextField 
+                        T="string"
+                        InputType="InputType.Email"
+                        @bind-Value="nomeCompleto"
+                        Label="E-mail"
+                        Variant="Variant.Text"
+                        Class="mb-3" />
+                </MudStack>
+
+                <MudStack Style="width: 220px;">
+                    <MudDatePicker Label="Data de Nascimento" />
+                </MudStack>
+
+                <MudStack Style="width: 180px;">
+                    <MudTextField 
+                        T="string"
+                        Label="CPF"
+                        Variant="Variant.Text"
+                        InputType="InputType.Text"
+                        Mask="@(new PatternMask("000.000.000-00"))"/>
+                </MudStack>
+
+                <MudStack Style="width: 100px;">
+                    <MudSelect 
+                        T="TypeSexoEnum?"
+                        Label="Sexo"
+                        Variant="Variant.Text"
+                        Required="true">
+                        @foreach (TypeSexoEnum? value in Enum.GetValues(typeof(TypeSexoEnum)))
+                        {
+                            <MudSelectItem T="TypeSexoEnum?" Value="@value">@GetDisplayText(value)</MudSelectItem>
+                        }
+                    </MudSelect>
+                </MudStack>
+
+            </MudStack>
+            <MudStack Justify="Justify.FlexStart" Class="mt-5" Style="width: 200px;">
+                <MudButton StartIcon="@(_loading ? "" : Icons.Material.Filled.SaveAs)"
+                           Variant="Variant.Filled"
+                           Color="Color.Primary"
+                           Class="mr-3"
+                           Disabled="@(_loading)">
+                    @if (_loading)
+                    {
+                        <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                        <MudText Class="ms-2">Salvando...</MudText>
+                    }
+                    else
+                    {
+                        <MudText>Salvar</MudText>
+                    }
+                </MudButton>
+            </MudStack>
+        </MudPaper>
+    </EditForm>
+}
+
+@code {
+
+    private bool _loading = false;
+    private bool _loadingDados = false;
+}
