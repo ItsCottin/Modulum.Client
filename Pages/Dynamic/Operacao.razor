@@ -54,7 +54,8 @@
                                        Variant="Variant.Text" Class="mb-3"
                                        Required="@campo.IsObrigatorio"
                                        Error="@HasError(campo)"
-                                       ErrorText="@GetError(campo)">
+                                       ErrorText="@GetError(campo)"
+                                       Clearable="true">
                                     @foreach (var opcao in campo.Opcoes)
                                     {
                                         <MudSelectItem T="string" Value="@(opcao.IdRegistro.ToString())">@opcao.ValorExibicao</MudSelectItem>
@@ -86,7 +87,8 @@
                             Class="mb-3"
                             Required="@campo.IsObrigatorio"
                             Error="@HasError(campo)"
-                            ErrorText="@GetError(campo)" />
+                            ErrorText="@GetError(campo)"
+                            Clearable="true"/>
                     }
                     else if (campo.Tipo == TypeColumnEnum.BIT)
                     {
